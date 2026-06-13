@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   description: "Kaito Watanabe's portfolio site",
 };
 
-export default function RootLayout({
+function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -31,11 +31,12 @@ export default function RootLayout({
       lang="en"
       className={`${notoSans.variable} ${cormorant.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-        <Header />
+      <body className="min-h-full flex flex-col bg-background">
         <main className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>
   );
 }
+
+export default RootLayout;
