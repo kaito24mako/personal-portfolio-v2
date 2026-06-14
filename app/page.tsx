@@ -1,20 +1,19 @@
-import Header from "@/_components/layout/Header";
 import Background from "@/_components/features/background/Background";
-import HomeSection from "./_sections/HomeSection";
+import HomeSection from "./_sections/home/HomeSection";
+import ProjectsSection from "./_sections/projects/ProjectsSection";
 
 import mountains from "@/public/bg/mountain-bg.png";
 
 function MainPage() {
   return (
     <>
-      <section id="home" className="relative min-h-screen">
-        <Header />
+      <section id="home" className="relative h-screen snap-start">
         <Background image={mountains} alt="mountains" />
         <HomeSection />
       </section>
 
-      <section id="projects">
-        <p>this is the projects page</p>
+      <section id="projects" className="h-screen snap-start">
+        <ProjectsSection />
       </section>
     </>
   );

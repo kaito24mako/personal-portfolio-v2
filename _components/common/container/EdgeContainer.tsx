@@ -7,7 +7,9 @@ type Props = {
 
 function EdgeContainer({ children, className = "" }: Props) {
   return (
-    <div className={`px-7 sm:px-25 2xl:px-50 py-4 ${className}`}>
+    <div
+      className={`px-7 sm:px-25 md:px-40 xl:px-60 3xl:px-100 py-4 ${className}`}
+    >
       {children}
     </div>
   );

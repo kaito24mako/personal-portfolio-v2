@@ -31,8 +31,11 @@ function RootLayout({
       lang="en"
       className={`${notoSans.variable} ${cormorant.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-background">
-        <main className="flex-1 scroll-smooth">{children}</main>
+      <body className="min-h-screen flex flex-col bg-background">
+        <Header />
+        <main className="flex-1 overflow-y-auto snap-y snap-mandatory">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

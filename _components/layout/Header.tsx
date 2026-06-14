@@ -4,7 +4,7 @@ import EdgeContainer from "../common/container/EdgeContainer";
 
 function Header() {
   return (
-    <EdgeContainer className="flex justify-between items-center bg-transparent sticky top-0">
+    <EdgeContainer className="flex justify-between items-center bg-transparent fixed top-0 left-0 right-0 z-50">
       <Link href="#home">
         <Image
           src="/icon/logo-transparent.png"

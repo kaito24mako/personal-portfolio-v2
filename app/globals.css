@@ -9,10 +9,10 @@
   --font-primary: var(--font-notoSans);
 
   /* Backgrounds */
-  --color-background: #161616;
-  --color-surface: #222222;
+  --color-background: #222222;
+  --color-surface: #333333;
   /* cards / panels */
-  --color-border: #333333;
+  --color-border: #444444;
   /* separators */
 
   /* Text */
@@ -23,8 +23,14 @@
   --color-accent: #d8565f;
   --color-accent-light: #e87b83;
   --color-accent-dark: #a53d44;
+
+  --breakpoint-3xl: 110rem;
 }
 
 body {
   font-family: var(--font-notoSans), Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
