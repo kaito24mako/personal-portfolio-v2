@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Noto_Sans_JP, Cormorant_Garamond } from "next/font/google";
 
 import Footer from "@/_components/layout/Footer";
+import Header from "@/_components/layout/Header";
 
 const notoSans = Noto_Sans_JP({
   variable: "--font-notoSans",
@@ -31,7 +32,7 @@ function RootLayout({
       className={`${notoSans.variable} ${cormorant.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background">
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 scroll-smooth">{children}</main>
         <Footer />
       </body>
     </html>

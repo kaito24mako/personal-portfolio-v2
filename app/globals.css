@@ -5,7 +5,7 @@
 }
 
 @theme {
-  --font-heading: var(--font-garamond);
+  --font-heading: var(--font-cormorant);
   --font-primary: var(--font-notoSans);
 
   /* Backgrounds */
