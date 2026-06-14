@@ -1,0 +1,11 @@
+1. design - planning, style guide, theme
+2. file structure - trouble with background img overlaying home page
+3. Reason for using Next.js
+
+# Prefetching:
+
+- Prefetching is the process of loading a route in the background before the user navigates to it. This makes navigation between routes in your application feel instant, because by the time a user clicks on a link, the data to render the next route is already available client side.
+- Next.js automatically prefetches routes linked with the <Link> component when they enter the user's viewport.
+- static routes are fully prefetched and prerendered at build time - dynamic routes arent or are partially if loading.tsx is present
+- Next.js automatically splits your application into smaller JavaScript chunks based on routes. Instead of loading all the code upfront like traditional SPAs, only the code needed for the current route is loaded. This reduces the initial load time while other parts of the app are loaded in the background. By the time you click the link, the resources for the new route have already been loaded into the browser cache.
+- When navigating to the new page, there's no full page reload or browser loading spinner. Instead, Next.js performs a client-side transition (keeping any shared layouts and UI), making the page navigation feel instant.

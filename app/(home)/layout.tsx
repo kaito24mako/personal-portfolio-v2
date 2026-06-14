@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import mountains from "@/public/bg/mountain-bg.png";
-import Header from "@/_components/_layout/Header";
+import Header from "@/_components/layout/Header";
 
 function HomeLayout({
   children,

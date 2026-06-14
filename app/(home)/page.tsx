@@ -1,4 +1,4 @@
-import EdgeContainer from "@/_components/_common/_container/EdgeContainer";
+import EdgeContainer from "@/_components/common/container/EdgeContainer";
 
 function HomePage() {
   return <EdgeContainer>this is the home page</EdgeContainer>;

@@ -1,10 +1,9 @@
+import "./globals.css";
+
 import type { Metadata } from "next";
 import { Noto_Sans_JP, Cormorant_Garamond } from "next/font/google";
 
-import Header from "@/_components/_layout/Header";
-
-import "./globals.css";
-import Footer from "@/_components/_layout/Footer";
+import Footer from "@/_components/layout/Footer";
 
 const notoSans = Noto_Sans_JP({
   variable: "--font-notoSans",
