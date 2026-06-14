@@ -22,7 +22,7 @@ function Navbar() {
 
   return (
     <motion.nav
-      className="flex justify-between items-center bg-transparent fixed top-0 left-0 right-0 z-50 px-7 sm:px-25 md:px-40 xl:px-60 3xl:px-100 py-4"
+      className={`flex justify-between items-center bg-transparent fixed top-0 left-0 right-0 z-50 px-7 sm:px-25 md:px-40 xl:px-60 3xl:px-100 py-4 ${hidden ? "pointer-events-none" : "pointer-events-auto"}`}
       animate={{
         y: hidden ? -10 : 0,
         opacity: hidden ? 0 : 1,
