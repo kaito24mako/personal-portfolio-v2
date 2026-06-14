@@ -7,12 +7,12 @@ import mountains from "@/public/bg/mountain-bg.png";
 function MainPage() {
   return (
     <>
-      <section id="home" className="relative h-screen snap-start">
+      <section id="home" className="relative min-h-screen">
         <Background image={mountains} alt="mountains" />
         <HomeSection />
       </section>
 
-      <section id="projects" className="h-screen snap-start">
+      <section id="projects" className="h-screen">
         <ProjectsSection />
       </section>
     </>
