@@ -4,16 +4,21 @@ import ProjectsSection from "./_sections/projects/ProjectsSection";
 import AboutSection from "./_sections/about/AboutSection";
 
 import mountains from "@/public/bg/mountain-bg.png";
+import land from "@/public/bg/land-bg.png";
 
 function MainPage() {
   return (
     <>
       <section id="home" className="relative h-[80dvh] sm:min-h-screen">
-        <Background image={mountains} alt="mountains" />
+        <Background
+          image={mountains}
+          alt="mountain landscape with a sakura tree"
+        />
         <HomeSection />
       </section>
 
-      <section id="about" className="h-screen">
+      <section id="about" className="relative h-screen">
+        <Background image={land} alt="hills, grass, and a single pathway" />
         <AboutSection />
       </section>
 

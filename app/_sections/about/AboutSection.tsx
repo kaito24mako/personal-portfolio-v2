@@ -76,7 +76,7 @@ const backendTech = [
 
 function AboutSection() {
   return (
-    <SectionContainer className="flex flex-col items-center shadow-lg">
+    <SectionContainer className="flex flex-col items-center">
       <div className="flex flex-col text-center gap-6">
         <FadeInOnView>
           <h1 className="text-accent text-5xl font-heading font-semibold">
@@ -85,7 +85,7 @@ function AboutSection() {
         </FadeInOnView>
 
         <FadeInOnView>
-          <p className="text-base md:text-lg">
+          <p className="text-background text-base md:text-lg">
             Welcome to my portfolio! I&apos;m Kaito and I have been studying web
             development since 2025. I have a sharp eye for detail, am passionate
             in learning new technologies, and mostly important, I love creating
@@ -95,7 +95,9 @@ function AboutSection() {
           </p>
         </FadeInOnView>
 
-        <Divider className="mt-5">Front-End</Divider>
+        <Divider className="mt-5 font-heading text-lg font-semibold">
+          Front-End
+        </Divider>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
           {frontendTech.map((tech) => (
             <TechCard
@@ -107,7 +109,9 @@ function AboutSection() {
           ))}
         </div>
 
-        <Divider className="mt-5">Back-End</Divider>
+        <Divider className="mt-5 font-heading text-lg font-semibold">
+          Back-End
+        </Divider>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
           {backendTech.map((tech) => (
             <TechCard

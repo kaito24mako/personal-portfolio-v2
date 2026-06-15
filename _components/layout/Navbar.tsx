@@ -55,7 +55,7 @@ function Navbar() {
         ></Image>
       </Link>
 
-      <ul className="flex gap-5 sm:gap-8 font-semibold">
+      <ul className="flex gap-5 sm:gap-8 font-semibold font-heading text-lg">
         <li className="hover:text-accent">
           <Link href="#home">Home</Link>
         </li>
