@@ -9,3 +9,9 @@
 - static routes are fully prefetched and prerendered at build time - dynamic routes arent or are partially if loading.tsx is present
 - Next.js automatically splits your application into smaller JavaScript chunks based on routes. Instead of loading all the code upfront like traditional SPAs, only the code needed for the current route is loaded. This reduces the initial load time while other parts of the app are loaded in the background. By the time you click the link, the resources for the new route have already been loaded into the browser cache.
 - When navigating to the new page, there's no full page reload or browser loading spinner. Instead, Next.js performs a client-side transition (keeping any shared layouts and UI), making the page navigation feel instant.
+
+# Motion
+
+- learning basics
+- performance hit on re-use of animations seem minimal to none - motion batches scroll updates, and a portfolio doesnt have too many elements
+- researched modern scroll animations - parallax, fade in/out

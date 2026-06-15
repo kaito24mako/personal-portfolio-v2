@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 
 import EdgeContainer from "@/_components/common/container/EdgeContainer";
-import FadeOnScroll from "@/_components/animations/StaggeredFadeIn";
+import FadeOnScroll from "@/_components/animations/FadeInVariants";
 
 function ProjectsSection() {
   return (

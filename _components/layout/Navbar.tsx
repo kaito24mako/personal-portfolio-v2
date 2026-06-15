@@ -30,7 +30,7 @@ function Navbar() {
     >
       <Link href="#home">
         <Image
-          src="/icon/logo-transparent.png"
+          src="/icon/logo.png"
           alt="logo of Kaito Watanabe"
           width={70}
           height={70}

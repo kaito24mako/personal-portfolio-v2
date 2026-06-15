@@ -27,3 +27,15 @@ function FadeOutOnScroll({ children, className }: Props) {
 }
 
 export default FadeOutOnScroll;
+
+// NATIVE CSS VERSION:
+
+// .fade-on-scroll {
+//   animation: fade-out linear both;
+//   animation-timeline: view();
+//   animation-range: exit 0% exit 40%;
+// }
+
+// @keyframes fade-out {
+//   to { opacity: 0; }
+// }

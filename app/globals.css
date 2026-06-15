@@ -27,11 +27,16 @@
   --breakpoint-3xl: 110rem;
 }
 
-body {
-  font-family: var(--font-notoSans), Arial, Helvetica, sans-serif;
-}
 
 html {
-  scroll-behavior: smooth;
   /* scroll-padding-top: 5rem; */
+  scroll-behavior: smooth;
+  /* first color for thumb, second color for track */
+  scrollbar-color: var(--color-accent) var(--color-background);
+  scrollbar-width: thin;
+}
+
+body {
+  font-family: var(--font-notoSans), Arial, Helvetica, sans-serif;
+
 }

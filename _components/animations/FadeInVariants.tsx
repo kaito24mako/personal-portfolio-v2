@@ -16,7 +16,7 @@ const item = {
   visible: { opacity: 1, y: 0 },
 };
 
-function StaggeredFadeIn() {
+function FadeInVariants() {
   const features = ["Fast", "Declarative", "Powerful", "Fun"];
 
   // variants are used to not repeat code
@@ -31,4 +31,4 @@ function StaggeredFadeIn() {
   );
 }
 
-export default StaggeredFadeIn;
+export default FadeInVariants;
