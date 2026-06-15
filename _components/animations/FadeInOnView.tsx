@@ -10,8 +10,8 @@ type Props = {
 function FadeInOnView({ children, className = "" }: Props) {
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.95 }}
-      whileInView={{ opacity: 1, scale: 1, transition: { duration: 1 } }}
+      initial={{ opacity: 0, scale: 0.97 }}
+      whileInView={{ opacity: 1, scale: 1, transition: { duration: 0.8 } }}
       viewport={{ once: true }}
       className={className}
     >

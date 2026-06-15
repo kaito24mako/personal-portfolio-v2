@@ -3,7 +3,7 @@ import SocialsList from "@/_components/features/list/SocialsList";
 
 function Footer() {
   return (
-    <EdgeContainer className="grid grid-cols-2 lg:grid-cols-3 py-6 bg-surface text-foreground">
+    <EdgeContainer className="grid grid-cols-2 lg:grid-cols-3 py-6 bg-surface">
       <span className="hidden lg:block" />
 
       <p className="text-sm sm:text-base text-center">© 2026 Kaito Watanabe</p>

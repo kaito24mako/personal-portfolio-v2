@@ -60,13 +60,13 @@ function Navbar() {
           <Link href="#home">Home</Link>
         </li>
         <li className="hover:text-accent">
+          <Link href="#about">About</Link>
+        </li>
+        <li className="hover:text-accent">
           <Link href="#projects">Projects</Link>
         </li>
         <li className="hover:text-accent">
           <Link href="#contact">Contact</Link>
-        </li>
-        <li>
-          <Link href="/blog">Blog</Link>
         </li>
       </ul>
     </motion.nav>
