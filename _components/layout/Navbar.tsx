@@ -6,8 +6,6 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import NavbarLink from "@/_components/layout/NavbarLink";
-
 function Navbar() {
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
