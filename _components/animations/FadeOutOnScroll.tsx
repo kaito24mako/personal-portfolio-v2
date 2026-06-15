@@ -11,13 +11,19 @@ type Props = {
 function FadeOutOnScroll({ children, className }: Props) {
   const ref = useRef<HTMLDivElement>(null);
 
+  // ref targets the element to be animated
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
   });
 
-  // Stay fully visible until the h1 starts leaving, then fade out
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 1], [1, 1, 0]);
+  // first array are the view points
+  // second array is the opacity
+  const opacity = useTransform(
+    scrollYProgress,
+    [0, 0.2, 0.5, 1],
+    [1, 1, 0.5, 0],
+  );
 
   return (
     <motion.div ref={ref} style={{ opacity }} className={className}>

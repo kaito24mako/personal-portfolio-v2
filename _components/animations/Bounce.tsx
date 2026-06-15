@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 type Props = {
   children: React.ReactNode;
-  midPosition?: number;
+  position?: number;
   duration?: number;
   delay?: number;
 };
@@ -12,12 +12,13 @@ type Props = {
 function Bounce({
   children,
   duration = 1,
-  midPosition = -10,
+  position = -10,
   delay = 0,
+  ...props
 }: Props) {
   return (
     <motion.div
-      animate={{ y: [0, midPosition, 0] }} // array acts as keyframes
+      animate={{ y: [0, position, 0] }} // array acts as keyframes
       transition={{
         duration,
         repeat: Infinity,
@@ -25,6 +26,7 @@ function Bounce({
         delay,
         ease: "easeInOut",
       }}
+      {...props}
     >
       {children}
     </motion.div>

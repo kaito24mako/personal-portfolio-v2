@@ -32,11 +32,16 @@ html {
   /* scroll-padding-top: 5rem; */
   scroll-behavior: smooth;
   /* first color for thumb, second color for track */
-  scrollbar-color: var(--color-accent) var(--color-background);
+  scrollbar-color: var(--color-accent-dark) var(--color-background);
   scrollbar-width: thin;
 }
 
 body {
   font-family: var(--font-notoSans), Arial, Helvetica, sans-serif;
+}
 
+@layer base {
+  body {
+    @apply text-foreground;
+  }
 }

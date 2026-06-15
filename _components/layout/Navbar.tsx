@@ -40,7 +40,7 @@ function Navbar() {
 
   return (
     <motion.nav
-      className={`flex justify-between items-center fixed top-0 left-0 right-0 z-50 py-1 px-7 sm:px-25 md:px-40 xl:px-60 3xl:px-100 bg-surface/20 text-sm md:text-base ${hidden ? "pointer-events-none" : "pointer-events-auto"}`}
+      className={`flex justify-between items-center fixed top-0 left-0 right-0 z-50 py-1 px-7 sm:px-25 md:px-40 xl:px-60 3xl:px-100 bg-surface/20 text-sm md:text-base text-background ${hidden ? "pointer-events-none" : "pointer-events-auto"}`}
       animate={{
         y: hidden ? -10 : 0,
         opacity: hidden ? 0 : 1,
@@ -55,7 +55,7 @@ function Navbar() {
         ></Image>
       </Link>
 
-      <ul className="flex gap-5 sm:gap-8">
+      <ul className="flex gap-5 sm:gap-8 font-semibold">
         <li className="hover:text-accent">
           <Link href="#home">Home</Link>
         </li>

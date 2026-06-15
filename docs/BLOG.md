@@ -14,4 +14,12 @@
 
 - learning basics
 - performance hit on re-use of animations seem minimal to none - motion batches scroll updates, and a portfolio doesnt have too many elements
-- researched modern scroll animations - parallax, fade in/out
+- researched modern scroll animations - parallax, fade in/out, bounce, hide navbar on scroll
+
+# responsiveness
+
+- kept two sizes apart between mobile and md viewport
+
+# typescript
+
+- although not needed to explicitly state types for every component (like animations), i did for practice
