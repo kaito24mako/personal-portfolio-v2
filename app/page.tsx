@@ -7,7 +7,7 @@ import mountains from "@/public/bg/mountain-bg.png";
 function MainPage() {
   return (
     <>
-      <section id="home" className="relative min-h-screen">
+      <section id="home" className="relative h-[80dvh] sm:min-h-screen">
         <Background image={mountains} alt="mountains" />
         <HomeSection />
       </section>

@@ -6,12 +6,14 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import NavbarLink from "@/_components/layout/NavbarLink";
+
 function Navbar() {
-  // hide navbar on scrolling down - show on scrolling up
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
 
   useMotionValueEvent(scrollY, "change", (current) => {
+    // if current scroll position is over 150px height, hide navbar
     const previous = scrollY.getPrevious() ?? 0;
     if (current > previous && current > 150) {
       setHidden(true);
@@ -20,9 +22,27 @@ function Navbar() {
     }
   });
 
+  // track the position of the scroll to show/hide background color
+  // const [isPastThreshold, setIsPastThreshold] = useState(false);
+
+  // useEffect(() => {
+  //   const threshold = 300;
+
+  //   function handleScroll() {
+  //     setIsPastThreshold(window.scrollY > threshold);
+  //   }
+
+  //   handleScroll();
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
+
   return (
     <motion.nav
-      className={`flex justify-between items-center bg-transparent fixed top-0 left-0 right-0 z-50 px-7 sm:px-25 md:px-40 xl:px-60 3xl:px-100 py-4 ${hidden ? "pointer-events-none" : "pointer-events-auto"}`}
+      className={`flex justify-between items-center fixed top-0 left-0 right-0 z-50 py-1 px-7 sm:px-25 md:px-40 xl:px-60 3xl:px-100 bg-surface/20 text-sm md:text-base ${hidden ? "pointer-events-none" : "pointer-events-auto"}`}
       animate={{
         y: hidden ? -10 : 0,
         opacity: hidden ? 0 : 1,
