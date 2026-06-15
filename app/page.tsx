@@ -1,4 +1,4 @@
-import Background from "@/_components/features/background/Background";
+import Background from "@/_components/common/background/Background";
 import HomeSection from "./_sections/home/HomeSection";
 import ProjectsSection from "./_sections/projects/ProjectsSection";
 import AboutSection from "./_sections/about/AboutSection";

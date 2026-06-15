@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 
 type Props = {
   children: React.ReactNode;
+  className?: string;
   position?: number;
   duration?: number;
   delay?: number;
@@ -14,6 +15,7 @@ function Bounce({
   duration = 1,
   position = -10,
   delay = 0,
+  className = "",
   ...props
 }: Props) {
   return (
@@ -26,6 +28,7 @@ function Bounce({
         delay,
         ease: "easeInOut",
       }}
+      className={className}
       {...props}
     >
       {children}
