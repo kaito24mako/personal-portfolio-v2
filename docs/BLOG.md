@@ -15,6 +15,7 @@
 - learning basics
 - performance hit on re-use of animations seem minimal to none - motion batches scroll updates, and a portfolio doesnt have too many elements
 - researched modern scroll animations - parallax, fade in/out, bounce, hide navbar on scroll
+- using variants for staggered fade-in animations on TechCards was difficult - had to target the card component's outer div with ref then make it a motion component with motion.create() - not sure how to implement reusability atm
 
 # responsiveness
 

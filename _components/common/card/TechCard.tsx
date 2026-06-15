@@ -1,3 +1,8 @@
+"use client";
+
+import { motion } from "motion/react";
+import { forwardRef } from "react";
+
 import Image from "next/image";
 
 type Props = {
@@ -6,9 +11,13 @@ type Props = {
   text: string;
 };
 
-function TechCard({ src, alt, text }: Props) {
+// 1. to add motion animation to the card component, attach ref to the outer div
+const TechCard = forwardRef<HTMLDivElement, Props>(function TechCard(
+  { src, alt, text },
+  ref,
+) {
   return (
-    <div className="p-3 rounded-sm bg-surface/80">
+    <div ref={ref} className="p-3 rounded-sm bg-surface/80">
       <div className="flex items-center gap-3">
         <div className="p-1.5 rounded-md bg-border">
           <Image src={src} width={30} height={30} alt={alt} />
@@ -17,6 +26,9 @@ function TechCard({ src, alt, text }: Props) {
       </div>
     </div>
   );
-}
+});
+
+// 2. create a motion component from the card
+export const MotionTechCard = motion.create(TechCard);
 
 export default TechCard;
