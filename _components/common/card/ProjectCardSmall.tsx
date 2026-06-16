@@ -6,6 +6,7 @@ import Badge from "../badge/Badge";
 import Button from "../button/Button";
 import IconTextWrapper from "../wrapper/IconTextWrapper";
 import BounceX from "@/_components/animations/bounce/BounceX";
+import ParallaxImage from "@/_components/animations/parallax/ParallaxImage";
 
 import GithubIcon from "../svg/GithubIcon";
 import SiteIcon from "../svg/SiteIcon";
@@ -23,7 +24,13 @@ function ProjectCardSmall({ title, image, description, tech, grid }: Props) {
   return (
     <div className={`${grid} mockup-window bg-surface rounded-md`}>
       <div className="relative">
-        <Image src={image} alt={title} quality={90} placeholder="blur" />
+        {/* <Image src={image} alt={title} quality={90} placeholder="blur" /> */}
+        <ParallaxImage
+          src={image}
+          alt={title}
+          className="aspect-video w-full shrink-0"
+          range={["-12%", "12%"]}
+        />
 
         {/* image overlay */}
         <div className="absolute bg-black/60 inset-0 z-10" />

@@ -10,12 +10,14 @@
 - Next.js automatically splits your application into smaller JavaScript chunks based on routes. Instead of loading all the code upfront like traditional SPAs, only the code needed for the current route is loaded. This reduces the initial load time while other parts of the app are loaded in the background. By the time you click the link, the resources for the new route have already been loaded into the browser cache.
 - When navigating to the new page, there's no full page reload or browser loading spinner. Instead, Next.js performs a client-side transition (keeping any shared layouts and UI), making the page navigation feel instant.
 
-# Motion
+# Motion - animations
 
 - learning basics
 - performance hit on re-use of animations seem minimal to none - motion batches scroll updates, and a portfolio doesnt have too many elements
-- researched modern scroll animations - parallax, fade in/out, bounce, hide navbar on scroll
+- researched modern scroll animations - parallax (https://motion.dev/tutorials/react-parallax), fade in/out, bounce, hide navbar on scroll
 - using variants for staggered fade-in animations on TechCards was difficult - had to target the card component's outer div with ref then make it a motion component with motion.create() - not sure how to implement reusability atm
+- parallex adds depth and motion - key of good design is to immerse the user in the site
+- wanted to improve the dynamic nature of my portfolio which was lacking in v1
 
 # responsiveness
 

@@ -1,7 +1,8 @@
-import Background from "@/_components/common/background/Background";
 import HomeSection from "./_sections/home/HomeSection";
 import ProjectsSection from "./_sections/projects/ProjectsSection";
 import AboutSection from "./_sections/about/AboutSection";
+
+import ParallaxBackground from "@/_components/animations/parallax/ParallaxBackground";
 
 import mountains from "@/public/bg/mountains.png";
 import land from "@/public/bg/land.png";
@@ -10,7 +11,7 @@ function MainPage() {
   return (
     <>
       <section id="home" className="relative min-h-screen">
-        <Background
+        <ParallaxBackground
           image={mountains}
           alt="Mountain landscape with a sakura tree"
         />
@@ -18,7 +19,10 @@ function MainPage() {
       </section>
 
       <section id="about" className="relative min-h-screen">
-        <Background image={land} alt="Hills, grass, and a single pathway" />
+        <ParallaxBackground
+          image={land}
+          alt="Hills, grass, and a single pathway"
+        />
         <AboutSection />
       </section>
 
