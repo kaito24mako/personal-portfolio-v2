@@ -13,15 +13,19 @@ function ProjectsSection() {
         <h2 className="text-foreground-muted text-5xl font-heading">2026</h2>
       </FadeOutOnScroll>
 
-      {featuredProjects.map((project) => (
-        <ProjectCardLarge
-          key={project.growth}
-          title={project.title}
-          description={project.description}
-          tech={project.tech}
-          growth={project.growth}
-        />
-      ))}
+      <div className="grid grid-cols-1 lg:grid-cols-2 grid-rows-3 gap-5">
+        {featuredProjects.map((project) => (
+          <ProjectCardLarge
+            key={project.title}
+            title={project.title}
+            image={project.image}
+            description={project.description}
+            tech={project.tech}
+            growth={project.growth}
+            grid={project.grid}
+          />
+        ))}
+      </div>
     </SectionContainer>
   );
 }

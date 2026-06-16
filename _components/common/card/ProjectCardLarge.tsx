@@ -1,45 +1,54 @@
-import Image from "next/image";
+import { StaticImageData } from "next/image";
 
-import BounceX from "@/_components/animations/bounce/BounceX";
+import Image from "next/image";
 
 import Badge from "../badge/Badge";
 import Divider from "../divider/Divider";
 import Button from "../button/Button";
 import IconTextWrapper from "../wrapper/IconTextWrapper";
+import BounceX from "@/_components/animations/bounce/BounceX";
 
 import GithubIcon from "../svg/GithubIcon";
 import SiteIcon from "../svg/SiteIcon";
 import ArrowRightIcon from "../svg/ArrowRightIcon";
 
-import mako from "@/public/projects/mako.png";
-
 type Props = {
   title: string;
+  image?: StaticImageData;
   description: string;
-  tech: string;
+  tech: string[];
   growth?: string;
+  grid: string;
 };
 
-function ProjectCardLarge({ title, description, tech, growth }: Props) {
+function ProjectCardLarge({
+  title,
+  image,
+  description,
+  tech,
+  growth,
+  grid,
+}: Props) {
   return (
-    <div className="mockup-window bg-surface w-[500px] rounded-md">
+    <div className={`${grid} mockup-window bg-surface rounded-md`}>
       <Image
-        src={mako}
+        src={image}
         alt="placeholder image"
         quality={90}
         placeholder="blur"
       />
 
       <div className="flex flex-col items-start text-start gap-1 p-5">
-        {/* remove div to put elements on left side */}
-        <div className="flex flex-col items-center text-center gap-1">
-          <h3 className="text-4xl font-heading font-semibold">{title}</h3>
+        <h3 className="text-4xl font-heading font-semibold">{title}</h3>
 
-          <p className="text-sm mb-1 opacity-87 ">{description}</p>
+        <p className="text-sm mb-1 opacity-87 ">{description}</p>
 
-          <Badge size="small" color="text-base">
-            {tech}
-          </Badge>
+        <div className="flex gap-2">
+          {tech.map((t) => (
+            <Badge size="small" key={t}>
+              {t}
+            </Badge>
+          ))}
         </div>
 
         <Divider className="mx-auto w-[95%] mt-2 mb-1" />
