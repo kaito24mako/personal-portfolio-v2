@@ -22,9 +22,9 @@ function Button({
   ...props
 }: Props) {
   const sizeClasses = {
-    small: "text-sm py-2 px-3",
-    medium: "text-base py-2 px-3",
-    large: "text-lg py-3 px-4",
+    small: "text-xs md:text-sm py-2 px-3",
+    medium: "text-sm md:text-base py-2 px-3",
+    large: "text-base md:text-lg py-3 px-4",
   };
 
   const colorClasses = {

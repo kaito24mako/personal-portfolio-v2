@@ -1,5 +1,6 @@
 type Props = {
   children: React.ReactNode;
+  className?: string;
   size?: "small" | "medium" | "large";
   textColor?: "default" | "background" | "surface" | "accent";
   bgColor?: "background" | "surface" | "accent";
@@ -7,14 +8,15 @@ type Props = {
 
 function Badge({
   children,
+  className = "",
   size = "medium",
   textColor = "default",
   bgColor = "background",
 }: Props) {
   const sizeClasses = {
-    small: "text-xs rounded-sm",
-    medium: "text-sm rounded-md",
-    large: "text-base rounded-lg",
+    small: "text-[10px] md:text-xs rounded-sm",
+    medium: "text-xs md:text-sm rounded-md",
+    large: "text-sm md:text-base rounded-lg",
   };
 
   const textColorClasses = {
@@ -32,7 +34,7 @@ function Badge({
 
   return (
     <div
-      className={`${sizeClasses[size]} ${textColorClasses[textColor]} ${bgColorClasses[bgColor]} px-3 py-1.5`}
+      className={`${sizeClasses[size]} ${textColorClasses[textColor]} ${bgColorClasses[bgColor]} ${className} opacity-87 px-3 py-1.5`}
     >
       {children}
     </div>

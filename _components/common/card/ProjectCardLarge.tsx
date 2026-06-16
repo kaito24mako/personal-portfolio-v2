@@ -39,9 +39,11 @@ function ProjectCardLarge({
       <div className="flex flex-col items-start text-start justify-between h-full gap-4 p-6">
         {/* top content */}
         <div className="flex flex-col gap-2">
-          <h3 className="text-4xl font-heading font-semibold">{title}</h3>
+          <h3 className="text-3xl md:text-4xl font-heading font-semibold">
+            {title}
+          </h3>
 
-          <p className="text-sm opacity-87 mb-1">{description}</p>
+          <p className="text-xs md:text-sm opacity-87 mb-1">{description}</p>
 
           <div className="flex gap-2">
             {tech.map((t) => (
@@ -58,10 +60,10 @@ function ProjectCardLarge({
         {/* bottom content */}
         <div className="flex flex-col justify-between h-full">
           <div>
-            <h4 className="text-accent-light text-sm mb-0.5">
+            <h4 className="text-accent-light text-xs md:text-sm mb-0.5">
               Personal Growth
             </h4>
-            <p className="text-sm opacity-70 mb-10">{growth}</p>
+            <p className="text-xs md:text-sm opacity-70 mb-10">{growth}</p>
           </div>
 
           <div className="flex justify-between items-center">

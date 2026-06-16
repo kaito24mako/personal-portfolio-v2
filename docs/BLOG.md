@@ -19,7 +19,7 @@
 
 # responsiveness
 
-- kept two sizes apart between mobile and md viewport
+- kept one size apart between mobile and md viewport
 - struggles with responsiveness of project cards - how to account for every slight change in viewport?
 - hard keeping track of the effect that parent containers have on child properties (such as justify-between, which requires h-full/w-full on parent)
 
@@ -42,4 +42,4 @@
 
 # design
 
-- worked on providing depth and a variety of typography to emphasize certain elements - my v1 portfolio was very static and samey
+- worked on providing depth and a variety of typography (like opacity, font size, color) to emphasize certain elements - my v1 portfolio was very static and samey
