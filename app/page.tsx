@@ -12,13 +12,13 @@ function MainPage() {
       <section id="home" className="relative h-[80dvh] sm:min-h-screen">
         <Background
           image={mountains}
-          alt="mountain landscape with a sakura tree"
+          alt="Mountain landscape with a sakura tree"
         />
         <HomeSection />
       </section>
 
       <section id="about" className="relative h-screen">
-        <Background image={land} alt="hills, grass, and a single pathway" />
+        <Background image={land} alt="Hills, grass, and a single pathway" />
         <AboutSection />
       </section>
 

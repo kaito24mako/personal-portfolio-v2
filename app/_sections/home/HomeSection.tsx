@@ -22,8 +22,11 @@ function HomeSection() {
         </FadeInX>
       </FadeOutOnScroll>
 
-      <Bounce position={10} className="flex justify-center mt-auto">
-        <Image src={arrow} alt="arrow" width={230} height={230} />
+      <Bounce
+        position={10}
+        className={`sm:flex sm:justify-center mt-auto hidden`}
+      >
+        <Image src={arrow} alt="Arrow pointing down" width={230} height={230} />
       </Bounce>
     </SectionContainer>
   );

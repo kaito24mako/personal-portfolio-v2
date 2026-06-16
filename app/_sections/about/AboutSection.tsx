@@ -14,8 +14,8 @@ function AboutSection() {
 
         <p className="text-background text-base md:text-lg">
           Welcome to my portfolio! I&apos;m Kaito and I have been studying web
-          development since 2025. I have a sharp eye for detail, am passionate
-          in learning new technologies, and mostly important, I love creating
+          development since 2025. I have a sharp eye for detail, passion in
+          learning new technologies, and mostly importantly, I love creating
           stunning websites. In my spare time, playing basketball and going to
           karaoke is my passion. Here are some technologies that I am familiar
           with:

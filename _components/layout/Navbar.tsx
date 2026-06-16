@@ -10,8 +10,8 @@ function Navbar() {
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
 
+  // if current scroll position is over 150px height, hide navbar
   useMotionValueEvent(scrollY, "change", (current) => {
-    // if current scroll position is over 150px height, hide navbar
     const previous = scrollY.getPrevious() ?? 0;
     if (current > previous && current > 150) {
       setHidden(true);
@@ -49,7 +49,7 @@ function Navbar() {
       <Link href="#home">
         <Image
           src="/icon/logo.png"
-          alt="logo of Kaito Watanabe"
+          alt="Logo of Kaito Watanabe"
           width={70}
           height={70}
         ></Image>

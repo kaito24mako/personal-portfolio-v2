@@ -24,3 +24,7 @@
 # typescript
 
 - although not needed to explicitly state types for every component (like animations), i did for practice
+
+# components
+
+- ensured animation components are as reusable as possible for future use

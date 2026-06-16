@@ -18,6 +18,7 @@ function Background({ image, alt }: Props) {
     offset: ["start start", "end start"],
   });
 
+  // move the div container down by 25% as scroll progresses
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
 
   return (
@@ -34,7 +35,7 @@ function Background({ image, alt }: Props) {
           alt={alt}
           placeholder="blur"
           sizes="100vw"
-          className="object-cover object-top scale-110"
+          className="object-cover object-left sm:object-top scale-110"
         />
       </motion.div>
     </div>

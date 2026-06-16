@@ -23,7 +23,7 @@ type Props = {
 function TechSegment({ tech, heading }: Props) {
   return (
     <>
-      <Divider className="mt-5 font-heading text-lg font-semibold">
+      <Divider className="mt-5 font-heading text-xl font-semibold">
         {heading}
       </Divider>
       <motion.div

@@ -6,7 +6,7 @@
 
 @theme {
   --font-heading: var(--font-cormorant);
-  --font-primary: var(--font-notoSans);
+  --font-primary: var(--font-inter);
 
   /* Backgrounds */
   --color-background: #222222;
@@ -37,7 +37,7 @@ html {
 }
 
 body {
-  font-family: var(--font-notoSans), Arial, Helvetica, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 @layer base {
