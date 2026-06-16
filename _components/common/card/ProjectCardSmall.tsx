@@ -13,7 +13,7 @@ import ArrowRightIcon from "../svg/ArrowRightIcon";
 
 type Props = {
   title: string;
-  image?: StaticImageData;
+  image: StaticImageData;
   description: string;
   tech: string[];
   grid: string;
@@ -26,7 +26,7 @@ function ProjectCardSmall({ title, image, description, tech, grid }: Props) {
         <Image src={image} alt={title} quality={90} placeholder="blur" />
 
         {/* image overlay */}
-        <div className="absolute bg-black/50 inset-0 z-10" />
+        <div className="absolute bg-black/60 inset-0 z-10" />
 
         {/* content */}
         <div className="absolute inset-0 z-20 flex flex-col items-start justify-between text-start gap-1 p-5">

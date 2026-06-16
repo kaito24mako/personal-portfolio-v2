@@ -14,10 +14,10 @@ import ArrowRightIcon from "../svg/ArrowRightIcon";
 
 type Props = {
   title: string;
-  image?: StaticImageData;
+  image: StaticImageData;
   description: string;
   tech: string[];
-  growth?: string;
+  growth: string;
   grid: string;
 };
 

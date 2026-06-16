@@ -16,29 +16,29 @@ function ProjectsSection() {
       </FadeOutOnScroll>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 grid-rows-3 gap-5">
-        {featuredProjects.map((project) => (
-          <ProjectCardLarge
-            key={project.title}
-            title={project.title}
-            image={project.image}
-            description={project.description}
-            tech={project.tech}
-            growth={project.growth}
-            grid={project.grid}
-          />
-        ))}
+        {featuredProjects.map((project) =>
+          project.growth ? (
+            <ProjectCardLarge
+              key={project.title}
+              title={project.title}
+              image={project.image}
+              description={project.description}
+              tech={project.tech}
+              growth={project.growth}
+              grid={project.grid}
+            />
+          ) : (
+            <ProjectCardSmall
+              key={project.title}
+              title={project.title}
+              image={project.image}
+              description={project.description}
+              tech={project.tech}
+              grid={project.grid}
+            />
+          ),
+        )}
       </div>
-
-      {featuredProjects.map((project) => (
-        <ProjectCardSmall
-          key={project.title}
-          title={project.title}
-          image={project.image}
-          description={project.description}
-          tech={project.tech}
-          grid={project.grid}
-        />
-      ))}
     </SectionContainer>
   );
 }
