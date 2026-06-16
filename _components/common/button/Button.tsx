@@ -1,12 +1,26 @@
-import React from "react";
+import Link from "next/link";
 
-type Props = {
+// to allow for button attributes (like onClick)
+type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   children: React.ReactNode;
+  className?: string;
   size?: "small" | "medium" | "large";
   color?: "background" | "surface" | "accent" | "custom";
+  href?: string;
+  toNewTab?: boolean;
+  ariaLabel?: string;
 };
 
-function Button({ children, size = "medium", color = "custom" }: Props) {
+function Button({
+  children,
+  className,
+  size = "medium",
+  color = "custom",
+  href,
+  toNewTab = false,
+  ariaLabel,
+  ...props
+}: Props) {
   const sizeClasses = {
     small: "text-sm p-2",
     medium: "text-base p-2",
@@ -20,9 +34,24 @@ function Button({ children, size = "medium", color = "custom" }: Props) {
     custom: "",
   };
 
+  if (href) {
+    return (
+      <Link
+        href={href}
+        target={toNewTab ? "_blank" : undefined}
+        aria-label={ariaLabel}
+        className={`${sizeClasses[size]} ${colorClasses[color]} ${className} rounded-md`}
+      >
+        {children}
+      </Link>
+    );
+  }
+
   return (
     <button
-      className={`${sizeClasses[size]} ${colorClasses[color]} rounded-md`}
+      className={`${sizeClasses[size]} ${colorClasses[color]} ${className} rounded-md`}
+      aria-label={ariaLabel}
+      {...props}
     >
       {children}
     </button>

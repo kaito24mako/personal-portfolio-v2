@@ -45,7 +45,12 @@ function ProjectCardLarge({ title, description, tech, growth }: Props) {
             Read Blog
           </Button>
           <div className="flex gap-3">
-            <Button size="small" color="accent">
+            <Button
+              size="small"
+              color="accent"
+              href="https://nextjs.org/docs/app/api-reference/components/image"
+              toNewTab
+            >
               View Code
             </Button>
             <Button size="small" color="accent">
