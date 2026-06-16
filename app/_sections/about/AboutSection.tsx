@@ -3,14 +3,13 @@ import { frontendTech, backendTech } from "@/_utils/mappedArrays";
 import SectionContainer from "@/_components/common/container/SectionContainer";
 import TechSegment from "./components/TechSegment";
 import FadeOutOnScroll from "@/_components/animations/FadeOutOnScroll";
+import Heading from "@/_components/common/text/Heading";
 
 function AboutSection() {
   return (
-    <SectionContainer className="flex flex-col text-center gap-6">
+    <SectionContainer className="text-center">
       <FadeOutOnScroll className="flex flex-col gap-4">
-        <h1 className="text-accent text-5xl font-heading font-semibold">
-          A little about me
-        </h1>
+        <Heading>A little about me</Heading>
 
         <p className="text-background text-base md:text-lg">
           Welcome to my portfolio! I&apos;m Kaito and I have been studying web

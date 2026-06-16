@@ -28,3 +28,9 @@
 # components
 
 - ensured animation components are as reusable as possible for future use
+
+# projects section
+
+- i want to show my progress as a student developer, so i opted for a timeline-like approach
+- showcase segment is for the main projects i want to show - so employers can quickly scan my main projects
+- yearly segments are all major projects i made by year - for those wanting to delve deeper
