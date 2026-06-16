@@ -8,14 +8,16 @@ type Props = {
   position?: number;
   duration?: number;
   delay?: number;
+  ease?: "easeIn" | "easeOut" | "easeInOut";
 };
 
 function Bounce({
   children,
+  className = "",
   duration = 1,
   position = -10,
   delay = 0,
-  className = "",
+  ease = "easeOut",
   ...props
 }: Props) {
   return (
@@ -26,7 +28,7 @@ function Bounce({
         repeat: Infinity,
         repeatDelay: 0.2,
         delay,
-        ease: "easeInOut",
+        ease,
       }}
       className={className}
       {...props}

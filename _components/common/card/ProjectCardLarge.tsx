@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 import BounceX from "@/_components/animations/bounce/BounceX";
 
@@ -49,14 +48,19 @@ function ProjectCardLarge({ title, description, tech, growth }: Props) {
         <p className="text-sm mb-1 opacity-70">{growth}</p>
 
         <div className="flex justify-between items-center w-full">
-          <Link href="/blog" className="text-accent text-sm">
+          <Button
+            href="/blog"
+            ariaLabel="Link to blog page"
+            size="small"
+            color="background"
+          >
             <IconTextWrapper gap="small">
-              <BounceX position={-3}>
+              <BounceX position={-2.1} ease="easeIn">
                 <ArrowRightIcon />
               </BounceX>
               <span>Read More</span>
             </IconTextWrapper>
-          </Link>
+          </Button>
 
           <div className="flex gap-3">
             <Button
