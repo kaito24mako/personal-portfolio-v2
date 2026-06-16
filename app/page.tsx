@@ -9,7 +9,7 @@ import land from "@/public/bg/land-bg.png";
 function MainPage() {
   return (
     <>
-      <section id="home" className="relative h-[80dvh] sm:min-h-screen">
+      <section id="home" className="relative min-h-screen">
         <Background
           image={mountains}
           alt="Mountain landscape with a sakura tree"
@@ -17,12 +17,12 @@ function MainPage() {
         <HomeSection />
       </section>
 
-      <section id="about" className="relative h-screen">
+      <section id="about" className="relative min-h-screen">
         <Background image={land} alt="Hills, grass, and a single pathway" />
         <AboutSection />
       </section>
 
-      <section id="projects" className="h-screen">
+      <section id="projects" className="min-h-screen">
         <ProjectsSection />
       </section>
     </>

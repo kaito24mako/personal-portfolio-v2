@@ -9,7 +9,7 @@ type Props = {
 function AnimatedButton({ children, stiffness = 300, damping = 15 }: Props) {
   return (
     <motion.button
-      className="border p-2 rounded-md bg-background text-foreground cursor-pointer"
+      className="border p-2 rounded-md bg-background text-foreground"
       whileHover={{ scale: 1.05, y: -2 }}
       whileTap={{ scale: 0.9, y: 1 }}
       transition={{ type: "spring", stiffness, damping }}

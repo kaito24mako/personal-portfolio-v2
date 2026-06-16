@@ -7,7 +7,7 @@ import {
 } from "@/_components/animations/FadeInStaggered";
 import { MotionTechCard } from "@/_components/common/card/TechCard";
 
-import Divider from "@/_components/common/divider/Divider";
+import DividerWithText from "@/_components/common/divider/DividerWithText";
 
 type Tech = {
   text: string;
@@ -23,9 +23,9 @@ type Props = {
 function TechSegment({ tech, heading }: Props) {
   return (
     <>
-      <Divider className="mt-5 font-heading text-xl font-semibold">
+      <DividerWithText className="mt-5 font-heading text-xl font-semibold">
         {heading}
-      </Divider>
+      </DividerWithText>
       <motion.div
         className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3"
         variants={staggerContainer}

@@ -1,16 +1,9 @@
 type Props = {
-  children: React.ReactNode;
   className?: string;
 };
 
-function Divider({ children, className = "" }: Props) {
-  return (
-    <div className={`flex items-center gap-4 ${className}`}>
-      <div className="h-px flex-1 bg-border" />
-      <span className="text-background">{children}</span>
-      <div className="h-px flex-1 bg-border" />
-    </div>
-  );
+function Divider({ className = "" }: Props) {
+  return <span className={`h-px bg-border ${className}`} />;
 }
 
 export default Divider;
