@@ -31,12 +31,7 @@ function ProjectCardLarge({
 }: Props) {
   return (
     <div className={`${grid} mockup-window bg-surface rounded-md`}>
-      <Image
-        src={image}
-        alt="placeholder image"
-        quality={90}
-        placeholder="blur"
-      />
+      <Image src={image} alt={title} quality={90} placeholder="blur" />
 
       <div className="flex flex-col items-start text-start gap-1 p-5">
         <h3 className="text-4xl font-heading font-semibold">{title}</h3>

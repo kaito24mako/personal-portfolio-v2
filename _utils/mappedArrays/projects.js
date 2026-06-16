@@ -1,7 +1,10 @@
 // * Projects (Projects section)
 
 import mako from "@/public/projects/mako.png";
-import catchEmAll from "@/public/projects/catch-em-all.png";
+import searchEmAll from "@/public/projects/search-em-all.png";
+import bookCollection from "@/public/projects/book-collection.png";
+import tictactoe from "@/public/projects/tic-tac-toe.png";
+import adminDashboard from "@/public/projects/admin-dashboard.png";
 
 export const featuredProjects = [
   {
@@ -15,8 +18,8 @@ export const featuredProjects = [
     grid: "row-span-2",
   },
   {
-    title: "Catch Em' All!",
-    image: catchEmAll,
+    title: "Book Collection",
+    image: bookCollection,
     description:
       "Uses React.js to search and filter through the Pokemon TCG database, and store cards for tracking purposes. ",
     tech: ["React", "SCSS"],
@@ -25,8 +28,8 @@ export const featuredProjects = [
     grid: "row-span-1",
   },
   {
-    title: "Admin Dashboard",
-    image: catchEmAll,
+    title: "Search Em' All!",
+    image: searchEmAll,
     description:
       "Uses React.js to search and filter through the Pokemon TCG database, and store cards for tracking purposes. ",
     tech: ["React", "SCSS"],
@@ -35,8 +38,8 @@ export const featuredProjects = [
     grid: "row-span-2",
   },
   {
-    title: "Calculator",
-    image: catchEmAll,
+    title: "Tic Tac Toe",
+    image: tictactoe,
     description:
       "Uses React.js to search and filter through the Pokemon TCG database, and store cards for tracking purposes. ",
     tech: ["React", "SCSS"],

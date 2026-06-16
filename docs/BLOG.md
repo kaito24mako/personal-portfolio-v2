@@ -29,6 +29,7 @@
 
 - ensured animation components are as reusable as possible for future use
 - ensured components are reusable via classes that can be targeted with its array index
+- some trouble figuring out just how customised a component should be - didnt want to overcomplicate it for myself
 
 # projects section
 
