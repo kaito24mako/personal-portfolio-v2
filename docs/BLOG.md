@@ -20,10 +20,13 @@
 # responsiveness
 
 - kept two sizes apart between mobile and md viewport
+- struggles with responsiveness of project cards - how to account for every slight change in viewport?
+- hard keeping track of the effect that parent containers have on child properties (such as justify-between, which requires h-full/w-full on parent)
 
 # typescript
 
 - although not needed to explicitly state types for every component (like animations), i did for practice
+- once i understood the basics of typescript, i could effectively look at the code for native react and next.js components and understand the BTS of how the components were made
 
 # components
 
@@ -36,3 +39,7 @@
 - i want to show my progress as a student developer, so i opted for a timeline-like approach
 - showcase segment is for the main projects i want to show - so employers can quickly scan my main projects
 - yearly segments are all major projects i made by year - for those wanting to delve deeper
+
+# design
+
+- worked on providing depth and a variety of typography to emphasize certain elements - my v1 portfolio was very static and samey

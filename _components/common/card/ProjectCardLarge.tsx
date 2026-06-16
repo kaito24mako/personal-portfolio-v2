@@ -30,67 +30,81 @@ function ProjectCardLarge({
   grid,
 }: Props) {
   return (
-    <div className={`${grid} mockup-window bg-surface rounded-md`}>
+    <div
+      className={`${grid} mockup-window flex flex-col h-full bg-surface rounded-md`}
+    >
       <Image src={image} alt={title} quality={90} placeholder="blur" />
 
-      <div className="flex flex-col items-start text-start gap-1 p-5">
-        <h3 className="text-4xl font-heading font-semibold">{title}</h3>
+      {/* content */}
+      <div className="flex flex-col items-start text-start justify-between h-full gap-4 p-6">
+        {/* top content */}
+        <div className="flex flex-col gap-2">
+          <h3 className="text-4xl font-heading font-semibold">{title}</h3>
 
-        <p className="text-sm mb-1 opacity-87 ">{description}</p>
+          <p className="text-sm opacity-87 mb-1">{description}</p>
 
-        <div className="flex gap-2">
-          {tech.map((t) => (
-            <Badge size="small" key={t}>
-              {t}
-            </Badge>
-          ))}
+          <div className="flex gap-2">
+            {tech.map((t) => (
+              <Badge size="small" key={t}>
+                {t}
+              </Badge>
+            ))}
+          </div>
         </div>
 
-        <Divider className="mx-auto w-[95%] mt-2 mb-1" />
+        {/* middle divider */}
+        <Divider className="mx-auto w-[95%]" />
 
-        <h4 className="text-accent-light text-sm">Personal Growth</h4>
-        <p className="text-sm mb-1 opacity-70">{growth}</p>
+        {/* bottom content */}
+        <div className="flex flex-col justify-between h-full">
+          <div>
+            <h4 className="text-accent-light text-sm mb-0.5">
+              Personal Growth
+            </h4>
+            <p className="text-sm opacity-70 mb-10">{growth}</p>
+          </div>
 
-        <div className="flex justify-between items-center w-full">
-          <Button
-            href="/blog"
-            ariaLabel="Link to blog page"
-            size="small"
-            color="background"
-          >
-            <IconTextWrapper gap="small">
-              <BounceX position={-2.1} ease="easeIn">
-                <ArrowRightIcon />
-              </BounceX>
-              <span>Read More</span>
-            </IconTextWrapper>
-          </Button>
-
-          <div className="flex gap-3">
+          <div className="flex justify-between items-center">
             <Button
+              href="/blog"
+              ariaLabel="Link to blog page"
               size="small"
-              color="accent"
-              href="https://nextjs.org/docs/app/api-reference/components/image"
-              toNewTab
+              color="background"
             >
-              <IconTextWrapper>
-                <GithubIcon />
-                <span>View Code</span>
+              <IconTextWrapper gap="small">
+                <BounceX position={-2.1} ease="easeIn">
+                  <ArrowRightIcon />
+                </BounceX>
+                <span>Read More</span>
               </IconTextWrapper>
             </Button>
 
-            <Button
-              size="small"
-              color="accent"
-              href="https://nextjs.org/docs/app/api-reference/components/image"
-              ariaLabel="Button to view live site"
-              toNewTab
-            >
-              <IconTextWrapper>
-                <SiteIcon />
-                <span>View Site</span>
-              </IconTextWrapper>
-            </Button>
+            <div className="flex gap-3">
+              <Button
+                size="small"
+                color="accent"
+                href="https://nextjs.org/docs/app/api-reference/components/image"
+                toNewTab
+              >
+                <IconTextWrapper>
+                  <GithubIcon />
+                  <span>View Code</span>
+                </IconTextWrapper>
+              </Button>
+
+              <Button
+                size="small"
+                color="accent"
+                href="https://nextjs.org/docs/app/api-reference/components/image"
+                ariaLabel="Button to view live site"
+                toNewTab
+              >
+                <IconTextWrapper>
+                  <SiteIcon />
+                  <span>View Site</span>
+                </IconTextWrapper>
+              </Button>
+            </div>
           </div>
         </div>
       </div>

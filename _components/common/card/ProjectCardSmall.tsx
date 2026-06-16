@@ -29,12 +29,12 @@ function ProjectCardSmall({ title, image, description, tech, grid }: Props) {
         <div className="absolute bg-black/60 inset-0 z-10" />
 
         {/* content */}
-        <div className="absolute inset-0 z-20 flex flex-col items-start justify-between text-start gap-1 p-5">
+        <div className="absolute inset-0 z-20 flex flex-col items-start justify-between text-start gap-1 px-6 py-5">
           {/* top content */}
           <div>
             <h3 className="text-4xl font-heading font-semibold">{title}</h3>
 
-            <p className="text-sm mb-1 opacity-87">{description}</p>
+            <p className="text-sm opacity-87 mb-1">{description}</p>
 
             <div className="flex gap-2">
               {tech.map((t) => (
