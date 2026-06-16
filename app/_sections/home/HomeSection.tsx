@@ -1,7 +1,7 @@
-import Bounce from "@/_components/animations/Bounce";
+import BounceY from "@/_components/animations/bounce/BounceY";
 import SectionContainer from "@/_components/common/container/SectionContainer";
-import FadeInX from "@/_components/animations/FadeInX";
-import FadeOutOnScroll from "@/_components/animations/FadeOutOnScroll";
+import FadeInX from "@/_components/animations/fade/FadeInX";
+import FadeOutOnScroll from "@/_components/animations/fade/FadeOutOnScroll";
 
 import arrow from "@/public/arrow.png";
 
@@ -22,12 +22,12 @@ function HomeSection() {
         </FadeInX>
       </FadeOutOnScroll>
 
-      <Bounce
+      <BounceY
         position={10}
         className={`sm:flex sm:justify-center mt-auto hidden`}
       >
         <Image src={arrow} alt="Arrow pointing down" width={230} height={230} />
-      </Bounce>
+      </BounceY>
     </SectionContainer>
   );
 }

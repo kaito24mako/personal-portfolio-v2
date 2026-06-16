@@ -20,7 +20,7 @@ function Bounce({
 }: Props) {
   return (
     <motion.div
-      animate={{ y: [0, position, 0] }} // array acts as keyframes
+      animate={{ x: [0, position, 0] }} // array acts as keyframes
       transition={{
         duration,
         repeat: Infinity,

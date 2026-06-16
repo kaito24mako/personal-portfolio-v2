@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import {
   staggerContainer,
   staggerItem,
-} from "@/_components/animations/FadeInStaggered";
+} from "@/_components/animations/fade/FadeInStaggered";
 import { MotionTechCard } from "@/_components/common/card/TechCard";
 
 import DividerWithText from "@/_components/common/divider/DividerWithText";

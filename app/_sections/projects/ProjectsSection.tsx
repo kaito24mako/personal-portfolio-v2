@@ -1,6 +1,6 @@
 import { featuredProjects } from "@/_utils/mappedArrays/projects";
 
-import FadeOutOnScroll from "@/_components/animations/FadeOutOnScroll";
+import FadeOutOnScroll from "@/_components/animations/fade/FadeOutOnScroll";
 import ProjectCardLarge from "@/_components/common/card/ProjectCardLarge";
 import SectionContainer from "@/_components/common/container/SectionContainer";
 import Heading from "@/_components/common/text/Heading";

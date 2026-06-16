@@ -2,7 +2,7 @@ import { frontendTech, backendTech } from "@/_utils/mappedArrays/tech.js";
 
 import SectionContainer from "@/_components/common/container/SectionContainer";
 import TechSegment from "./components/TechSegment";
-import FadeOutOnScroll from "@/_components/animations/FadeOutOnScroll";
+import FadeOutOnScroll from "@/_components/animations/fade/FadeOutOnScroll";
 import Heading from "@/_components/common/text/Heading";
 
 function AboutSection() {

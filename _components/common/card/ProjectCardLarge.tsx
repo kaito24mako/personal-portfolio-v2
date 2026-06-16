@@ -1,8 +1,16 @@
 import Image from "next/image";
+import Link from "next/link";
+
+import BounceX from "@/_components/animations/bounce/BounceX";
 
 import Badge from "../badge/Badge";
 import Divider from "../divider/Divider";
 import Button from "../button/Button";
+import IconTextWrapper from "../wrapper/IconTextWrapper";
+
+import GithubIcon from "../svg/GithubIcon";
+import SiteIcon from "../svg/SiteIcon";
+import ArrowRightIcon from "../svg/ArrowRightIcon";
 
 import mako from "@/public/projects/mako.png";
 
@@ -40,10 +48,16 @@ function ProjectCardLarge({ title, description, tech, growth }: Props) {
         <h4 className="text-accent-light text-sm">Personal Growth</h4>
         <p className="text-sm mb-1 opacity-70">{growth}</p>
 
-        <div className="flex justify-between w-full">
-          <Button size="small" color="accent">
-            Read Blog
-          </Button>
+        <div className="flex justify-between items-center w-full">
+          <Link href="/blog" className="text-accent text-sm">
+            <IconTextWrapper gap="small">
+              <BounceX position={-3}>
+                <ArrowRightIcon />
+              </BounceX>
+              <span>Read More</span>
+            </IconTextWrapper>
+          </Link>
+
           <div className="flex gap-3">
             <Button
               size="small"
@@ -51,10 +65,23 @@ function ProjectCardLarge({ title, description, tech, growth }: Props) {
               href="https://nextjs.org/docs/app/api-reference/components/image"
               toNewTab
             >
-              View Code
+              <IconTextWrapper>
+                <GithubIcon />
+                <span>View Code</span>
+              </IconTextWrapper>
             </Button>
-            <Button size="small" color="accent">
-              View Site
+
+            <Button
+              size="small"
+              color="accent"
+              href="https://nextjs.org/docs/app/api-reference/components/image"
+              ariaLabel="Button to view live site"
+              toNewTab
+            >
+              <IconTextWrapper>
+                <SiteIcon />
+                <span>View Site</span>
+              </IconTextWrapper>
             </Button>
           </div>
         </div>
