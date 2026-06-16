@@ -1,4 +1,4 @@
-import { frontendTech, backendTech } from "@/_utils/mappedArrays";
+import { frontendTech, backendTech } from "@/_utils/mappedArrays/tech.js";
 
 import SectionContainer from "@/_components/common/container/SectionContainer";
 import TechSegment from "./components/TechSegment";
