@@ -28,9 +28,9 @@ function Button({
   };
 
   const colorClasses = {
-    background: "bg-background hover:bg-background/80",
-    surface: "bg-surface hover:bg-surface/80",
-    accent: "bg-accent-dark hover:bg-accent-dark/80",
+    background: "bg-background hover:bg-border",
+    surface: "bg-surface hover:bg-border",
+    accent: "bg-accent-dark hover:bg-accent-darker",
     transparent: "bg-transparent",
     none: "",
   };

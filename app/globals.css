@@ -8,21 +8,21 @@
   --font-heading: var(--font-cormorant);
   --font-primary: var(--font-inter);
 
-  /* Backgrounds */
-  --color-background: #222222;
-  --color-surface: #333333;
-  /* cards / panels */
-  --color-border: #444444;
-  /* separators */
+  /* Layers */
+  --color-background: var(--color-neutral-900);
+  --color-surface: var(--color-neutral-800);
+  --color-border: var(--color-neutral-700);
 
   /* Text */
-  --color-foreground: #f5f5f3;
-  --color-foreground-muted: #c8c8c5;
+  --color-foreground: var(--color-neutral-100);
+  --color-foreground-muted: var(--color-neutral-300);
 
-  /* Accent */
-  --color-accent: #d8565f;
+  /* Brand */
   --color-accent-light: #e87b83;
+  --color-accent-lighter: #f0b1b2;
+  --color-accent: #d8565f;
   --color-accent-dark: #a53d44;
+  --color-accent-darker: #a42c3d;
 
   --breakpoint-3xl: 110rem;
 }

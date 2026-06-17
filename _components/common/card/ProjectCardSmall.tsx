@@ -1,7 +1,5 @@
 import { StaticImageData } from "next/image";
 
-import Image from "next/image";
-
 import Badge from "../badge/Badge";
 import Button from "../button/Button";
 import IconTextWrapper from "../wrapper/IconTextWrapper";

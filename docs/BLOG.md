@@ -2,7 +2,11 @@
 2. file structure - trouble with background img overlaying home page
 3. Reason for using Next.js
 
-# Prefetching:
+# route structure
+
+- difficulty figuring out how the route structure would be, since the site is mostly a SPA, except for blog pages
+
+# prefetching:
 
 - Prefetching is the process of loading a route in the background before the user navigates to it. This makes navigation between routes in your application feel instant, because by the time a user clicks on a link, the data to render the next route is already available client side.
 - Next.js automatically prefetches routes linked with the <Link> component when they enter the user's viewport.
@@ -10,7 +14,7 @@
 - Next.js automatically splits your application into smaller JavaScript chunks based on routes. Instead of loading all the code upfront like traditional SPAs, only the code needed for the current route is loaded. This reduces the initial load time while other parts of the app are loaded in the background. By the time you click the link, the resources for the new route have already been loaded into the browser cache.
 - When navigating to the new page, there's no full page reload or browser loading spinner. Instead, Next.js performs a client-side transition (keeping any shared layouts and UI), making the page navigation feel instant.
 
-# Motion - animations
+# motion - animations
 
 - learning basics
 - performance hit on re-use of animations seem minimal to none - motion batches scroll updates, and a portfolio doesnt have too many elements
@@ -45,3 +49,4 @@
 # design
 
 - worked on providing depth and a variety of typography (like opacity, font size, color) to emphasize certain elements - my v1 portfolio was very static and samey
+- used https://uicolors.app/generate/d8565f to generate brand color pallete - used tailwind classes for other colors
