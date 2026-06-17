@@ -9,7 +9,7 @@ import Image from "next/image";
 
 function HomeSection() {
   return (
-    <SectionContainer className="flex flex-col h-full pt-80 text-center text-background">
+    <SectionContainer className="flex flex-col min-h-screen pt-80 text-center text-background">
       <FadeOutOnScroll className="flex flex-col">
         <FadeInX position={60} duration={1.4}>
           <h1 className="font-heading text-6xl md:text-8xl">I&apos;m Kaito</h1>
@@ -22,7 +22,7 @@ function HomeSection() {
         </FadeInX>
       </FadeOutOnScroll>
 
-      <BounceY position={10} className={`flex justify-center mt-auto`}>
+      <BounceY position={10} className="flex justify-center mt-auto">
         <Image src={arrow} alt="Arrow pointing down" width={230} height={230} />
       </BounceY>
     </SectionContainer>

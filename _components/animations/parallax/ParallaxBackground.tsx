@@ -7,9 +7,10 @@ import { useRef } from "react";
 type Props = {
   image: StaticImageData;
   alt: string;
+  className?: string;
 };
 
-function Background({ image, alt }: Props) {
+function Background({ image, alt, className }: Props) {
   // parallax effect using useScroll and useTransform
   const ref = useRef<HTMLDivElement>(null);
 
@@ -22,7 +23,10 @@ function Background({ image, alt }: Props) {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
 
   return (
-    <div ref={ref} className="absolute inset-0 -z-10 overflow-hidden">
+    <div
+      ref={ref}
+      className={`${className} absolute inset-0 -z-10 overflow-hidden`}
+    >
       <motion.div
         className="absolute inset-0 will-change-transform"
         style={{ y }}

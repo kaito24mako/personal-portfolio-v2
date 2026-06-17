@@ -1,22 +1,38 @@
-import { featuredProjects } from "@/_utils/mappedArrays/projects";
+import { StaticImageData } from "next/image";
 
 import FadeOutOnScroll from "@/_components/animations/fade/FadeOutOnScroll";
-
 import ProjectCardLarge from "@/_components/common/card/ProjectCardLarge";
 import ProjectCardSmall from "@/_components/common/card/ProjectCardSmall";
 import SectionContainer from "@/_components/common/container/SectionContainer";
 import Heading from "@/_components/common/text/Heading";
 
-function ProjectsSection() {
+type Project = {
+  title: string;
+  image: StaticImageData;
+  description: string;
+  tech: string[];
+  growth?: string;
+  grid: string;
+};
+
+type Props = {
+  // children: React.ReactNode;
+  subHeading: string;
+  gridTemplate: string;
+  projects: Project[];
+};
+
+function ProjectsSection({ subHeading, gridTemplate, projects }: Props) {
   return (
-    <SectionContainer className="text-center bg-background text-foreground">
+    <SectionContainer className="text-center bg-background text-foreground pt-2! pb-10! w-screen snap-start shrink-0">
       <FadeOutOnScroll className="flex flex-col">
-        <Heading>Projects Showcase</Heading>
-        <h2 className="text-foreground-muted text-5xl font-heading">2026</h2>
+        <h2 className="text-foreground-muted text-3xl md:text-4xl font-heading">
+          {subHeading}
+        </h2>
       </FadeOutOnScroll>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 grid-rows-3 gap-5">
-        {featuredProjects.map((project) =>
+      <div className={`${gridTemplate} grid gap-8`}>
+        {projects.map((project) =>
           project.growth ? (
             <ProjectCardLarge
               key={project.title}

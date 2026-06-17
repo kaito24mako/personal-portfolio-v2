@@ -1,7 +1,5 @@
 import { StaticImageData } from "next/image";
 
-import Image from "next/image";
-
 import Badge from "../badge/Badge";
 import Divider from "../divider/Divider";
 import Button from "../button/Button";
