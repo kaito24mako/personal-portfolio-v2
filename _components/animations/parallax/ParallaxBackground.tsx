@@ -1,7 +1,7 @@
 "use client";
 
 import Image, { StaticImageData } from "next/image";
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion, useScroll, useTransform, useSpring } from "motion/react";
 import { useRef } from "react";
 
 type Props = {
@@ -11,7 +11,6 @@ type Props = {
 };
 
 function Background({ image, alt, className }: Props) {
-  // parallax effect using useScroll and useTransform
   const ref = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -19,8 +18,16 @@ function Background({ image, alt, className }: Props) {
     offset: ["start start", "end start"],
   });
 
+  // * Parallax
   // move the div container down by 25% as scroll progresses
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
+
+  // * Blur
+  const filter = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ["blur(0px)", "blur(3px)"],
+  );
 
   return (
     <div
@@ -29,7 +36,7 @@ function Background({ image, alt, className }: Props) {
     >
       <motion.div
         className="absolute inset-0 will-change-transform"
-        style={{ y }}
+        style={{ y, filter }}
       >
         <Image
           src={image}

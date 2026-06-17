@@ -27,6 +27,7 @@ export default function ParallaxImage({
     offset: ["start end", "end start"],
   });
 
+  // * Parallax
   // The image shifts based on the scroll progress
   const y = useTransform(scrollYProgress, [0, 1], range);
 

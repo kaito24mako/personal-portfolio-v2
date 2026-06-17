@@ -6,6 +6,7 @@ import {
 
 import HomeSection from "./_sections/home/HomeSection";
 import ProjectsSection from "./_sections/projects/ProjectsSection";
+import ProjectsScrollArea from "./_sections/projects/ProjectsScrollArea";
 import AboutSection from "./_sections/about/AboutSection";
 
 import ParallaxBackground from "@/_components/animations/parallax/ParallaxBackground";
@@ -36,7 +37,8 @@ function MainPage() {
       <section id="projects" className="min-h-screen py-20">
         <Heading className="text-center">Projects Showcase</Heading>
 
-        <div className="flex overflow-x-auto snap-x snap-mandatory">
+        {/* <div className="flex overflow-x-auto snap-x snap-mandatory"> */}
+        <ProjectsScrollArea sectionLabels={["Featured", "2026", "2025"]}>
           <ProjectsSection
             subHeading="Featured"
             gridTemplate="grid-cols-1 lg:grid-cols-2 grid-rows-3"
@@ -54,7 +56,7 @@ function MainPage() {
             gridTemplate="grid-cols-1 lg:grid-cols-2 grid-rows-3"
             projects={projects2025}
           />
-        </div>
+        </ProjectsScrollArea>
       </section>
     </>
   );

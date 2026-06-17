@@ -1,0 +1,126 @@
+"use client";
+
+import { useCallback, useEffect, useRef, useState } from "react";
+import {
+  motion,
+  useMotionValue,
+  useTransform,
+  type MotionValue,
+} from "motion/react";
+
+type Props = {
+  children: React.ReactNode;
+  sectionLabels: string[];
+};
+
+type ProgressSegmentProps = {
+  index: number;
+  scrollSection: MotionValue<number>;
+};
+
+function ProgressSegment({ index, scrollSection }: ProgressSegmentProps) {
+  // fill progress bar with color
+  // position is a value between 0 and 1, representing the scroll position
+  const fillScale = useTransform(scrollSection, (position) =>
+    Math.min(Math.max(position - index + 1, 0), 1),
+  );
+
+  return (
+    // progress bar
+    <div className="relative h-1 flex-1 overflow-hidden rounded-full bg-border">
+      {/* fill the progress bar with the color based on the scroll position */}
+      <motion.div
+        className="absolute inset-0 origin-left rounded-full bg-accent"
+        style={{ scaleX: fillScale }}
+      />
+    </div>
+  );
+}
+
+function ProjectsScrollArea({ children, sectionLabels }: Props) {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const scrollSection = useMotionValue(0);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const sectionCount = sectionLabels.length;
+
+  // Map scroll position to a 0-based "section index" (0 = Featured, 1 = 2026, etc.)
+  const updateScrollSection = useCallback(() => {
+    const container = scrollRef.current;
+    if (!container) return;
+
+    // get the section width
+    const sectionWidth = container.clientWidth;
+    if (sectionWidth === 0) return;
+
+    // update the scroll section based on the scroll position
+    const position = container.scrollLeft / sectionWidth;
+    scrollSection.set(position);
+
+    // update the active index based on the scroll position
+    const index = Math.min(Math.round(position), sectionCount - 1);
+    setActiveIndex(index);
+  }, [scrollSection, sectionCount]);
+
+  // useEffect to update the scroll section based on the scroll position
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (!container) return;
+
+    updateScrollSection();
+
+    container.addEventListener("scroll", updateScrollSection, {
+      passive: true,
+    });
+    window.addEventListener("resize", updateScrollSection);
+
+    return () => {
+      container.removeEventListener("scroll", updateScrollSection);
+      window.removeEventListener("resize", updateScrollSection);
+    };
+  }, [updateScrollSection]);
+
+  return (
+    <>
+      <div className="mb-8 px-7 sm:px-25 md:px-40 xl:px-60 3xl:px-100">
+        <div className="mx-auto flex max-w-3xl flex-col gap-3">
+          {/* progress bar labels */}
+          <div className="flex gap-2">
+            {sectionLabels.map((label, index) => (
+              <span
+                key={label}
+                className={`flex-1 text-center font-heading text-3xl! transition-colors duration-300 md:text-base ${
+                  index === activeIndex
+                    ? "text-accent"
+                    : "text-foreground-muted"
+                }`}
+              >
+                {label}
+              </span>
+            ))}
+          </div>
+
+          {/* progress bar */}
+          <div className="flex gap-1.5">
+            {sectionLabels.map((label, index) => (
+              <ProgressSegment
+                key={label}
+                index={index}
+                scrollSection={scrollSection}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* scroll area/div for projects */}
+      <div
+        ref={scrollRef}
+        className="flex snap-x snap-mandatory overflow-x-auto"
+      >
+        {children}
+      </div>
+    </>
+  );
+}
+
+export default ProjectsScrollArea;
