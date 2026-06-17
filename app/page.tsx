@@ -57,6 +57,7 @@ function MainPage() {
         <ProjectsScrollArea
           sectionLabels={["Featured", "2026", "2025"]}
           isSectionVisible={isRefVisible}
+          sectionRef={intersectionRef}
         >
           <ProjectsSection
             subHeading="Featured"

@@ -8,12 +8,14 @@ type Props = {
   children: React.ReactNode;
   sectionLabels: string[];
   isSectionVisible?: boolean;
+  sectionRef?: React.RefObject<HTMLElement | null>;
 };
 
 function ProjectsScrollArea({
   children,
   sectionLabels,
   isSectionVisible = true,
+  sectionRef,
 }: Props) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0); // 0 = Featured, 1 = 2026, etc.
@@ -34,18 +36,28 @@ function ProjectsScrollArea({
   }, [sectionCount]);
 
   // Scroll to section on click
-  const scrollToSection = useCallback((index: number) => {
-    const container = scrollRef.current;
-    if (!container) return;
+  const scrollToSection = useCallback(
+    (index: number) => {
+      const container = scrollRef.current;
+      if (!container) return;
 
-    const sectionWidth = container.clientWidth;
-    if (sectionWidth === 0) return;
+      const sectionWidth = container.clientWidth;
+      if (sectionWidth === 0) return;
 
-    container.scrollTo({
-      left: index * sectionWidth,
-      behavior: "smooth",
-    });
-  }, []);
+      // scroll to top of section
+      sectionRef?.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+
+      // scroll to respective section
+      container.scrollTo({
+        left: index * sectionWidth,
+        behavior: "smooth",
+      });
+    },
+    [sectionRef],
+  );
 
   // Update the active index based on the scroll position
   useEffect(() => {
