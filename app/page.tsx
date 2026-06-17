@@ -1,3 +1,6 @@
+"use client";
+
+import { useRef } from "react";
 import {
   projectsFeatured,
   projects2026,
@@ -12,10 +15,19 @@ import AboutSection from "./_sections/about/AboutSection";
 import ParallaxBackground from "@/_components/animations/parallax/ParallaxBackground";
 import Heading from "@/_components/common/text/Heading";
 
+import useIsVisible from "@/_utils/hooks/useIsVisible";
+
 import mountains from "@/public/bg/mountains.png";
 import land from "@/public/bg/land.png";
 
 function MainPage() {
+  // Create a ref for the element that should trigger the intended change
+  const intersectionRef = useRef<HTMLElement>(null);
+
+  // Pass it into our useIsVisible hook to determine if it's in view.
+  // The hook will return true or false which we will use for conditional styling/rendering
+  const isRefVisible = useIsVisible(intersectionRef);
+
   return (
     <>
       <section id="home" className="relative min-h-screen">
@@ -34,11 +46,18 @@ function MainPage() {
         <AboutSection />
       </section>
 
-      <section id="projects" className="min-h-screen py-20">
+      <section
+        id="projects"
+        className="min-h-screen py-20"
+        ref={intersectionRef}
+      >
         <Heading className="text-center">Projects Showcase</Heading>
 
         {/* <div className="flex overflow-x-auto snap-x snap-mandatory"> */}
-        <ProjectsScrollArea sectionLabels={["Featured", "2026", "2025"]}>
+        <ProjectsScrollArea
+          sectionLabels={["Featured", "2026", "2025"]}
+          isSectionVisible={isRefVisible}
+        >
           <ProjectsSection
             subHeading="Featured"
             gridTemplate="grid-cols-1 lg:grid-cols-2 grid-rows-3"

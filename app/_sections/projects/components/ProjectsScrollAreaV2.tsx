@@ -7,9 +7,14 @@ import Button from "@/_components/common/button/Button";
 type Props = {
   children: React.ReactNode;
   sectionLabels: string[];
+  isSectionVisible?: boolean;
 };
 
-function ProjectsScrollArea({ children, sectionLabels }: Props) {
+function ProjectsScrollArea({
+  children,
+  sectionLabels,
+  isSectionVisible = true,
+}: Props) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0); // 0 = Featured, 1 = 2026, etc.
   const sectionCount = sectionLabels.length;
@@ -61,34 +66,36 @@ function ProjectsScrollArea({ children, sectionLabels }: Props) {
 
   return (
     <>
-      {/* progress tabs */}
-      <div className="fixed right-12 top-1/2 z-50 -translate-y-1/2">
-        <div className="flex flex-col gap-1.5">
-          {sectionLabels.map((label, index) => (
-            <div key={label} className="flex items-center gap-3">
-              {/* dot indicator */}
-              <span
-                className={`size-2.5 rounded-full transition-colors duration-300 ${
-                  index === activeIndex ? "bg-accent" : "bg-border"
-                }`}
-              />
+      {/* IF projects section is in view, render progress tabs */}
+      {isSectionVisible && (
+        <div className="fixed right-12 top-1/2 -translate-y-1 z-50">
+          <div className="flex flex-col gap-1.5">
+            {sectionLabels.map((label, index) => (
+              <div key={label} className="flex items-center gap-3">
+                {/* dot indicator */}
+                <span
+                  className={`size-2.5 rounded-full transition-colors duration-300 ${
+                    index === activeIndex ? "bg-accent" : "bg-border"
+                  }`}
+                />
 
-              {/* label button */}
-              <Button
-                ariaLabel={label}
-                onClick={() => scrollToSection(index)}
-                className={`text-right font-heading text-2xl lg:text-3xl transition-colors duration-300 ${
-                  index === activeIndex
-                    ? "text-accent!"
-                    : "text-foreground-muted!"
-                }`}
-              >
-                {label}
-              </Button>
-            </div>
-          ))}
+                {/* label button */}
+                <Button
+                  ariaLabel={label}
+                  onClick={() => scrollToSection(index)}
+                  className={`text-right font-heading text-2xl lg:text-3xl transition-colors duration-300 ${
+                    index === activeIndex
+                      ? "text-accent!"
+                      : "text-foreground-muted!"
+                  }`}
+                >
+                  {label}
+                </Button>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       {/* scroll area/div for projects */}
       <div
