@@ -1,4 +1,8 @@
-import { projectsFeatured, projects2026 } from "@/_utils/mappedArrays/projects";
+import {
+  projectsFeatured,
+  projects2026,
+  projects2025,
+} from "@/_utils/mappedArrays/projects";
 
 import HomeSection from "./_sections/home/HomeSection";
 import ProjectsSection from "./_sections/projects/ProjectsSection";
@@ -45,9 +49,11 @@ function MainPage() {
             projects={projects2026}
           />
 
-          <section className="w-screen shrink-0 snap-start">
-            2025 Projects
-          </section>
+          <ProjectsSection
+            subHeading="2025"
+            gridTemplate="grid-cols-1 lg:grid-cols-2 grid-rows-3"
+            projects={projects2025}
+          />
         </div>
       </section>
     </>

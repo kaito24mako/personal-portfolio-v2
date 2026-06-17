@@ -33,6 +33,7 @@
 
 - although not needed to explicitly state types for every component (like animations), i did for practice
 - once i understood the basics of typescript, i could effectively look at the code for native react and next.js components and understand the BTS of how the components were made
+- made Project type customisable with optional description and tag properties - makes project cards dynamic and unique
 
 # components
 
