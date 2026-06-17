@@ -25,8 +25,8 @@ function Background({ image, alt, className }: Props) {
   // * Blur
   const filter = useTransform(
     scrollYProgress,
-    [0, 1],
-    ["blur(0px)", "blur(3px)"],
+    [0, 0.9, 1],
+    ["blur(0px)", "blur(1px)", "blur(3px)"],
   );
 
   return (

@@ -56,9 +56,9 @@ function ProjectCardSmall({ title, image, description, tech, grid }: Props) {
           <div className="flex justify-between items-center w-full">
             <Button
               href="/blog"
-              ariaLabel="Link to blog page"
               size="small"
               color="background"
+              ariaLabel="Link to blog page"
             >
               <IconTextWrapper gap="small">
                 <BounceX position={-2.1} ease="easeIn">
@@ -73,6 +73,7 @@ function ProjectCardSmall({ title, image, description, tech, grid }: Props) {
                 size="small"
                 color="accent"
                 href="https://nextjs.org/docs/app/api-reference/components/image"
+                ariaLabel="View code on GitHub"
                 toNewTab
               >
                 <IconTextWrapper>
@@ -85,7 +86,7 @@ function ProjectCardSmall({ title, image, description, tech, grid }: Props) {
                 size="small"
                 color="accent"
                 href="https://nextjs.org/docs/app/api-reference/components/image"
-                ariaLabel="Button to view live site"
+                ariaLabel="View live site"
                 toNewTab
               >
                 <IconTextWrapper>

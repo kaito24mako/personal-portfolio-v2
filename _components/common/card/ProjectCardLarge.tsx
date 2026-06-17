@@ -91,6 +91,7 @@ function ProjectCardLarge({
                 size="small"
                 color="accent"
                 href="https://nextjs.org/docs/app/api-reference/components/image"
+                ariaLabel="View code on GitHub"
                 toNewTab
               >
                 <IconTextWrapper>
@@ -103,7 +104,7 @@ function ProjectCardLarge({
                 size="small"
                 color="accent"
                 href="https://nextjs.org/docs/app/api-reference/components/image"
-                ariaLabel="Button to view live site"
+                ariaLabel="View live site"
                 toNewTab
               >
                 <IconTextWrapper>
