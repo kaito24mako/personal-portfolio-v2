@@ -8,6 +8,8 @@ import {
   type MotionValue,
 } from "motion/react";
 
+import Button from "@/_components/common/button/Button";
+
 type Props = {
   children: React.ReactNode;
   sectionLabels: string[];
@@ -40,11 +42,12 @@ function ProgressSegment({ index, scrollSection }: ProgressSegmentProps) {
 function ProjectsScrollArea({ children, sectionLabels }: Props) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const scrollSection = useMotionValue(0);
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0); // 0 = Featured, 1 = 2026, etc.
   const sectionCount = sectionLabels.length;
 
   // Map scroll position to a 0-based "section index" (0 = Featured, 1 = 2026, etc.)
   const updateScrollSection = useCallback(() => {
+    // get the current section
     const container = scrollRef.current;
     if (!container) return;
 
@@ -60,6 +63,20 @@ function ProjectsScrollArea({ children, sectionLabels }: Props) {
     const index = Math.min(Math.round(position), sectionCount - 1);
     setActiveIndex(index);
   }, [scrollSection, sectionCount]);
+
+  // Scroll to section on click
+  const scrollToSection = useCallback((index: number) => {
+    const container = scrollRef.current;
+    if (!container) return;
+
+    const sectionWidth = container.clientWidth;
+    if (sectionWidth === 0) return;
+
+    container.scrollTo({
+      left: index * sectionWidth,
+      behavior: "smooth",
+    });
+  }, []);
 
   // useEffect to update the scroll section based on the scroll position
   useEffect(() => {
@@ -82,20 +99,22 @@ function ProjectsScrollArea({ children, sectionLabels }: Props) {
   return (
     <>
       <div className="mb-8 px-7 sm:px-25 md:px-40 xl:px-60 3xl:px-100">
-        <div className="mx-auto flex max-w-3xl flex-col gap-3">
+        <div className="mx-auto flex max-w-3xl flex-col gap-2">
           {/* progress bar labels */}
           <div className="flex gap-2">
             {sectionLabels.map((label, index) => (
-              <span
+              <Button
                 key={label}
-                className={`flex-1 text-center font-heading text-3xl! transition-colors duration-300 md:text-base ${
+                ariaLabel={label}
+                onClick={() => scrollToSection(index)}
+                className={`flex-1 text-center font-heading text-2xl lg:text-3xl transition-colors duration-300  ${
                   index === activeIndex
-                    ? "text-accent"
-                    : "text-foreground-muted"
+                    ? "text-accent!"
+                    : "text-foreground-muted!"
                 }`}
               >
                 {label}
-              </span>
+              </Button>
             ))}
           </div>
 
@@ -115,7 +134,7 @@ function ProjectsScrollArea({ children, sectionLabels }: Props) {
       {/* scroll area/div for projects */}
       <div
         ref={scrollRef}
-        className="flex snap-x snap-mandatory overflow-x-auto"
+        className="flex snap-x snap-mandatory overflow-x-auto scrollbar-none"
       >
         {children}
       </div>

@@ -55,3 +55,8 @@
 # snap scrolling
 
 - implemented horizontal snap scrolling on projects section - ux friendly
+
+# progress bar for horizontal scrolling
+
+- used Cursor for implementation
+- could improve by having a vertical progress bar on the side of the entire section, so that when scrolling near the bottom the user will know which section they are on without having to scroll back up to see the progress bar

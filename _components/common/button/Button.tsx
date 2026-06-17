@@ -4,17 +4,17 @@ import Link from "next/link";
 type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   children: React.ReactNode;
   className?: string;
-  size?: "small" | "medium" | "large";
+  size?: "small" | "medium" | "large" | "none";
   color?: "background" | "surface" | "accent" | "transparent" | "none";
   href?: string;
   toNewTab?: boolean;
-  ariaLabel?: string;
+  ariaLabel: string;
 };
 
 function Button({
   children,
   className,
-  size = "medium",
+  size = "none",
   color = "none",
   href,
   toNewTab = false,
@@ -25,6 +25,7 @@ function Button({
     small: "text-xs xl:text-sm py-2 px-3",
     medium: "text-sm xl:text-base py-2 px-3",
     large: "text-base xl:text-lg py-3 px-4",
+    none: "",
   };
 
   const colorClasses = {

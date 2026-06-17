@@ -24,11 +24,11 @@ type Props = {
 function ProjectsSection({ subHeading, gridTemplate, projects }: Props) {
   return (
     <SectionContainer className="text-center bg-background text-foreground pt-2! pb-10! w-screen snap-start shrink-0">
-      <FadeOutOnScroll className="flex flex-col">
+      {/* <FadeOutOnScroll className="flex flex-col">
         <h2 className="text-foreground-muted text-3xl md:text-4xl font-heading">
           {subHeading}
         </h2>
-      </FadeOutOnScroll>
+      </FadeOutOnScroll> */}
 
       <div className={`${gridTemplate} grid gap-8`}>
         {projects.map((project) =>

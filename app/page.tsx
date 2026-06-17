@@ -35,7 +35,7 @@ function MainPage() {
       </section>
 
       <section id="projects" className="min-h-screen py-20">
-        <Heading className="text-center">Projects Showcase</Heading>
+        <Heading className="text-center mb-8">Projects Showcase</Heading>
 
         {/* <div className="flex overflow-x-auto snap-x snap-mandatory"> */}
         <ProjectsScrollArea sectionLabels={["Featured", "2026", "2025"]}>
