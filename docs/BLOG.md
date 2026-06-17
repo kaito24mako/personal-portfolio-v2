@@ -50,3 +50,7 @@
 
 - worked on providing depth and a variety of typography (like opacity, font size, color) to emphasize certain elements - my v1 portfolio was very static and samey
 - used https://uicolors.app/generate/d8565f to generate brand color pallete - used tailwind classes for other colors
+
+# snap scrolling
+
+- implemented horizontal snap scrolling on projects section - ux friendly

@@ -4,13 +4,12 @@ import FadeOutOnScroll from "@/_components/animations/fade/FadeOutOnScroll";
 import ProjectCardLarge from "@/_components/common/card/ProjectCardLarge";
 import ProjectCardSmall from "@/_components/common/card/ProjectCardSmall";
 import SectionContainer from "@/_components/common/container/SectionContainer";
-import Heading from "@/_components/common/text/Heading";
 
 type Project = {
   title: string;
   image: StaticImageData;
-  description: string;
-  tech: string[];
+  description?: string;
+  tech?: string[];
   growth?: string;
   grid: string;
 };
@@ -39,7 +38,7 @@ function ProjectsSection({ subHeading, gridTemplate, projects }: Props) {
               title={project.title}
               image={project.image}
               description={project.description}
-              tech={project.tech}
+              tech={project.tech ?? project.tech}
               growth={project.growth}
               grid={project.grid}
             />

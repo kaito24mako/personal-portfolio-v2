@@ -14,8 +14,8 @@ import ArrowRightIcon from "../svg/ArrowRightIcon";
 type Props = {
   title: string;
   image: StaticImageData;
-  description: string;
-  tech: string[];
+  description?: string;
+  tech?: string[];
   growth: string;
   grid: string;
 };
@@ -51,7 +51,7 @@ function ProjectCardLarge({
           <p className="text-xs md:text-sm opacity-87 mb-1">{description}</p>
 
           <div className="flex gap-2">
-            {tech.map((t) => (
+            {tech?.map((t) => (
               <Badge size="small" key={t}>
                 {t}
               </Badge>

@@ -1,15 +1,14 @@
-import { featuredProjects } from "@/_utils/mappedArrays/projects";
+import { projectsFeatured, projects2026 } from "@/_utils/mappedArrays/projects";
 
 import HomeSection from "./_sections/home/HomeSection";
 import ProjectsSection from "./_sections/projects/ProjectsSection";
 import AboutSection from "./_sections/about/AboutSection";
 
 import ParallaxBackground from "@/_components/animations/parallax/ParallaxBackground";
+import Heading from "@/_components/common/text/Heading";
 
 import mountains from "@/public/bg/mountains.png";
 import land from "@/public/bg/land.png";
-import Heading from "@/_components/common/text/Heading";
-import SectionContainer from "@/_components/common/container/SectionContainer";
 
 function MainPage() {
   return (
@@ -37,13 +36,13 @@ function MainPage() {
           <ProjectsSection
             subHeading="Featured"
             gridTemplate="grid-cols-1 lg:grid-cols-2 grid-rows-3"
-            projects={featuredProjects}
+            projects={projectsFeatured}
           />
 
           <ProjectsSection
             subHeading="2026"
             gridTemplate="grid-cols-1 lg:grid-cols-2 grid-rows-3"
-            projects={featuredProjects}
+            projects={projects2026}
           />
 
           <section className="w-screen shrink-0 snap-start">
