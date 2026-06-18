@@ -21,11 +21,11 @@ function AboutSection() {
         </p>
       </FadeOutOnScroll>
 
-      <FadeOutOnScroll className="flex flex-col gap-5" sudden>
+      <FadeOutOnScroll className="flex flex-col gap-5">
         <TechSegment tech={frontendTech} heading="Front-End" />
       </FadeOutOnScroll>
 
-      <FadeOutOnScroll className="flex flex-col gap-5" sudden>
+      <FadeOutOnScroll className="flex flex-col gap-5">
         <TechSegment tech={backendTech} heading="Back-End" />
       </FadeOutOnScroll>
     </SectionContainer>

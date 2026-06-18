@@ -26,7 +26,7 @@
 # javascript & react hook-based animations
 
 - also mixed in native javascript and react-based animations for personal learning
-- but motion seems to provide better performance due to inherit caching (right...?)
+- but motion seems to provide better performance due to inherit caching (right...?), and provides many other utilities for more animation variety and ease-of-implementation
 
 # responsiveness
 

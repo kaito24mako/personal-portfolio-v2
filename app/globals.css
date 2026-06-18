@@ -5,6 +5,7 @@
 }
 
 @theme {
+  /* Fonts */
   --font-heading: var(--font-cormorant);
   --font-primary: var(--font-inter);
 
@@ -24,8 +25,10 @@
   --color-accent-dark: #a53d44;
   --color-accent-darker: #8a2738;
 
+  /* Responsive breakpoints */
   --breakpoint-3xl: 110rem;
 
+  /* Animations */
   --animate-marquee: marquee 15s linear infinite;
 
   @keyframes marquee {
@@ -39,11 +42,17 @@
   }
 }
 
+@layer base {
+  body {
+    @apply text-foreground;
+  }
+}
 
 html {
-  /* scroll-padding-top: 5rem; */
-  scroll-behavior: smooth;
-  scrollbar-color: var(--color-surface) var(--color-background);
+  /* scroll-behaviour: smooth can conflict with snap scrolling, so set to auto */
+  overflow-y: scroll;
+  scroll-behavior: auto;
+  /* scrollbar-color: var(--color-surface) var(--color-background); */
   scrollbar-width: thin;
 }
 
@@ -54,10 +63,4 @@ body {
 button,
 a {
   cursor: pointer;
-}
-
-@layer base {
-  body {
-    @apply text-foreground;
-  }
 }
