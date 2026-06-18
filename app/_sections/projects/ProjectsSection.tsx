@@ -15,18 +15,17 @@ type Project = {
 };
 
 type Props = {
-  // children: React.ReactNode;
-  subHeading: string;
+  sectionLabel?: string;
   gridTemplate: string;
   projects: Project[];
 };
 
-function ProjectsSection({ subHeading, gridTemplate, projects }: Props) {
+function ProjectsSection({ sectionLabel, gridTemplate, projects }: Props) {
   return (
-    <SectionContainer className="text-center bg-background text-foreground pt-2! pb-10! w-screen snap-start shrink-0">
+    <SectionContainer className="text-center bg-background text-foreground py-0! w-screen snap-start shrink-0">
       <FadeOutOnScroll className="flex flex-col">
         <h2 className="text-foreground-muted text-3xl md:text-4xl font-heading">
-          {subHeading}
+          {sectionLabel}
         </h2>
       </FadeOutOnScroll>
 

@@ -58,6 +58,11 @@
 
 # progress bar for horizontal scrolling
 
-- used Cursor for implementation
-- could improve by having a vertical progress bar on the side of the entire section, so that when scrolling near the bottom the user will know which section they are on without having to scroll back up to see the progress bar
+- used Cursor for implementation of complex functionality (such as click to scroll to section, filling bar with color based on scroll progress)
 - instead of using Motion, I used the IntersectionObserver API to add conditional rendering and styling based on when the projects section comes into view https://dev.to/bcncodeschool/detecting-if-an-element-is-in-view-with-react-5b60
+- could improve by having a vertical progress bar on the side of the entire section, so that when scrolling near the bottom the user will know which section they are on without having to scroll back up to see the progress bar
+- implemented vertical progress bar, but it was unintuitive since it doesnt show that the user can scroll horizontally. ALSO, it was janky because the purpose of it was to allow the user to see the section structure even when scrolling to view projects that are outside of the progress bar's view, BUT it meant a fixed position which needed intersectionObserver API to show it when the projects section is in view...but it meant you could see the progress bar even when halfway onto the About section. Was very difficult to configure, so I ended up sticking to a simpler, horizontal bar.
+
+# code comments
+
+- customised Better Code Comments since I realised I needed a better system that suits my needs in regards to creating structured comments for explaining code

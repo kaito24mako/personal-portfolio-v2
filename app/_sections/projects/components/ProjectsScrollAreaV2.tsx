@@ -1,3 +1,5 @@
+// ! NOT in use - for a vertical progress bar
+
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -11,7 +13,7 @@ type Props = {
   sectionRef?: React.RefObject<HTMLElement | null>;
 };
 
-function ProjectsScrollArea({
+function ProjectsScrollAreaV2({
   children,
   sectionLabels,
   isSectionVisible = true,
@@ -120,4 +122,4 @@ function ProjectsScrollArea({
   );
 }
 
-export default ProjectsScrollArea;
+export default ProjectsScrollAreaV2;
