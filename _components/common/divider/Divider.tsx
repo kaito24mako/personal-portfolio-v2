@@ -1,13 +1,13 @@
 type Props = {
   className?: string;
-  color: string;
+  color?: string;
   height?: "small" | "medium" | "large";
   opacity?: "low" | "medium" | "high";
 };
 
 function Divider({
   className = "",
-  color,
+  color = "bg-border",
   height = "small",
   opacity = "high",
 }: Props) {

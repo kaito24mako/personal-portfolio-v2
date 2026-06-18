@@ -57,7 +57,12 @@ function MainPage() {
         </ProjectsScrollArea>
       </section>
 
-      <section id="contact" className="relative snap-start">
+      <section id="contact" className="relative min-h-screen snap-start">
+        <ParallaxBackground image={ocean} alt="Ocean waves" />
+        <ContactSection />
+      </section>
+
+      <section id="contact" className="relative min-h-screen snap-start">
         <ParallaxBackground image={ocean} alt="Ocean waves" />
         <ContactSection />
       </section>

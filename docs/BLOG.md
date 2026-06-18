@@ -38,8 +38,8 @@
 # components
 
 - ensured animation components are as reusable as possible for future use
-- ensured components are reusable via classes that can be targeted with its array index
-- some trouble figuring out just how customised a component should be - didnt want to overcomplicate it for myself
+- ensured components are reusable via classes that can be targeted with its index
+- a lot of the components in this project are overly configured to be reusable, too much for a simple portfolio site. But it was good for my learning and I can use in future projects.
 
 # projects section
 

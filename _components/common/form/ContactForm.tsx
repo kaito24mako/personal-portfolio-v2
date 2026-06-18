@@ -1,6 +1,6 @@
 function ContactForm() {
   return (
-    <form className="border bg-border border-surface rounded-md w-xs p-6 h-[500px] w-full">
+    <form className="border bg-border border-surface rounded-md w-md p-6">
       <legend className="text-center text-accent font-semibold">
         Email me
       </legend>
