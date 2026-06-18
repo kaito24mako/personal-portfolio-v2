@@ -36,6 +36,8 @@ function ContactSection() {
         </div>
 
         <ContactForm />
+
+        <div></div>
       </SectionContainer>
     </>
   );
