@@ -23,6 +23,11 @@
 - parallex and blur adds depth and motion - key of good design is to immerse the user in the site https://motion.dev/docs/react-scroll-animations
 - wanted to improve the dynamic nature of my portfolio which was lacking in v1
 
+# javascript & react hook-based animations
+
+- also mixed in native javascript and react-based animations for personal learning
+- but motion seems to provide better performance due to inherit caching (right...?)
+
 # responsiveness
 
 - kept one size apart between mobile and md viewport
@@ -55,6 +60,7 @@
 # snap scrolling
 
 - implemented horizontal snap scrolling on projects section - ux friendly
+- implemented site-wide, snap-based vertical scrolling, but its quite finicky...its good for this site because pages take up max full screen height, but is it worth the UX harm?
 
 # progress bar for horizontal scrolling
 

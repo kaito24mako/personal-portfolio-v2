@@ -5,7 +5,7 @@ import FadeOutOnScroll from "@/_components/animations/fade/FadeOutOnScroll";
 import ContactForm from "@/_components/common/form/ContactForm";
 import SocialsList from "@/_components/features/footer/SocialsList";
 import Divider from "@/_components/common/divider/Divider";
-import Footer from "@/_components/layout/FooterV2";
+import FooterV2 from "@/_components/layout/FooterV2";
 
 function ContactSection() {
   return (
@@ -39,10 +39,8 @@ function ContactSection() {
         <ContactForm />
       </SectionContainer>
 
-      {/* absolute -bottom-15 */}
-
       {/* Marquee effect */}
-      <div className=" overflow-hidden w-full py-20">
+      <div className="absolute bottom-0 overflow-hidden w-full py-20">
         {/* marquee track */}
         <div className="flex w-max animate-marquee">
           {/* original content block */}
@@ -55,7 +53,7 @@ function ContactSection() {
           {/* duplicate content block */}
           <div
             aria-hidden="true"
-            className="flex justify-around gap-10 pr-10 text-9xl font-heading text-background italic"
+            className="flex justify-around gap-40 pr-40 text-8xl font-heading text-background italic"
           >
             <span>Thank you for visiting</span>
             {/* <span className="text-background">
@@ -65,7 +63,7 @@ function ContactSection() {
         </div>
       </div>
 
-      <Footer />
+      <FooterV2 />
     </>
   );
 }
