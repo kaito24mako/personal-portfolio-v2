@@ -18,7 +18,7 @@ import land from "@/public/bg/land.png";
 function MainPage() {
   return (
     <>
-      <section id="home" className="relative min-h-screen">
+      <section id="home" className="relative min-h-screen snap-start">
         <ParallaxBackground
           image={mountains}
           alt="Mountain landscape with a sakura tree"
@@ -26,7 +26,7 @@ function MainPage() {
         <HomeSection />
       </section>
 
-      <section id="about" className="relative min-h-screen">
+      <section id="about" className="relative min-h-screen snap-start">
         <ParallaxBackground
           image={land}
           alt="Countryside with shrubbery, mountains, and a lake"
@@ -34,7 +34,7 @@ function MainPage() {
         <AboutSection />
       </section>
 
-      <section id="projects" className="min-h-screen py-20">
+      <section id="projects" className="py-20 min-h-screen snap-start">
         <Heading className="text-center mb-8">Projects Showcase</Heading>
 
         <ProjectsScrollArea sectionLabels={["Featured", "2026", "2025"]}>

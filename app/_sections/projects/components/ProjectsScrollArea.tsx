@@ -1,12 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import {
-  motion,
-  useMotionValue,
-  useTransform,
-  type MotionValue,
-} from "motion/react";
+import { motion, useMotionValue } from "motion/react";
 
 import Button from "@/_components/common/button/Button";
 
@@ -17,22 +12,19 @@ type Props = {
 
 type ProgressBarProps = {
   index: number;
-  scrollSection: MotionValue<number>;
+  isActive: boolean;
 };
 
-function ProgressBar({ index, scrollSection }: ProgressBarProps) {
-  //* Fill progress bar with color
-  // position is a value between 0 and 1, representing the scroll position
-  const fillScale = useTransform(scrollSection, (position) =>
-    Math.min(Math.max(position - index + 1, 0), 1),
-  );
-
+function ProgressBar({ isActive }: ProgressBarProps) {
   return (
     <div className="relative h-0.5 flex-1 overflow-hidden rounded-sm bg-border">
-      {/* fill the progress bar with color based on the scroll position */}
       <motion.div
+        // transform starts from the left
         className="absolute inset-0 origin-left bg-accent"
-        style={{ scaleX: fillScale }}
+        initial={false}
+        // if the section is active, the progress bar should be 100% wide
+        animate={{ scaleX: isActive ? 1 : 0 }}
+        transition={{ duration: 0.25, ease: "easeOut" }}
       />
     </div>
   );
@@ -61,6 +53,7 @@ function ProjectsScrollAreaV1({ children, sectionLabels }: Props) {
 
     // update the active index based on the scroll position
     const index = Math.min(Math.round(position), sectionCount - 1);
+
     setActiveIndex(index);
   }, [scrollSection, sectionCount]);
 
@@ -107,7 +100,7 @@ function ProjectsScrollAreaV1({ children, sectionLabels }: Props) {
                 key={label}
                 ariaLabel={label}
                 onClick={() => scrollToSection(index)}
-                className={`flex-1 text-center font-heading text-2xl lg:text-3xl transition-colors duration-300  ${
+                className={`flex-1 text-center font-heading text-2xl lg:text-3xl transition-colors duration-300 ${
                   index === activeIndex
                     ? "text-accent!"
                     : "text-foreground-muted!"
@@ -117,13 +110,14 @@ function ProjectsScrollAreaV1({ children, sectionLabels }: Props) {
               </Button>
             ))}
           </div>
-          {/* progress bar */}
+          {/* scroll bar */}
           <div className="flex gap-4">
             {sectionLabels.map((label, index) => (
               <ProgressBar
                 key={label}
                 index={index}
-                scrollSection={scrollSection}
+                // if current section's index equals the activeIndex state, conditionally play animations in ProgressBar if isActive is true
+                isActive={index === activeIndex}
               />
             ))}
           </div>

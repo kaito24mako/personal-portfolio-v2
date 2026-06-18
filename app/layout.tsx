@@ -36,9 +36,11 @@ function RootLayout({
       lang="en"
       className={`${notoSans.variable} ${cormorant.variable} ${inter.variable} min-h-screen antialiased`}
     >
-      <body className="min-h-screen flex flex-col bg-background">
+      <body className="h-screen flex flex-col bg-background">
         <Navbar />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1 min-h-screen overflow-y-auto snap-y snap-proximity">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
