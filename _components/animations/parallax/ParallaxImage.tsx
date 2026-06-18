@@ -8,15 +8,14 @@ type Props = {
   src: StaticImageData;
   alt: string;
   className?: string;
-  /** How far the image shifts — keep subtle for cards */
-  range?: [string, string];
+
+  range?: [string, string]; // how far the image shifts — keep subtle for cards
 };
 
 export default function ParallaxImage({
   src,
   alt,
   className = "",
-  // How far the image shifts — keep subtle for cards
   range = ["-8%", "8%"],
 }: Props) {
   const ref = useRef<HTMLDivElement>(null);
@@ -27,7 +26,7 @@ export default function ParallaxImage({
     offset: ["start end", "end start"],
   });
 
-  // * Parallax
+  //* Parallax
   // The image shifts based on the scroll progress
   const y = useTransform(scrollYProgress, [0, 1], range);
 

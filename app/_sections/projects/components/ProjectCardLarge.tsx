@@ -1,4 +1,4 @@
-import { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 import Badge from "@/_components/common/badge/Badge";
 import Divider from "@/_components/common/divider/Divider";
@@ -32,13 +32,13 @@ function ProjectCardLarge({
     <div
       className={`${grid} mockup-window flex flex-col h-full bg-surface rounded-md`}
     >
-      <ParallaxImage
+      <Image src={image} alt={title} quality={90} placeholder="blur" />
+      {/* <ParallaxImage
         src={image}
         alt={title}
         className="aspect-video w-full shrink-0"
         range={["-6%", "6%"]}
-      />
-      {/* <Image src={image} alt={title} quality={90} placeholder="blur" /> */}
+      /> */}
 
       {/* content */}
       <div className="flex flex-col items-start text-start justify-between h-full gap-4 p-6">

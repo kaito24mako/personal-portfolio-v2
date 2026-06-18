@@ -1,4 +1,4 @@
-import { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 import Badge from "@/_components/common/badge/Badge";
 import Button from "@/_components/common/button/Button";
@@ -22,13 +22,13 @@ function ProjectCardSmall({ title, image, description, tech, grid }: Props) {
   return (
     <div className={`${grid} mockup-window bg-surface rounded-md`}>
       <div className="relative">
-        {/* <Image src={image} alt={title} quality={90} placeholder="blur" /> */}
-        <ParallaxImage
+        <Image src={image} alt={title} quality={90} placeholder="blur" />
+        {/* <ParallaxImage
           src={image}
           alt={title}
           className="aspect-video w-full shrink-0"
           range={["-12%", "12%"]}
-        />
+        /> */}
 
         {/* image overlay */}
         <div className="absolute bg-black/60 inset-0 z-10" />

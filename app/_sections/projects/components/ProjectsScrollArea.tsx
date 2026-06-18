@@ -28,10 +28,10 @@ function ProgressBar({ index, scrollSection }: ProgressBarProps) {
   );
 
   return (
-    <div className="relative h-1 flex-1 overflow-hidden rounded-full bg-border">
+    <div className="relative h-0.5 flex-1 overflow-hidden rounded-sm bg-border">
       {/* fill the progress bar with color based on the scroll position */}
       <motion.div
-        className="absolute inset-0 origin-left rounded-full bg-accent"
+        className="absolute inset-0 origin-left bg-accent"
         style={{ scaleX: fillScale }}
       />
     </div>
@@ -99,7 +99,7 @@ function ProjectsScrollAreaV1({ children, sectionLabels }: Props) {
   return (
     <div className="flex flex-col">
       <div className="mb-8 px-7 sm:px-25 md:px-40 xl:px-60 3xl:px-100">
-        <div className="mx-auto flex max-w-3xl flex-col gap-1">
+        <div className="mx-auto flex flex-col max-w-2xl gap-1">
           {/* progress bar labels */}
           <div className="flex">
             {sectionLabels.map((label, index) => (
@@ -118,7 +118,7 @@ function ProjectsScrollAreaV1({ children, sectionLabels }: Props) {
             ))}
           </div>
           {/* progress bar */}
-          <div className="flex">
+          <div className="flex gap-4">
             {sectionLabels.map((label, index) => (
               <ProgressBar
                 key={label}
