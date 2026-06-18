@@ -7,7 +7,6 @@ type Props = {
   children: React.ReactNode;
   className?: string;
   sudden?: boolean;
-  ref?: React.Ref<HTMLDivElement>;
 };
 
 function FadeOutOnScroll({ children, className, sudden = false }: Props) {

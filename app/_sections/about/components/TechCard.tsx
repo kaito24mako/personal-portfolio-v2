@@ -17,7 +17,7 @@ const TechCard = forwardRef<HTMLDivElement, Props>(function TechCard(
   ref,
 ) {
   return (
-    <div ref={ref} className="p-3 rounded-sm bg-border/90">
+    <div ref={ref} className="p-3 rounded-sm bg-neutral-700/85">
       <div className="flex items-center gap-3">
         <div className="p-1.5 rounded-md bg-border">
           <Image src={src} width={30} height={30} alt={alt} />

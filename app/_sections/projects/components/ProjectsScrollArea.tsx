@@ -32,13 +32,13 @@ function ProgressBar({ isActive }: ProgressBarProps) {
 }
 
 function ProjectsScrollAreaV1({ children, sectionLabels }: Props) {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const scrollSection = useMotionValue(0);
-  const [activeIndex, setActiveIndex] = useState(0); // 0 = Featured, 1 = 2026, etc.
+  const scrollRef = useRef<HTMLDivElement>(null); // creates a ref that stores the scroll position
+  const scrollSection = useMotionValue(0); // creates a motion value that can animate the scroll position
+  const [activeIndex, setActiveIndex] = useState(0); // state that stores the active index (0 = Featured, 1 = 2026, etc.)
 
-  const sectionCount = sectionLabels.length;
+  const sectionCount = sectionLabels.length; // stores the number of sections
 
-  //* Map scroll position to a 0-based "section index" (0 = Featured, 1 = 2026, etc.)
+  //* Updates the scroll section based on the scroll position (0 = Featured, 1 = 2026, etc.)
   const updateScrollSection = useCallback(() => {
     // get the current section
     const container = scrollRef.current;
@@ -126,13 +126,12 @@ function ProjectsScrollAreaV1({ children, sectionLabels }: Props) {
       </FadeOutOnScroll>
 
       {/* parent container for projects with ref for scrolling logic */}
-      <FadeOutOnScroll
+      <div
         ref={scrollRef}
         className="flex snap-x snap-mandatory overflow-x-auto scrollbar-none"
-        sudden
       >
         {children}
-      </FadeOutOnScroll>
+      </div>
     </div>
   );
 }

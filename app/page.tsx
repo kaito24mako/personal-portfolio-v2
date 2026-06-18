@@ -17,7 +17,6 @@ import Heading from "@/_components/common/text/Heading";
 import mountains from "@/public/bg/mountains.png";
 import land from "@/public/bg/land.png";
 import ocean from "@/public/bg/ocean.png";
-import Image from "next/image";
 
 function MainPage() {
   return (
