@@ -8,12 +8,14 @@ import HomeSection from "@/app/_sections/home/HomeSection";
 import ProjectsSection from "@/app/_sections/projects/ProjectsSection";
 import ProjectsScrollArea from "@/app/_sections/projects/components/ProjectsScrollArea";
 import AboutSection from "@/app/_sections/about/AboutSection";
+import ContactSection from "./_sections/contact/ContactSection";
 
 import ParallaxBackground from "@/_components/animations/parallax/ParallaxBackground";
 import Heading from "@/_components/common/text/Heading";
 
 import mountains from "@/public/bg/mountains.png";
 import land from "@/public/bg/land.png";
+import ocean from "@/public/bg/ocean.png";
 
 function MainPage() {
   return (
@@ -53,6 +55,11 @@ function MainPage() {
             projects={projects2025}
           />
         </ProjectsScrollArea>
+      </section>
+
+      <section id="contact" className="relative snap-start">
+        <ParallaxBackground image={ocean} alt="Ocean waves" />
+        <ContactSection />
       </section>
     </>
   );

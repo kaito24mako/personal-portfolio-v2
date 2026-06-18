@@ -1,11 +1,11 @@
+import Image from "next/image";
+
 import BounceY from "@/_components/animations/bounce/BounceY";
 import SectionContainer from "@/_components/common/container/SectionContainer";
 import FadeInX from "@/_components/animations/fade/FadeInX";
 import FadeOutOnScroll from "@/_components/animations/fade/FadeOutOnScroll";
 
 import arrow from "@/public/arrow.png";
-
-import Image from "next/image";
 
 function HomeSection() {
   return (
