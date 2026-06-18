@@ -9,7 +9,7 @@ import Divider from "@/_components/common/divider/Divider";
 function ContactSection() {
   return (
     <>
-      <SectionContainer className="text-background grid grid-cols-1 md:grid-cols-2 gap-10">
+      <SectionContainer className="text-background grid grid-cols-1 md:grid-cols-2 gap-10 h-full">
         <div className="flex flex-col text-center md:text-left gap-5 h-full">
           <FadeOutOnScroll>
             <Heading className="text-background">Get in touch</Heading>
@@ -36,9 +36,31 @@ function ContactSection() {
         </div>
 
         <ContactForm />
-
-        <div></div>
       </SectionContainer>
+
+      {/* Marquee effect */}
+      <div className="absolute -bottom-15 overflow-hidden w-full py-20">
+        {/* marquee track */}
+        <div className="flex w-max animate-marquee">
+          {/* original content block */}
+          <div className="flex justify-around gap-40 pr-40 text-8xl font-heading text-background italic">
+            <span>Thank you for visiting</span>
+            {/* <span className="text-background">
+              ポートフォリオをご覧いただき、ありがとうございます。
+            </span> */}
+          </div>
+          {/* duplicate content block */}
+          <div
+            aria-hidden="true"
+            className="flex justify-around gap-10 pr-10 text-9xl font-heading text-background italic"
+          >
+            <span>Thank you for visiting</span>
+            {/* <span className="text-background">
+              ポートフォリオをご覧いただき、ありがとうございます。
+            </span> */}
+          </div>
+        </div>
+      </div>
     </>
   );
 }
