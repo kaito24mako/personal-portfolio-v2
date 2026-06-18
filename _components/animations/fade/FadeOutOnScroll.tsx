@@ -7,9 +7,10 @@ type Props = {
   children: React.ReactNode;
   className?: string;
   sudden?: boolean;
+  ref?: React.Ref<HTMLDivElement>;
 };
 
-function FadeOutOnScroll({ children, className, sudden }: Props) {
+function FadeOutOnScroll({ children, className, sudden = false }: Props) {
   const ref = useRef<HTMLDivElement>(null);
 
   // ref targets the element to be animated

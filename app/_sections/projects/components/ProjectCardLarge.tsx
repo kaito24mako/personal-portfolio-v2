@@ -5,7 +5,6 @@ import Divider from "@/_components/common/divider/Divider";
 import Button from "@/_components/common/button/Button";
 import IconTextWrapper from "@/_components/common/wrapper/IconTextWrapper";
 import BounceX from "@/_components/animations/bounce/BounceX";
-import ParallaxImage from "@/_components/animations/parallax/ParallaxImage";
 
 import GithubIcon from "@/_components/common/icon/GithubIcon";
 import SiteIcon from "@/_components/common/icon/SiteIcon";
@@ -33,12 +32,6 @@ function ProjectCardLarge({
       className={`${grid} mockup-window flex flex-col h-full bg-surface rounded-md`}
     >
       <Image src={image} alt={title} quality={90} placeholder="blur" />
-      {/* <ParallaxImage
-        src={image}
-        alt={title}
-        className="aspect-video w-full shrink-0"
-        range={["-6%", "6%"]}
-      /> */}
 
       {/* content */}
       <div className="flex flex-col items-start text-start justify-between h-full gap-4 p-6">
