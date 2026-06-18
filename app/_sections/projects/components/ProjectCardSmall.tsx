@@ -1,14 +1,14 @@
 import { StaticImageData } from "next/image";
 
-import Badge from "../badge/Badge";
-import Button from "../button/Button";
-import IconTextWrapper from "../wrapper/IconTextWrapper";
+import Badge from "@/_components/common/badge/Badge";
+import Button from "@/_components/common/button/Button";
+import IconTextWrapper from "@/_components/common/wrapper/IconTextWrapper";
 import BounceX from "@/_components/animations/bounce/BounceX";
 import ParallaxImage from "@/_components/animations/parallax/ParallaxImage";
 
-import GithubIcon from "../svg/GithubIcon";
-import SiteIcon from "../svg/SiteIcon";
-import ArrowRightIcon from "../svg/ArrowRightIcon";
+import GithubIcon from "@/_components/common/icon/GithubIcon";
+import SiteIcon from "@/_components/common/icon/SiteIcon";
+import ArrowRightIcon from "@/_components/common/icon/ArrowRightIcon";
 
 type Props = {
   title: string;

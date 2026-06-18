@@ -5,7 +5,7 @@ import {
   staggerContainer,
   staggerItem,
 } from "@/_components/animations/fade/FadeInStaggered";
-import { MotionTechCard } from "@/_components/common/card/TechCard";
+import { MotionTechCard } from "@/app/_sections/about/components/TechCard";
 
 import DividerWithText from "@/_components/common/divider/DividerWithText";
 

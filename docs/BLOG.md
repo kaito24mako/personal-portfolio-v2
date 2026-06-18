@@ -60,4 +60,4 @@
 
 - used Cursor for implementation
 - could improve by having a vertical progress bar on the side of the entire section, so that when scrolling near the bottom the user will know which section they are on without having to scroll back up to see the progress bar
-- instead of using Motion, I used the IntersectionObserver API to add conditional rendering and styling based on when the projects section comes into view
+- instead of using Motion, I used the IntersectionObserver API to add conditional rendering and styling based on when the projects section comes into view https://dev.to/bcncodeschool/detecting-if-an-element-is-in-view-with-react-5b60

@@ -1,5 +1,5 @@
 import EdgeContainer from "@/_components/common/container/EdgeContainer";
-import SocialsList from "@/_components/features/list/SocialsList";
+import SocialsList from "@/_components/features/footer/SocialsList";
 
 function Footer() {
   return (

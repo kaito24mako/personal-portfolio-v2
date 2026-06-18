@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
 
-import ProjectCardLarge from "@/_components/common/card/ProjectCardLarge";
-import ProjectCardSmall from "@/_components/common/card/ProjectCardSmall";
+import ProjectCardLarge from "./components/ProjectCardLarge";
+import ProjectCardSmall from "./components/ProjectCardSmall";
 import SectionContainer from "@/_components/common/container/SectionContainer";
 import FadeOutOnScroll from "@/_components/animations/fade/FadeOutOnScroll";
 
