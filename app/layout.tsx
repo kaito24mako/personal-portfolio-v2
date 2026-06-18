@@ -3,7 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Noto_Sans_JP, Inter } from "next/font/google";
 
-import Footer from "@/_components/layout/Footer";
+import Footer from "@/_components/layout/FooterV2";
 import Navbar from "@/_components/layout/Navbar";
 
 const cormorant = Cormorant_Garamond({
@@ -39,7 +39,7 @@ function RootLayout({
       <body className="min-h-screen flex flex-col bg-background">
         <Navbar />
         <main className="flex-1">{children}</main>
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );
