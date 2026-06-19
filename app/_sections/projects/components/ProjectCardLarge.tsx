@@ -19,6 +19,11 @@ type Props = {
   grid: string;
 };
 
+// todo: image expands on hover
+// todo: click image to go to site
+// todo: ensure every card stretches fully
+// todo?: custom border around image
+
 function ProjectCardLarge({
   title,
   image,
@@ -29,12 +34,12 @@ function ProjectCardLarge({
 }: Props) {
   return (
     <div
-      className={`${grid} mockup-window flex flex-col h-full bg-surface rounded-md`}
+      className={`${grid} flex flex-col h-full bg-surface rounded-md overflow-hidden`}
     >
       <Image src={image} alt={title} quality={90} placeholder="blur" />
 
       {/* content */}
-      <div className="flex flex-col items-start text-start justify-between h-full gap-4 p-6">
+      <div className="flex flex-col items-start text-start justify-between h-full gap-4 p-8 pb-6">
         {/* top content */}
         <div className="flex flex-col gap-2">
           <h3 className="text-3xl md:text-4xl font-heading font-semibold">

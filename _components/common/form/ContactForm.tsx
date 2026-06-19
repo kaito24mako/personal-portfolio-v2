@@ -11,7 +11,7 @@ function ContactForm() {
         type="text"
         id="name"
         name="name"
-        className="border-b border-border/40 text-foreground-muted"
+        className="border-b border-border/40 text-foreground-muted focus:outline-hidden"
         placeholder="Fullname *"
         required
       />
@@ -20,7 +20,7 @@ function ContactForm() {
         type="email"
         id="email"
         name="email"
-        className="border-b border-border/40 text-foreground-muted"
+        className="border-b border-border/40 text-foreground-muted focus:outline-hidden"
         placeholder="Email *"
         required
       />
@@ -28,7 +28,7 @@ function ContactForm() {
       <textarea
         id="message"
         name="message"
-        className="border-b border-border/40 text-foreground-muted"
+        className="border-b border-border/40 text-foreground-muted focus:outline-hidden"
         placeholder="Message *"
         required
       />
