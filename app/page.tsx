@@ -37,7 +37,7 @@ function MainPage() {
         <AboutSection />
       </section>
 
-      <section id="projects" className="py-20 min-h-screen snap-start">
+      <section id="projects" className="min-h-screen snap-start pt-28 pb-25">
         <Heading className="text-center mb-8">Projects Showcase</Heading>
 
         <ProjectsScrollArea sectionLabels={["Featured", "2026", "2025"]}>

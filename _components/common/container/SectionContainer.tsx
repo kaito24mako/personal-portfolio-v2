@@ -6,7 +6,7 @@ type Props = {
 function SectionContainer({ children, className = "" }: Props) {
   return (
     <section
-      className={`flex flex-col gap-6 px-7 sm:px-25 md:px-40 xl:px-60 3xl:px-100 py-20 ${className}`}
+      className={`flex flex-col gap-6 px-7 sm:px-25 md:px-40 xl:px-60 3xl:px-100 pt-28 pb-20 ${className}`}
     >
       {children}
     </section>

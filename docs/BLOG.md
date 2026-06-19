@@ -72,3 +72,11 @@
 # code comments
 
 - customised Better Code Comments since I realised I needed a better system that suits my needs in regards to creating structured comments for explaining code
+
+# navbar
+
+- was coflicted about how the navbar should look and change according to scroll behaviour
+- first it was a full width navbar that was hidden when scrolling down, but visible when scrolling up
+- but was unintuitive and finecky, so got inspo from Motion's site which has a fixed navbar with a defined shape
+- so created a new navbar that stayed visible but doesnt take up too much space
+- and also changes background color depending on the scrollY position (done via React hooks)

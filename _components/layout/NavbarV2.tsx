@@ -11,13 +11,10 @@ function Navbar() {
   // * Change navbar's styling on scroll
   useEffect(() => {
     const threshold = 100;
-
     function handleScroll() {
       setScrolled(window.scrollY > threshold);
     }
-
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -25,9 +22,9 @@ function Navbar() {
 
   return (
     <nav
-      className={`fixed top-3 inset-x-0 z-50 mx-auto w-fit flex gap-10 justify-between items-center 
-        px-10 py-1 text-sm md:text-base text-background rounded-md transition-colors duration-500 
-        ${scrolled ? "bg-surface/95 text-foreground" : "bg-transparent"}`}
+      className={`fixed top-3 inset-x-0 z-50 mx-auto w-fit flex items-center gap-5 sm:gap-10
+        px-10 py-1 text-xs md:text-base text-background rounded-md transition-colors duration-500 
+        ${scrolled ? "bg-surface text-foreground shadow-md" : "bg-transparent"}`}
     >
       <Link href="#home">
         <Image
@@ -38,7 +35,7 @@ function Navbar() {
         ></Image>
       </Link>
 
-      <ul className="flex gap-5 md:gap-7 font-semibold font-heading text-lg">
+      <ul className="flex gap-5 md:gap-7 font-semibold font-heading text-base sm:text-lg">
         <li className="hover:text-accent">
           <Link href="#home">Home</Link>
         </li>
