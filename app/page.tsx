@@ -64,7 +64,10 @@ function MainPage() {
         <ContactSectionV2 />
       </section> */}
 
-      <section id="contact" className="relative min-h-screen snap-start">
+      <section
+        id="contact"
+        className="relative min-h-screen snap-start pt-0 md:pt-10"
+      >
         <ParallaxBackground image={ocean} alt="Ocean waves" />
         <ContactSection />
       </section>

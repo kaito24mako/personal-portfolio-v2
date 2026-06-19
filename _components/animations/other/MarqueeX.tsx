@@ -1,24 +1,55 @@
-function MarqueeX() {
+type Props = {
+  contents: string[];
+  color?: "primary" | "secondary" | "accent" | "muted" | "custom";
+  size?: "xl" | "lg" | "md" | "sm" | "custom";
+  italic?: boolean;
+  containerStyle?: string;
+  textStyle?: string;
+};
+
+function MarqueeX({
+  contents,
+  color = "custom",
+  size = "custom",
+  italic = false,
+  containerStyle,
+  textStyle,
+}: Props) {
+  const colorClasses = {
+    primary: "text-foreground",
+    secondary: "text-background",
+    accent: "text-accent",
+    muted: "text-border/60",
+    custom: "",
+  };
+
+  const sizeClasses = {
+    xl: "text-7xl md:text-8xl",
+    lg: "text-5xl md:text-6xl",
+    md: "text-3xl md:text-4xl",
+    sm: "text-xl md:text-2xl",
+    custom: "",
+  };
+
   return (
-    <div className="absolute bottom-0 overflow-hidden w-full py-20">
-      {/* marquee track */}
-      <div className="flex w-max animate-marquee">
-        {/* original content block */}
-        <div className="flex justify-around gap-40 pr-40 text-8xl font-heading text-background italic">
-          <span>Thank you for visiting</span>
-          {/* <span className="text-background">
-              ポートフォリオをご覧いただき、ありがとうございます。
-            </span> */}
+    <div className={`${containerStyle} overflow-hidden w-full`}>
+      <div
+        className={`${colorClasses[color]} ${italic && "italic"} flex w-max animate-marquee`}
+      >
+        <div
+          className={`${sizeClasses[size]} ${textStyle} flex justify-around gap-8 pr-8`}
+        >
+          {contents.map((content, index) => (
+            <p key={index}>{content}</p>
+          ))}
         </div>
-        {/* duplicate content block */}
         <div
           aria-hidden="true"
-          className="flex justify-around gap-40 pr-40 text-8xl font-heading text-background italic"
+          className={`${sizeClasses[size]} ${textStyle} flex justify-around gap-8 pr-8`}
         >
-          <span>Thank you for visiting</span>
-          {/* <span className="text-background">
-              ポートフォリオをご覧いただき、ありがとうございます。
-            </span> */}
+          {contents.map((content, index) => (
+            <p key={index}>{content}</p>
+          ))}
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ function ContactForm() {
   return (
     <form className="flex flex-col gap-10 bg-surface rounded-md p-15">
       <legend className="text-center text-accent font-semibold text-xl">
-        Send me a message!
+        Send me a message
       </legend>
 
       <input
@@ -12,7 +12,7 @@ function ContactForm() {
         id="name"
         name="name"
         className="border-b border-border/40 text-foreground-muted focus:outline-hidden"
-        placeholder="Fullname *"
+        placeholder="Full Name *"
         required
       />
 

@@ -36,14 +36,25 @@ function ContactSection() {
             <div className="flex mx-auto md:mx-0 gap-2 mt-2">
               <SocialsList />
             </div>
+            {/* <MarqueeX
+              contents={["連絡先", "連絡先"]}
+              size="md"
+              color="muted"
+              textStyle="font-japanese!"
+              containerStyle="py-10"
+            /> */}
           </FadeOutOnScroll>
         </div>
 
         <ContactForm />
       </SectionContainer>
 
-      {/* Marquee effect */}
-      <MarqueeX />
+      {/* <MarqueeX
+        contents={["Thank you for visiting...", "Hello I'm Kaito"]}
+        size="lg"
+        color="secondary"
+        containerStyle="absolute bottom-0"
+      /> */}
 
       <FooterV2 />
     </>
