@@ -3,11 +3,12 @@ import Image, { StaticImageData } from "next/image";
 import Badge from "@/_components/common/badge/Badge";
 import Button from "@/_components/common/button/Button";
 import IconTextWrapper from "@/_components/common/wrapper/IconTextWrapper";
-import BounceX from "@/_components/animations/bounce/BounceX";
-
 import GithubIcon from "@/_components/common/icon/GithubIcon";
 import SiteIcon from "@/_components/common/icon/SiteIcon";
 import ArrowRightIcon from "@/_components/common/icon/ArrowRightIcon";
+
+import BounceX from "@/_components/animations/bounce/BounceX";
+import FadeOutOnScroll from "@/_components/animations/fade/FadeOutOnScroll";
 
 type Props = {
   title: string;
@@ -19,7 +20,9 @@ type Props = {
 
 function ProjectCardSmall({ title, image, description, tech, grid }: Props) {
   return (
-    <div className={`${grid} bg-surface rounded-md overflow-hidden`}>
+    <FadeOutOnScroll
+      className={`${grid} bg-surface rounded-xs overflow-hidden`}
+    >
       <div className="relative">
         <Image src={image} alt={title} quality={90} placeholder="blur" />
 
@@ -91,7 +94,7 @@ function ProjectCardSmall({ title, image, description, tech, grid }: Props) {
           </div>
         </div>
       </div>
-    </div>
+    </FadeOutOnScroll>
   );
 }
 

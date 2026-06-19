@@ -1,17 +1,17 @@
 import Button from "../button/Button";
 
-function ContactForm() {
+function ContactFormBlurred() {
   return (
-    <form className="flex flex-col gap-10 bg-surface shadow-md rounded-xs p-15">
-      <legend className="text-center text-accent font-semibold text-xl">
-        Send a message!
+    <form className="flex flex-col gap-10 bg-transparent backdrop-blur-md border border-border/10 shadow-foreground-muted rounded-md p-15">
+      <legend className="text-center text-background font-semibold text-xl">
+        Send me a message
       </legend>
 
       <input
         type="text"
         id="name"
         name="name"
-        className="border-b border-border/40 text-foreground-muted focus:outline-hidden"
+        className="border-b border-border/40 text-border focus:outline-hidden"
         placeholder="Full Name *"
         required
       />
@@ -20,7 +20,7 @@ function ContactForm() {
         type="email"
         id="email"
         name="email"
-        className="border-b border-border/40 text-foreground-muted focus:outline-hidden"
+        className="border-b border-border/40 text-border focus:outline-hidden"
         placeholder="Email *"
         required
       />
@@ -28,7 +28,7 @@ function ContactForm() {
       <textarea
         id="message"
         name="message"
-        className="border-b border-border/40 text-foreground-muted focus:outline-hidden"
+        className="border-b border-border/40 text-border focus:outline-hidden"
         placeholder="Message *"
         required
       />
@@ -45,4 +45,4 @@ function ContactForm() {
   );
 }
 
-export default ContactForm;
+export default ContactFormBlurred;

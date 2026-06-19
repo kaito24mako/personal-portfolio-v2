@@ -1,15 +1,20 @@
-import EdgeContainer from "@/_components/common/container/EdgeContainer";
-import SocialsList from "@/_components/features/footer/SocialsList";
+import Link from "next/link";
 
 function Footer() {
   return (
-    <EdgeContainer className="grid grid-cols-2 lg:grid-cols-3 bg-surface/20">
-      <span className="hidden lg:block" />
-      <p className="text-sm sm:text-base text-center">© 2026 Kaito Watanabe</p>
-      <ul className="flex justify-end gap-3">
-        <SocialsList />
-      </ul>
-    </EdgeContainer>
+    <div className="absolute bottom-0 flex justify-between w-full py-3 bg-surface text-xs sm:text-sm text-foreground-muted px-7 sm:px-25 md:px-40 xl:px-60 3xl:px-100">
+      <p className="text-center">2026 © Kaito Watanabe</p>
+      <p>
+        Made with{" "}
+        <Link
+          href="https://nextjs.org/"
+          className="text-accent"
+          aria-label="Next.js site"
+        >
+          Next.js
+        </Link>
+      </p>
+    </div>
   );
 }
 

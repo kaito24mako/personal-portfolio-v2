@@ -23,7 +23,7 @@ function Navbar() {
   return (
     <nav
       className={`fixed top-3 inset-x-0 z-50 mx-auto w-fit flex items-center gap-5 sm:gap-10
-        px-10 py-1 text-xs md:text-base text-background rounded-md transition-colors duration-500 
+        px-10 py-1 text-xs md:text-base text-background rounded-sm transition-colors duration-500 
         ${scrolled ? "bg-surface text-foreground shadow-md" : "bg-transparent"}`}
     >
       <Link href="#home">

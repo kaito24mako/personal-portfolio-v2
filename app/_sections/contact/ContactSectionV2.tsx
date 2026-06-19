@@ -5,7 +5,7 @@ import FadeOutOnScroll from "@/_components/animations/fade/FadeOutOnScroll";
 import ContactForm from "@/_components/common/form/ContactForm";
 import SocialsList from "@/_components/features/footer/SocialsList";
 import Divider from "@/_components/common/divider/Divider";
-import FooterV2 from "@/_components/layout/FooterV2";
+import FooterV2 from "@/_components/layout/Footer";
 import MarqueeX from "@/_components/animations/other/MarqueeX";
 
 function ContactSection() {

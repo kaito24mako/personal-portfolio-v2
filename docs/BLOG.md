@@ -57,6 +57,9 @@
 
 - worked on providing depth and a variety of typography (like opacity, font size, color) to emphasize certain elements - my v1 portfolio was very static and samey
 - used https://uicolors.app/generate/d8565f to generate brand color pallete - used tailwind classes for other colors
+- struggled to find a consistent theme for the website, while keeping pages/sections dynamic and distinct from one another
+- theme is a sharp (sharp border radiuses), japanese aesthetic, while distinction comes from color and unique layout of elements
+- is it best to keep pages consistent for clarity and coherence? how much should design be distinct within a site? these are questions I tackled with a lot
 
 # snap scrolling
 

@@ -1,7 +1,7 @@
 type Props = {
   contents: string[];
   color?: "primary" | "secondary" | "accent" | "muted" | "custom";
-  size?: "xl" | "lg" | "md" | "sm" | "custom";
+  size?: "xl" | "lg" | "md" | "sm" | "xs" | "custom";
   italic?: boolean;
   containerStyle?: string;
   textStyle?: string;
@@ -28,6 +28,7 @@ function MarqueeX({
     lg: "text-5xl md:text-6xl",
     md: "text-3xl md:text-4xl",
     sm: "text-xl md:text-2xl",
+    xs: "text-base md:text-lg",
     custom: "",
   };
 

@@ -1,62 +1,84 @@
+import Link from "next/link";
+
 import SectionContainer from "@/_components/common/container/SectionContainer";
 import Heading from "@/_components/common/text/Heading";
-
-import FadeOutOnScroll from "@/_components/animations/fade/FadeOutOnScroll";
 import ContactForm from "@/_components/common/form/ContactForm";
 import SocialsList from "@/_components/features/footer/SocialsList";
-import Divider from "@/_components/common/divider/Divider";
-import FooterV2 from "@/_components/layout/FooterV2";
+import Footer from "@/_components/layout/Footer";
+import GroupHeading from "@/_components/common/text/GroupHeading";
+
+import FadeOutOnScroll from "@/_components/animations/fade/FadeOutOnScroll";
 import MarqueeX from "@/_components/animations/other/MarqueeX";
+
+// ? Don't need fadeout animation for elements, since it can affect performance?
 
 function ContactSection() {
   return (
     <>
-      <SectionContainer className="text-background grid grid-cols-1 md:grid-cols-2 gap-10 h-full">
-        <div className="flex flex-col text-center md:text-left gap-5 h-full">
+      <SectionContainer className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-15 h-full text-background">
+        <div className="flex flex-col gap-5 text-center lg:text-left">
           <FadeOutOnScroll>
             <Heading className="font-semibold" color="secondary" size="md">
               Get in touch
             </Heading>
           </FadeOutOnScroll>
 
-          <FadeOutOnScroll className="flex flex-col gap-2 mb-3">
+          <FadeOutOnScroll className="flex flex-col gap-2">
             <p>
               I am always looking for new opportunities to collaborate on
               projects and work on building beautiful applications.
             </p>
             <p>
               Contact me via email or social media, and I will respond as soon
-              as possible!
+              as possible.
             </p>
           </FadeOutOnScroll>
 
-          <FadeOutOnScroll className="flex flex-col text-center md:text-left gap-0.5">
-            <h3 className="font-semibold">Social Network</h3>
-            <Divider opacity="low" />
-            <div className="flex mx-auto md:mx-0 gap-2 mt-2">
-              <SocialsList />
-            </div>
-            {/* <MarqueeX
-              contents={["連絡先", "連絡先"]}
-              size="md"
+          <FadeOutOnScroll>
+            <MarqueeX
+              contents={[
+                "Living in Melbourne, Australia",
+                "Living in Melbourne, Australia",
+              ]}
+              size="sm"
               color="muted"
-              textStyle="font-japanese!"
-              containerStyle="py-10"
-            /> */}
+              textStyle="font-heading"
+              italic
+            />
+          </FadeOutOnScroll>
+
+          <FadeOutOnScroll className="flex flex-col gap-7 text-center lg:text-left">
+            {/* <div className="flex flex-col gap-0.5">
+              <h2 className="font-semibold">Location</h2>
+              <Divider opacity="low" />
+              <div className="flex mx-auto lg:mx-0 gap-4 mt-1">
+                <p>
+                  Australia, Victoria
+                  <br />
+                  Melbourne 3006
+                </p>
+              </div>
+            </div> */}
+
+            <GroupHeading heading="Email">
+              <Link
+                href="mailto:kaitowatanabemcc@gmail.com"
+                className="link link-hover"
+              >
+                kaitowatanabemcc@gmail.com
+              </Link>
+            </GroupHeading>
+
+            <GroupHeading heading="Social Network">
+              <SocialsList />
+            </GroupHeading>
           </FadeOutOnScroll>
         </div>
 
         <ContactForm />
       </SectionContainer>
 
-      {/* <MarqueeX
-        contents={["Thank you for visiting...", "Hello I'm Kaito"]}
-        size="lg"
-        color="secondary"
-        containerStyle="absolute bottom-0"
-      /> */}
-
-      <FooterV2 />
+      <Footer />
     </>
   );
 }
