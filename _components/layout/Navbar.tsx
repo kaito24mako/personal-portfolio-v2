@@ -1,6 +1,5 @@
 "use client";
 
-import { motion, useScroll, useMotionValueEvent } from "motion/react";
 import { useState, useEffect } from "react";
 
 import Image from "next/image";
@@ -8,57 +7,35 @@ import Link from "next/link";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const [hidden, setHidden] = useState(false);
-
-  const { scrollY } = useScroll();
 
   // * Change navbar's styling on scroll
   useEffect(() => {
     const threshold = 100;
-
     function handleScroll() {
       setScrolled(window.scrollY > threshold);
     }
-
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  // * Hide navbar when past a scroll threshold
-  useMotionValueEvent(scrollY, "change", (current) => {
-    const previous = scrollY.getPrevious() ?? 0;
-    const threshold = 150;
-
-    if (current > previous && current > threshold) {
-      setHidden(true);
-    } else {
-      setHidden(false);
-    }
-  });
-
   return (
-    <motion.nav
-      className={`flex justify-between items-center fixed top-0 left-0 w-full z-50 py-1 px-7 sm:px-25 md:px-40 xl:px-60 3xl:px-100 text-sm md:text-base text-background transition-colors duration-500 
-        ${scrolled ? "bg-foreground-muted shadow-md" : "bg-transparent"} 
-        ${hidden ? "pointer-events-none" : "pointer-events-auto"}`}
-      animate={{
-        y: hidden ? -20 : 0,
-        opacity: hidden ? 0 : 1,
-      }}
+    <nav
+      className={`fixed top-3 inset-x-0 z-50 mx-auto w-fit flex items-center gap-5 sm:gap-10
+        px-10 py-1 text-xs md:text-base text-background rounded-md transition-colors duration-500 
+        ${scrolled ? "bg-surface text-foreground shadow-md" : "bg-transparent"}`}
     >
       <Link href="#home">
         <Image
           src="/icon/logo.png"
           alt="Logo of Kaito Watanabe"
-          width={70}
-          height={70}
+          width={55}
+          height={55}
         ></Image>
       </Link>
 
-      <ul className="flex gap-5 sm:gap-8 font-semibold font-heading text-lg">
+      <ul className="flex gap-5 md:gap-7 font-semibold font-heading text-base sm:text-lg">
         <li className="hover:text-accent">
           <Link href="#home">Home</Link>
         </li>
@@ -72,8 +49,22 @@ function Navbar() {
           <Link href="#contact">Contact</Link>
         </li>
       </ul>
-    </motion.nav>
+    </nav>
   );
 }
 
 export default Navbar;
+
+// * Hide navbar when past a scroll threshold (using Motion)
+//#  const [hidden, setHidden] = useState(false);
+//#  const { scrollY } = useScroll();
+//# useMotionValueEvent(scrollY, "change", (current) => {
+//   const previous = scrollY.getPrevious() ?? 0;
+//   const threshold = 150;
+//   if (current > previous && current > threshold) {
+//     setHidden(true);
+//   } else {
+//     setHidden(false);
+//   }
+// });
+//# <nav animate={{y: hidden ? -20 : 0, opacity: hidden ? 0 : 1 }}></nav>
