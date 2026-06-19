@@ -9,7 +9,9 @@ function AboutSection() {
   return (
     <SectionContainer className="text-center">
       <FadeOutOnScroll className="flex flex-col gap-4">
-        <Heading>A little about me</Heading>
+        <Heading className="font-semibold" color="secondary" size="md">
+          A little about me
+        </Heading>
 
         <p className="text-background text-base md:text-lg">
           Welcome to my portfolio! I&apos;m Kaito and I have been studying web

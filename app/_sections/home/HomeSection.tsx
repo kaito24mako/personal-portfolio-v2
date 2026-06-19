@@ -6,13 +6,16 @@ import FadeInX from "@/_components/animations/fade/FadeInX";
 import FadeOutOnScroll from "@/_components/animations/fade/FadeOutOnScroll";
 
 import arrow from "@/public/arrow.png";
+import Heading from "@/_components/common/text/Heading";
 
 function HomeSection() {
   return (
     <SectionContainer className="flex flex-col min-h-screen pt-80 text-center text-background">
       <FadeOutOnScroll className="flex flex-col">
         <FadeInX position={60} duration={1.4}>
-          <h1 className="font-heading text-6xl md:text-8xl">I&apos;m Kaito</h1>
+          <Heading className="font-heading" size="xl">
+            I&apos;m Kaito
+          </Heading>
         </FadeInX>
 
         <FadeInX position={80} duration={1.3} delay={0.1}>

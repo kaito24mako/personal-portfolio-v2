@@ -1,28 +1,46 @@
+import Button from "../button/Button";
+
 function ContactForm() {
   return (
-    <form className="border bg-border border-surface rounded-md w-md p-6">
-      <legend className="text-center text-accent font-semibold">
-        Email me
+    <form className="flex flex-col gap-10 bg-surface rounded-md p-15">
+      <legend className="text-center text-accent font-semibold text-xl">
+        Send me a message!
       </legend>
 
-      <label className="label">Username</label>
       <input
         type="text"
-        className="input"
-        placeholder="username"
-        name="username"
+        id="name"
+        name="name"
+        className="border-b border-border/40 text-foreground-muted"
+        placeholder="Fullname *"
+        required
       />
 
-      <label className="label">Password</label>
       <input
-        type="password"
-        className="input"
-        placeholder="password"
-        name="password"
-        autoComplete="current-password"
+        type="email"
+        id="email"
+        name="email"
+        className="border-b border-border/40 text-foreground-muted"
+        placeholder="Email *"
+        required
       />
 
-      <button className="btn btn-neutral mt-4">Login</button>
+      <textarea
+        id="message"
+        name="message"
+        className="border-b border-border/40 text-foreground-muted"
+        placeholder="Message *"
+        required
+      />
+
+      <Button
+        type="submit"
+        size="small"
+        ariaLabel="Submit"
+        className="text-foreground bg-border/40 hover:bg-border/90!"
+      >
+        Submit
+      </Button>
     </form>
   );
 }
