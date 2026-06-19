@@ -23,7 +23,7 @@ function ContactSection() {
             </Heading>
           </FadeOutOnScroll>
 
-          <FadeOutOnScroll className="flex flex-col gap-2">
+          <FadeOutOnScroll className="flex flex-col gap-2 text-border">
             <p>
               I am always looking for new opportunities to collaborate on
               projects and work on building beautiful applications.

@@ -2,7 +2,7 @@ import Button from "../button/Button";
 
 function ContactForm() {
   return (
-    <form className="flex flex-col gap-10 bg-surface shadow-md rounded-xs p-15">
+    <form className="flex flex-col gap-10 bg-surface shadow-sm rounded-xs p-15">
       <legend className="text-center text-accent font-semibold text-xl">
         Send a message!
       </legend>

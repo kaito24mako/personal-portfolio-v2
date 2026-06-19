@@ -25,9 +25,9 @@ function HomeSection() {
         </FadeInX>
       </FadeOutOnScroll>
 
-      <BounceY position={10} className="flex justify-center mt-auto">
+      {/* <BounceY position={10} className="flex justify-center mt-auto">
         <Image src={arrow} alt="Arrow pointing down" width={230} height={230} />
-      </BounceY>
+      </BounceY> */}
     </SectionContainer>
   );
 }
