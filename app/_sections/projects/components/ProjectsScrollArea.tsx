@@ -4,7 +4,6 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { motion, useMotionValue } from "motion/react";
 
 import Button from "@/_components/common/button/Button";
-import FadeOutOnScroll from "@/_components/animations/fade/FadeOutOnScroll";
 
 type Props = {
   children: React.ReactNode;
@@ -92,7 +91,7 @@ function ProjectsScrollAreaV1({ children, sectionLabels }: Props) {
 
   return (
     <div className="flex flex-col">
-      <FadeOutOnScroll className="mb-4 px-7 sm:px-25 md:px-40 xl:px-60 3xl:px-100">
+      <div className="mb-4 px-7 sm:px-25 md:px-40 xl:px-60 3xl:px-100">
         <div className="mx-auto flex flex-col max-w-2xl gap-1">
           {/* progress bar labels */}
           <div className="flex">
@@ -111,6 +110,7 @@ function ProjectsScrollAreaV1({ children, sectionLabels }: Props) {
               </Button>
             ))}
           </div>
+
           {/* scroll bar */}
           <div className="flex gap-4">
             {sectionLabels.map((label, index) => (
@@ -123,13 +123,16 @@ function ProjectsScrollAreaV1({ children, sectionLabels }: Props) {
             ))}
           </div>
         </div>
-      </FadeOutOnScroll>
+      </div>
 
       {/* parent container for projects with ref for scrolling logic */}
       <div
         ref={scrollRef}
         className="flex snap-x snap-mandatory overflow-x-auto scrollbar-none"
       >
+        <div>
+          <p>this is</p>
+        </div>
         {children}
       </div>
     </div>

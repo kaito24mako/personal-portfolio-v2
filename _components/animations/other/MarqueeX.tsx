@@ -16,7 +16,7 @@ function MarqueeX({
   textStyle,
 }: Props) {
   const colorClasses = {
-    primary: "text-foreground",
+    primary: "text-foreground-muted",
     secondary: "text-background",
     accent: "text-accent",
     muted: "text-border/60",
