@@ -9,6 +9,7 @@ import GroupHeading from "@/_components/common/text/GroupHeading";
 
 import FadeOutOnScroll from "@/_components/animations/fade/FadeOutOnScroll";
 import MarqueeX from "@/_components/animations/other/MarqueeX";
+import Shine from "@/_components/animations/other/Shine";
 
 // ? Don't need fadeout animation for elements, since it can affect performance?
 
@@ -19,7 +20,7 @@ function ContactSection() {
         <div className="flex flex-col gap-5 text-center lg:text-left">
           <FadeOutOnScroll>
             <Heading className="font-semibold" color="secondary" size="md">
-              Get in touch
+              <Shine>Get in touch</Shine>
             </Heading>
           </FadeOutOnScroll>
 
@@ -39,6 +40,8 @@ function ContactSection() {
               contents={[
                 "Living in Melbourne, Australia",
                 "Living in Melbourne, Australia",
+                // "Living in Melbourne, Australia",
+                // "Living in Melbourne, Australia",
               ]}
               size="sm"
               color="muted"

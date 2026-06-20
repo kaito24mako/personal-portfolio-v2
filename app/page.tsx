@@ -9,7 +9,6 @@ import ProjectsSection from "@/app/_sections/projects/ProjectsSection";
 import ProjectsScrollArea from "@/app/_sections/projects/components/ProjectsScrollArea";
 import AboutSection from "@/app/_sections/about/AboutSection";
 import ContactSection from "./_sections/contact/ContactSection";
-import ContactSectionV2 from "./_sections/contact/ContactSectionV2";
 
 import ParallaxBackground from "@/_components/animations/parallax/ParallaxBackground";
 import Heading from "@/_components/common/text/Heading";
@@ -17,6 +16,7 @@ import Heading from "@/_components/common/text/Heading";
 import mountains from "@/public/bg/mountains.png";
 import land from "@/public/bg/land.png";
 import ocean from "@/public/bg/ocean.png";
+import Shine from "@/_components/animations/other/Shine";
 
 function MainPage() {
   return (
@@ -39,7 +39,9 @@ function MainPage() {
 
       <section id="projects" className="min-h-screen snap-start pt-33 pb-25">
         <Heading className="text-center mb-8" color="accent" size="lg">
-          Projects showcase
+          <Shine firstColor="border/80%" secondColor="accent">
+            Projects showcase
+          </Shine>
         </Heading>
 
         <ProjectsScrollArea sectionLabels={["Featured", "2026", "2025"]}>
@@ -59,10 +61,6 @@ function MainPage() {
           />
         </ProjectsScrollArea>
       </section>
-
-      {/* <section id="contact" className="h-screen snap-start">
-        <ContactSectionV2 />
-      </section> */}
 
       <section
         id="contact"

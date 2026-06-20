@@ -10,6 +10,8 @@ type Project = {
   image: StaticImageData;
   description?: string;
   tech?: string[];
+  githubUrl?: string;
+  siteUrl?: string;
   growth?: string;
   grid: string;
 };
@@ -38,6 +40,8 @@ function ProjectsSection({ sectionLabel, gridTemplate, projects }: Props) {
               image={project.image}
               description={project.description}
               tech={project.tech ?? project.tech}
+              githubUrl={project.githubUrl}
+              siteUrl={project.siteUrl}
               growth={project.growth}
               grid={project.grid}
             />
@@ -48,6 +52,8 @@ function ProjectsSection({ sectionLabel, gridTemplate, projects }: Props) {
               image={project.image}
               description={project.description}
               tech={project.tech}
+              githubUrl={project.githubUrl}
+              siteUrl={project.siteUrl}
               grid={project.grid}
             />
           ),

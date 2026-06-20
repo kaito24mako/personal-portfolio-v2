@@ -16,6 +16,8 @@ type Props = {
   image: StaticImageData;
   description?: string;
   tech?: string[];
+  githubUrl?: string;
+  siteUrl?: string;
   growth: string;
   grid: string;
 };
@@ -31,6 +33,8 @@ function ProjectCardLarge({
   image,
   description,
   tech,
+  githubUrl,
+  siteUrl,
   growth,
   grid,
 }: Props) {
@@ -91,7 +95,7 @@ function ProjectCardLarge({
               <Button
                 size="small"
                 color="accent"
-                href="https://nextjs.org/docs/app/api-reference/components/image"
+                href={githubUrl}
                 ariaLabel="View code on GitHub"
                 toNewTab
               >
@@ -104,7 +108,7 @@ function ProjectCardLarge({
               <Button
                 size="small"
                 color="accent"
-                href="https://nextjs.org/docs/app/api-reference/components/image"
+                href={siteUrl}
                 ariaLabel="View live site"
                 toNewTab
               >

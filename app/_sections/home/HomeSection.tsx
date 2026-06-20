@@ -7,6 +7,7 @@ import FadeOutOnScroll from "@/_components/animations/fade/FadeOutOnScroll";
 
 import arrow from "@/public/arrow.png";
 import Heading from "@/_components/common/text/Heading";
+import Shine from "@/_components/animations/other/Shine";
 
 function HomeSection() {
   return (
@@ -19,9 +20,13 @@ function HomeSection() {
         </FadeInX>
 
         <FadeInX position={80} duration={1.3} delay={0.1}>
-          <h2 className="font-heading text-2xl md:text-4xl opacity-60">
+          <Shine
+            className="font-heading text-2xl md:text-4xl opacity-60"
+            firstColor="border"
+            secondColor="border/70%"
+          >
             With passion in web development
-          </h2>
+          </Shine>
         </FadeInX>
       </FadeOutOnScroll>
 

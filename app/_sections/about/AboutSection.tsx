@@ -4,13 +4,14 @@ import SectionContainer from "@/_components/common/container/SectionContainer";
 import TechSegment from "./components/TechSegment";
 import FadeOutOnScroll from "@/_components/animations/fade/FadeOutOnScroll";
 import Heading from "@/_components/common/text/Heading";
+import Shine from "@/_components/animations/other/Shine";
 
 function AboutSection() {
   return (
     <SectionContainer className="text-center">
       <FadeOutOnScroll className="flex flex-col gap-4">
         <Heading className="font-semibold" color="secondary" size="md">
-          A little about me
+          <Shine>A little about me</Shine>
         </Heading>
 
         <p className="text-border text-base md:text-lg">
