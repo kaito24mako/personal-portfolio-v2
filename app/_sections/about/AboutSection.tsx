@@ -11,7 +11,9 @@ function AboutSection() {
     <SectionContainer className="text-center">
       <FadeOutOnScroll className="flex flex-col gap-4">
         <Heading className="font-semibold" color="secondary" size="md">
-          <Shine>A little about me</Shine>
+          <Shine firstColor="background" secondColor="foreground-muted/60%">
+            A little about me
+          </Shine>
         </Heading>
 
         <p className="text-border text-base md:text-lg">

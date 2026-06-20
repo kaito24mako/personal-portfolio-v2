@@ -7,6 +7,7 @@ function SocialsList() {
         href="https://github.com/kaito24mako"
         target="_blank"
         aria-label="link to Kaito Watanabe's GitHub page"
+        className="hover:text-accent-dark"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -26,6 +27,7 @@ function SocialsList() {
         href="https://facebook.com/"
         target="_blank"
         aria-label="link to Kaito Watanabe's Facebook page"
+        className="hover:text-accent-dark"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -47,6 +49,7 @@ function SocialsList() {
         href="https://instagram.com/"
         target="_blank"
         aria-label="link to Kaito Watanabe's Instagram page"
+        className="hover:text-accent-dark"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -20,7 +20,9 @@ function ContactSection() {
         <div className="flex flex-col gap-5 text-center lg:text-left">
           <FadeOutOnScroll>
             <Heading className="font-semibold" color="secondary" size="md">
-              <Shine>Get in touch</Shine>
+              <Shine firstColor="background" secondColor="foreground-muted/60%">
+                Get in touch
+              </Shine>
             </Heading>
           </FadeOutOnScroll>
 
@@ -66,7 +68,7 @@ function ContactSection() {
             <GroupHeading heading="Email">
               <Link
                 href="mailto:kaitowatanabemcc@gmail.com"
-                className="link link-hover"
+                className="hover:text-accent-dark"
               >
                 kaitowatanabemcc@gmail.com
               </Link>

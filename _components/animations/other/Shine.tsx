@@ -1,25 +1,44 @@
-import React from "react";
+// Color props use theme token names (eg. "accent", "foreground-muted", "border/70%")
 
-// * Notes on component:
-// Color props are the native CSS value of a color, not the tailwind class (eg. "accent", not "text-accent")
+// Recommended color props:
+// - black to white/silver
 
 type Props = {
   children: React.ReactNode;
   className?: string;
-  firstColor: string;
-  secondColor: string;
+  firstColor?: string;
+  secondColor?: string;
 };
 
-function Shine({ children, className, firstColor, secondColor }: Props) {
+function themeColor(token: string): string {
+  const slashIndex = token.indexOf("/");
+
+  if (slashIndex === -1) {
+    return `var(--color-${token})`;
+  }
+
+  const name = token.slice(0, slashIndex);
+  const opacity = token.slice(slashIndex + 1);
+
+  return `color-mix(in oklab, var(--color-${name}) ${opacity}, transparent)`;
+}
+
+function Shine({
+  children,
+  className = "",
+  firstColor = "foreground-muted",
+  secondColor = "foreground/85%",
+}: Props) {
   return (
-    <h3
-      className={`${className} animate-shine tracking-tight bg-clip-text! text-transparent [background:radial-gradient(circle_at_center,theme(colors.${secondColor}),transparent)_-200%_50%_/_200%_100%_no-repeat,theme(colors.${firstColor})]`}
+    <p
+      className={`${className} animate-shine tracking-tight bg-clip-text! text-transparent`}
+      style={{
+        background: `radial-gradient(circle at center, ${themeColor(secondColor)}, transparent) -200% 50% / 200% 100% no-repeat, ${themeColor(firstColor)}`,
+      }}
     >
       {children}
-    </h3>
+    </p>
   );
 }
 
 export default Shine;
-
-// border/80%
