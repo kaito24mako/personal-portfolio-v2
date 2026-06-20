@@ -30,14 +30,14 @@ function Shine({
   secondColor = "foreground/85%",
 }: Props) {
   return (
-    <p
+    <span
       className={`${className} animate-shine tracking-tight bg-clip-text! text-transparent`}
       style={{
         background: `radial-gradient(circle at center, ${themeColor(secondColor)}, transparent) -200% 50% / 200% 100% no-repeat, ${themeColor(firstColor)}`,
       }}
     >
       {children}
-    </p>
+    </span>
   );
 }
 

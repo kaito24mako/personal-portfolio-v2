@@ -9,40 +9,64 @@ import ArrowRightIcon from "@/_components/common/icon/ArrowRightIcon";
 
 import BounceX from "@/_components/animations/bounce/BounceX";
 import FadeOutOnScroll from "@/_components/animations/fade/FadeOutOnScroll";
+import Shine from "@/_components/animations/other/Shine";
 
 type Props = {
   title: string;
   image: StaticImageData;
   description?: string;
   tech?: string[];
+  githubUrl?: string;
+  siteUrl?: string;
   grid: string;
 };
 
-function ProjectCardSmall({ title, image, description, tech, grid }: Props) {
+function ProjectCardSmall({
+  title,
+  image,
+  description,
+  tech,
+  githubUrl,
+  siteUrl,
+  grid,
+}: Props) {
   return (
     <FadeOutOnScroll
-      className={`${grid} bg-surface rounded-xs overflow-hidden`}
+      className={`${grid} h-full bg-surface rounded-xs overflow-hidden`}
     >
-      <div className="relative">
-        <Image src={image} alt={title} quality={90} placeholder="blur" />
+      <div className="relative h-full">
+        <Image
+          src={image}
+          alt={title}
+          quality={90}
+          placeholder="blur"
+          fill
+          className="object-cover"
+        />
 
         {/* image overlay */}
         <div className="absolute bg-black/60 inset-0 z-10" />
 
         {/* content */}
-        <div className="absolute inset-0 z-20 flex flex-col items-start justify-between text-start gap-1 px-6 py-5">
+        <div className="absolute inset-0 z-20 flex flex-col items-start justify-between text-start gap-1 p-8 pb-6">
           {/* top content */}
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-2">
             <h3 className="text-3xl md:text-4xl font-heading font-semibold">
               {title}
             </h3>
 
-            <p className="text-xs md:text-sm opacity-80 mb-1">{description}</p>
+            <p className="text-sm opacity-80 mb-1">{description}</p>
 
             <div className="flex gap-2">
               {tech?.map((t) => (
-                <Badge size="small" key={t}>
-                  {t}
+                <Badge
+                  size="small"
+                  textColor="foreground"
+                  bgColor="surface"
+                  italic
+                  key={t}
+                >
+                  <Shine>{t}</Shine>
                 </Badge>
               ))}
             </div>
@@ -68,7 +92,7 @@ function ProjectCardSmall({ title, image, description, tech, grid }: Props) {
               <Button
                 size="small"
                 color="accent"
-                href="https://nextjs.org/docs/app/api-reference/components/image"
+                href={githubUrl}
                 ariaLabel="View code on GitHub"
                 toNewTab
               >
@@ -81,7 +105,7 @@ function ProjectCardSmall({ title, image, description, tech, grid }: Props) {
               <Button
                 size="small"
                 color="accent"
-                href="https://nextjs.org/docs/app/api-reference/components/image"
+                href={siteUrl}
                 ariaLabel="View live site"
                 toNewTab
               >

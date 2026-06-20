@@ -37,7 +37,7 @@ function MainPage() {
       </section>
 
       <section id="projects" className="min-h-screen snap-start pt-33 pb-25">
-        <Heading className="text-center mb-8" color="accent" size="lg">
+        <Heading className="text-center mb-8" color="accent" size="md">
           Projects showcase
         </Heading>
 

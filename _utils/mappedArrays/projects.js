@@ -32,7 +32,7 @@ export const projectsFeatured = [
     image: bookCollection,
     description:
       "OOP programming with JavaScript to create and store books for tracking purposes.",
-    tech: ["JavaScript", "CSS", "HTML"],
+    // tech: ["JavaScript", "CSS", "HTML"],
     githubUrl: "https://github.com/kaito24mako/Book-Library",
     siteUrl: "https://kaito24mako.github.io/Book-Library/",
     grid: "row-span-1",
@@ -46,14 +46,16 @@ export const projectsFeatured = [
     githubUrl: "https://github.com/kaito24mako/react-pokemon-app",
     siteUrl: "https://pokemon-app-five-murex.vercel.app/",
     growth:
-      '"My first project utilising React.js, and the first from my diploma of IT course. Implemented core React principles such as re-usable components and hooks."',
+      '"My first project utilising React.js, and the first from my Diploma of IT course. Implemented core React principles such as re-usable components and hooks."',
     grid: "row-span-2",
   },
   {
     title: "Last Man Standing",
     image: lastManStanding,
     description: "User vs CPU-based game of rock, paper, scissors.",
-    tech: ["JavaScript", "CSS", "HTML"],
+    // tech: ["JavaScript", "CSS", "HTML"],
+    githubUrl: "https://github.com/kaito24mako/Last-Man-Standing",
+    siteUrl: "https://kaito24mako.github.io/Last-Man-Standing/",
     grid: "row-span-1",
   },
 ];
@@ -93,10 +95,9 @@ export const projects2026 = [
     grid: "row-span-2",
   },
   {
-    title: "Personal Portfolio V1",
+    title: "Working in progress...",
     image: portfolioV1,
     description: "My first portfolio site made with React and SCSS.",
-    tech: ["React", "SCSS"],
     githubUrl: "https://github.com/kaito24mako/uxdd-personal-portfolio",
     siteUrl: "https://personal-portfolio-cyan-seven-25.vercel.app/",
     grid: "row-span-1",
@@ -120,10 +121,9 @@ export const projects2025 = [
     title: "Last Man Standing",
     image: lastManStanding,
     description: "User vs CPU-based game of rock, paper, scissors.",
-    tech: ["JavaScript", "CSS", "HTML"],
+    // tech: ["JavaScript", "CSS", "HTML"],
     githubUrl: "https://github.com/kaito24mako/Last-Man-Standing",
     siteUrl: "https://kaito24mako.github.io/Last-Man-Standing/",
-    // tech: ["JavaScript", "CSS", "HTML"],
     // growth:
     //   '"My first major project that incorporates JavaScript alongside a front-end UI. Implementing the logic and a fun yet clear UI to provide feedback was a steep learning curve."',
     grid: "row-span-1",
@@ -144,7 +144,7 @@ export const projects2025 = [
     image: etchASketch,
     description:
       "Customisable drawing with a variety of colours and grid sizes.",
-    tech: ["JavaScript", "CSS", "HTML"],
+    // tech: ["JavaScript", "CSS", "HTML"],
     githubUrl: "https://github.com/kaito24mako/Etch-A-Sketch",
     siteUrl: "https://kaito24mako.github.io/Etch-A-Sketch/",
     grid: "row-span-1",

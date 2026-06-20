@@ -10,6 +10,7 @@ import ArrowRightIcon from "@/_components/common/icon/ArrowRightIcon";
 
 import BounceX from "@/_components/animations/bounce/BounceX";
 import FadeOutOnScroll from "@/_components/animations/fade/FadeOutOnScroll";
+import Shine from "@/_components/animations/other/Shine";
 
 type Props = {
   title: string;
@@ -24,7 +25,6 @@ type Props = {
 
 // todo: image expands on hover
 // todo: click image to go to site
-// todo: ensure every card stretches fully
 // todo: fade out for every element in projects section
 // todo?: custom border around image
 
@@ -57,15 +57,21 @@ function ProjectCardLarge({
 
           <div className="flex gap-2">
             {tech?.map((t) => (
-              <Badge size="small" key={t}>
-                {t}
+              <Badge
+                size="small"
+                textColor="foreground"
+                bgColor="surface"
+                italic
+                key={t}
+              >
+                <Shine>{t}</Shine>
               </Badge>
             ))}
           </div>
         </div>
 
         {/* middle divider */}
-        <Divider className="mx-auto w-[95%]" />
+        <Divider className="mx-auto w-[95%] mt-1" />
 
         {/* bottom content */}
         <div className="flex flex-col justify-between h-full">

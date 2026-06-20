@@ -20,7 +20,7 @@ function Heading({
 
   const sizeClasses = {
     xl: "text-7xl md:text-8xl",
-    lg: "text-6xl md:text-7xl",
+    lg: "text-5xl md:text-7xl",
     md: "text-5xl md:text-6xl",
     sm: "text-4xl md:text-5xl",
     custom: "",

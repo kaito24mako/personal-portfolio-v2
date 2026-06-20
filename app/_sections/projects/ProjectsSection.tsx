@@ -3,7 +3,7 @@ import { StaticImageData } from "next/image";
 import ProjectCardLarge from "./components/ProjectCardLarge";
 import ProjectCardSmall from "./components/ProjectCardSmall";
 import SectionContainer from "@/_components/common/container/SectionContainer";
-import FadeOutOnScroll from "@/_components/animations/fade/FadeOutOnScroll";
+import Shine from "@/_components/animations/other/Shine";
 
 type Project = {
   title: string;
@@ -25,11 +25,11 @@ type Props = {
 function ProjectsSection({ sectionLabel, gridTemplate, projects }: Props) {
   return (
     <SectionContainer className="text-center bg-background text-foreground py-0! w-screen snap-start shrink-0">
-      <FadeOutOnScroll className="flex flex-col" sudden>
+      <div className="flex flex-col">
         <h2 className="text-foreground-muted text-3xl md:text-4xl font-heading">
           {sectionLabel}
         </h2>
-      </FadeOutOnScroll>
+      </div>
 
       <div className={`${gridTemplate} grid gap-8`}>
         {projects.map((project) =>
