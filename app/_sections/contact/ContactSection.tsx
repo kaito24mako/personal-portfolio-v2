@@ -58,6 +58,12 @@ function ContactSection() {
               </Link>
             </GroupHeading>
 
+            <GroupHeading heading="Phone number">
+              <span className="hover:text-accent-dark cursor-pointer">
+                (+61) 0416 127 431
+              </span>
+            </GroupHeading>
+
             <GroupHeading heading="Social Network">
               <SocialsList />
             </GroupHeading>
