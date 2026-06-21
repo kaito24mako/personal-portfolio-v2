@@ -42,16 +42,11 @@ function MainPage() {
         </Heading>
 
         <ProjectsScrollArea sectionLabels={["Featured", "2026", "2025"]}>
-          {/* <ProjectsSection
-            gridTemplate="grid-cols-1 lg:grid-cols-2 grid-rows-3"
-            sectionSummary={"My best works"}
-            projects={projectsFeatured}
-          /> */}
           <ProjectsSection
             gridTemplate="grid-cols-1 lg:grid-cols-2 grid-rows-3"
             sectionSummary={[
               "My best works",
-              "Projects I'm proud of most",
+              "Personal milestone projects",
               "Featured projects",
             ]}
             projects={projectsFeatured}
@@ -72,8 +67,8 @@ function MainPage() {
             gridTemplate="grid-cols-1 lg:grid-cols-2 grid-rows-3"
             sectionSummary={[
               "First year of web development",
+              "HTML, CSS, JavaScript",
               "The Odin Project course",
-              "Fundamental HTML, CSS, and JavaScript",
             ]}
             projects={projects2025}
           />

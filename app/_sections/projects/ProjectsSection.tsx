@@ -18,30 +18,22 @@ type Project = {
 
 type Props = {
   sectionLabel?: string;
-  sectionSummary?: string[];
+  sectionSummary: string[];
   gridTemplate: string;
   projects: Project[];
 };
 
-function ProjectsSection({
-  sectionLabel,
-  sectionSummary,
-  gridTemplate,
-  projects,
-}: Props) {
+function ProjectsSection({ sectionSummary, gridTemplate, projects }: Props) {
   return (
     <SectionContainer className="text-center bg-background text-foreground py-0! w-screen snap-start shrink-0">
-      <div className="flex flex-col gap-5 mb-5">
-        <h2 className="text-3xl md:text-4xl font-heading">{sectionLabel}</h2>
-
-        {/* <h3 className="text-lg md:text-2xl">{sectionSummary}</h3> */}
-
+      <div className=" border-border/40 py-3 my-2">
         <MarqueeX
-          contents={sectionSummary ?? []}
-          size="md"
+          contents={sectionSummary}
+          size="sm"
           color="primary"
-          textStyle="font-heading"
-          italic
+          textStyle="font-heading uppercase tracking-widest"
+          fadeEdges
+          separator
         />
       </div>
 
@@ -53,7 +45,7 @@ function ProjectsSection({
               title={project.title}
               image={project.image}
               description={project.description}
-              tech={project.tech ?? project.tech}
+              tech={project.tech}
               githubUrl={project.githubUrl}
               siteUrl={project.siteUrl}
               growth={project.growth}

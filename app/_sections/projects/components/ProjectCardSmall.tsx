@@ -8,7 +8,6 @@ import SiteIcon from "@/_components/common/icon/SiteIcon";
 import ArrowRightIcon from "@/_components/common/icon/ArrowRightIcon";
 
 import BounceX from "@/_components/animations/bounce/BounceX";
-import FadeOutOnScroll from "@/_components/animations/fade/FadeOutOnScroll";
 import Shine from "@/_components/animations/other/Shine";
 
 type Props = {
@@ -31,8 +30,8 @@ function ProjectCardSmall({
   grid,
 }: Props) {
   return (
-    <FadeOutOnScroll
-      className={`${grid} h-full bg-surface rounded-xs overflow-hidden`}
+    <div
+      className={`${grid} h-full bg-surface border border-border/70 rounded-xs overflow-hidden`}
     >
       <div className="relative h-full">
         <Image
@@ -63,7 +62,6 @@ function ProjectCardSmall({
                   size="small"
                   textColor="foreground"
                   bgColor="surface"
-                  italic
                   key={t}
                 >
                   <Shine>{t}</Shine>
@@ -120,7 +118,7 @@ function ProjectCardSmall({
           </div>
         </div>
       </div>
-    </FadeOutOnScroll>
+    </div>
   );
 }
 

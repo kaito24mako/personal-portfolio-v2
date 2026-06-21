@@ -9,7 +9,6 @@ import SiteIcon from "@/_components/common/icon/SiteIcon";
 import ArrowRightIcon from "@/_components/common/icon/ArrowRightIcon";
 
 import BounceX from "@/_components/animations/bounce/BounceX";
-import FadeOutOnScroll from "@/_components/animations/fade/FadeOutOnScroll";
 import Shine from "@/_components/animations/other/Shine";
 
 type Props = {
@@ -23,10 +22,7 @@ type Props = {
   grid: string;
 };
 
-// todo: image expands on hover
-// todo: click image to go to site
-// todo: fade out for every element in projects section
-// todo?: custom border around image
+// todo: fade out or stagger animation for every element in projects section
 
 function ProjectCardLarge({
   title,
@@ -39,9 +35,8 @@ function ProjectCardLarge({
   grid,
 }: Props) {
   return (
-    <FadeOutOnScroll
-      className={`${grid} flex flex-col h-full bg-surface rounded-xs overflow-hidden`}
-      sudden
+    <div
+      className={`${grid} flex flex-col h-full bg-surface border border-border/70 rounded-xs overflow-hidden`}
     >
       <Image src={image} alt={title} quality={90} placeholder="blur" />
 
@@ -61,7 +56,6 @@ function ProjectCardLarge({
                 size="small"
                 textColor="foreground"
                 bgColor="surface"
-                italic
                 key={t}
               >
                 <Shine>{t}</Shine>
@@ -129,7 +123,7 @@ function ProjectCardLarge({
           </div>
         </div>
       </div>
-    </FadeOutOnScroll>
+    </div>
   );
 }
 
