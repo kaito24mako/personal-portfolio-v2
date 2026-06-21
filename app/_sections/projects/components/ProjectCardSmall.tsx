@@ -84,7 +84,7 @@ function ProjectCardSmall({
                 <BounceX position={-2.1} ease="easeIn">
                   <ArrowRightIcon />
                 </BounceX>
-                <span>Read More</span>
+                <span>Read Blog</span>
               </IconTextWrapper>
             </Button>
 
@@ -98,7 +98,8 @@ function ProjectCardSmall({
               >
                 <IconTextWrapper>
                   <GithubIcon />
-                  <span>View Code</span>
+                  <span className="md:hidden">Code</span>
+                  <span className="hidden md:inline">View Code</span>
                 </IconTextWrapper>
               </Button>
 
@@ -111,7 +112,8 @@ function ProjectCardSmall({
               >
                 <IconTextWrapper>
                   <SiteIcon />
-                  <span>View Site</span>
+                  <span className="md:hidden">Visit</span>
+                  <span className="hidden md:inline">Visit Site</span>
                 </IconTextWrapper>
               </Button>
             </div>

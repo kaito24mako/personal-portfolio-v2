@@ -2,13 +2,14 @@ import Divider from "../divider/Divider";
 
 type Props = {
   children: React.ReactNode;
+  className?: string;
   heading: string;
 };
 
-function GroupHeading({ children, heading }: Props) {
+function GroupHeading({ children, className, heading }: Props) {
   return (
-    <div className="flex flex-col gap-0.5">
-      <h2 className="font-semibold">{heading}</h2>
+    <div className={`${className} flex flex-col gap-0.5`}>
+      <h3 className="font-semibold text-surface">{heading}</h3>
       <Divider opacity="low" />
       <div className="flex mx-auto lg:mx-0 gap-4 mt-1">{children}</div>
     </div>

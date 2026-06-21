@@ -84,3 +84,8 @@
 - but was unintuitive and finecky, so got inspo from Motion's site which has a fixed navbar with a defined shape
 - so created a new navbar that stayed visible but doesnt take up too much space
 - and also changes background color depending on the scrollY position (done via React hooks)
+
+# marquee effect
+
+- wanted to show my progress as a web dev, so added a marquee to the projects section to scroll some keywords/milestones for every year
+- couldnt think of a good way to use marquee until this

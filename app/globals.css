@@ -7,8 +7,7 @@
 @theme {
   /* Fonts */
   --font-heading: var(--font-cormorant);
-  --font-primary: var(--font-inter);
-  --font-japanese: var(--font-notoSans);
+  --font-subHeading: var(--font-inter);
 
   /* Layers */
   --color-background: var(--color-neutral-900);
@@ -31,7 +30,7 @@
 
   /* Animations */
   --animate-marquee: marquee 15s linear infinite;
-  --animate-shine: shine 3s linear infinite;
+  --animate-shine: shine 3.5s linear infinite;
 
   @keyframes marquee {
     from {

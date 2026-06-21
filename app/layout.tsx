@@ -1,7 +1,7 @@
 import "./globals.css";
 
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Noto_Sans_JP, Inter } from "next/font/google";
+import { Cormorant_Garamond, Inter_Tight } from "next/font/google";
 
 import Navbar from "@/_components/layout/Navbar";
 import Footer from "@/_components/layout/Footer";
@@ -11,12 +11,7 @@ const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
 });
 
-const notoSans = Noto_Sans_JP({
-  variable: "--font-notoSans",
-  subsets: ["latin"],
-});
-
-const inter = Inter({
+const inter = Inter_Tight({
   variable: "--font-inter",
   subsets: ["latin"],
 });
@@ -34,7 +29,7 @@ function RootLayout({
   return (
     <html
       lang="en"
-      className={`${notoSans.variable} ${cormorant.variable} ${inter.variable} min-h-screen snap-y snap-proximity antialiased`}
+      className={`${cormorant.variable} ${inter.variable} min-h-screen snap-y snap-proximity antialiased`}
     >
       <body className="min-h-screen flex flex-col bg-background">
         <Navbar />
