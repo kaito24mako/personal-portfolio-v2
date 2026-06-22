@@ -1,0 +1,5 @@
+- create blog page
+- change entire path structure of site?
+- create functional contact form via https://help.formspree.io/articles/using-the-cli/build-a-contact-form-with-react/
+- sound effects?
+- preview button for project images?
