@@ -21,7 +21,7 @@ import Shine from "@/_components/animations/other/Shine";
 function MainPage() {
   return (
     <>
-      <section id="home" className="relative h-[80dvh] md:min-h-screen">
+      <section id="home" className="relative min-h-screen">
         <ParallaxBackground
           image={mountains}
           alt="Mountain landscape with a sakura tree"

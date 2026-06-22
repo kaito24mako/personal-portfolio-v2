@@ -20,7 +20,7 @@ function FadeInY({
     <motion.div
       initial={{ opacity: 0, y: position }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: duration, ease: "easeOut", delay }}
+      transition={{ duration: duration, ease: "easeIn", delay }}
       {...props}
     >
       {children}
