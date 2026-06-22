@@ -16,6 +16,7 @@ import Heading from "@/_components/common/text/Heading";
 import mountains from "@/public/bg/mountains.png";
 import land from "@/public/bg/land.png";
 import ocean from "@/public/bg/ocean.png";
+import Shine from "@/_components/animations/other/Shine";
 
 function MainPage() {
   return (
@@ -38,7 +39,9 @@ function MainPage() {
 
       <section id="projects" className="pt-25 pb-25">
         <Heading className="text-center mb-8" color="accent" size="md">
-          Projects showcase
+          <Shine firstColor="foreground-muted" secondColor="border">
+            Projects showcase
+          </Shine>
         </Heading>
 
         <ProjectsScrollArea sectionLabels={["Featured", "2026", "2025"]}>

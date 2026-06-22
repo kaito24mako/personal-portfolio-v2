@@ -60,11 +60,18 @@
 - struggled to find a consistent theme for the website, while keeping pages/sections dynamic and distinct from one another
 - theme is a sharp (sharp border radiuses), japanese aesthetic, while distinction comes from color and unique layout of elements
 - is it best to keep pages consistent for clarity and coherence? how much should design be distinct within a site? these are questions I tackled with a lot
+- for final stylising, I decided to:
+  - keep all headings with shine effect for consisitency
+  - keep all subheadings the same color
+  - add borders to project cards for readability
+  - remove snap scrolling for better UX
+  - remove fade out effect on all text, due to it being rather obstrusive and unnecessary - less is more
 
 # snap scrolling
 
 - implemented horizontal snap scrolling on projects section - ux friendly
 - implemented site-wide, snap-based vertical scrolling, but its quite finicky...its good for this site because pages take up max full screen height, but is it worth the UX harm?
+- in the end, decided to remove snap scrolling
 
 # progress bar for horizontal scrolling
 

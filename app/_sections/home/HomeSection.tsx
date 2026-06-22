@@ -1,37 +1,27 @@
-import Image from "next/image";
-
-import BounceY from "@/_components/animations/bounce/BounceY";
 import SectionContainer from "@/_components/common/container/SectionContainer";
-import FadeInX from "@/_components/animations/fade/FadeInX";
-import FadeOutOnScroll from "@/_components/animations/fade/FadeOutOnScroll";
-
-import arrow from "@/public/arrow.png";
 import Heading from "@/_components/common/text/Heading";
+
 import Shine from "@/_components/animations/other/Shine";
+import FadeInY from "@/_components/animations/fade/FadeInY";
 
 function HomeSection() {
   return (
     <SectionContainer className="flex flex-col min-h-screen pt-80 text-center text-background">
-      <FadeOutOnScroll className="flex flex-col">
-        <FadeInX position={60} duration={1.4}>
+      <div className="flex flex-col">
+        <FadeInY position={10} duration={1.2}>
           <Heading size="xl">
             <Shine firstColor="background" secondColor="foreground-muted/60%">
               I&apos;m Kaito
             </Shine>
           </Heading>
-        </FadeInX>
+        </FadeInY>
 
-        <FadeInX position={80} duration={1.3} delay={0.1}>
-          {/* <Heading className="text-2xl md:text-4xl">
-            <Shine firstColor="border/50%" secondColor="foreground-muted/60%">
-              With passion in web development
-            </Shine>
-          </Heading> */}
+        <FadeInY position={10} duration={1.2}>
           <h2 className="font-heading text-border/90 text-2xl md:text-4xl">
             With passion in web development
           </h2>
-        </FadeInX>
-      </FadeOutOnScroll>
+        </FadeInY>
+      </div>
 
       {/* <BounceY position={10} className="flex justify-center mt-auto">
         <Image src={arrow} alt="Arrow pointing down" width={230} height={230} />

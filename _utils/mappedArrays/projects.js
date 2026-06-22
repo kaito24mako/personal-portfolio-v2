@@ -2,12 +2,13 @@
 // add growth key to projects you want to use ProjectCardLarge (large size)
 // omit growth key to projects you want to use ProjectCardSmall (small size)
 
+import portfolioV2 from "@/public/projects/2026/portfolio-v2.png";
 import mako from "@/public/projects/2026/mako.png";
 import searchEmAll from "@/public/projects/2026/search-em-all.png";
 import portfolioV1 from "@/public/projects/2026/portfolio-v1.png";
 
-import bookCollection from "@/public/projects/2025/book-collection.png";
 import tictactoe from "@/public/projects/2025/tic-tac-toe.png";
+import bookCollection from "@/public/projects/2025/book-collection.png";
 import etchASketch from "@/public/projects/2025/etch-a-sketch.png";
 import lastManStanding from "@/public/projects/2025/last-man-standing.png";
 import adminDashboard from "@/public/projects/2025/admin-dashboard.png";
@@ -20,7 +21,7 @@ export const projectsFeatured = [
     image: mako,
     description:
       "A CMS for customizing a portfolio site via API endpoints. Utilizes Next.js with postgreSQL for the backend.",
-    tech: ["Next.js", "Supabase", "TailwindCSS", "DaisyUI"],
+    tech: ["Next.js", "Supabase", "Tailwind CSS", "DaisyUI"],
     githubUrl: "https://github.com/kaito24mako/portfolio-cms",
     siteUrl: "https://portfolio-cms-blond-five.vercel.app/login",
     growth:
@@ -28,13 +29,13 @@ export const projectsFeatured = [
     grid: "row-span-2",
   },
   {
-    title: "Book Collection",
-    image: bookCollection,
+    title: "Personal Portfolio V2",
+    image: portfolioV2,
     description:
-      "OOP programming with JavaScript to create and store books for tracking purposes.",
-    // tech: ["JavaScript", "CSS", "HTML"],
-    githubUrl: "https://github.com/kaito24mako/Book-Library",
-    siteUrl: "https://kaito24mako.github.io/Book-Library/",
+      "Revised portfolio site with an enhanced design, modern animations, and polish.",
+    tech: ["Next.js", "Tailwind CSS", "Motion"],
+    githubUrl: "https://github.com/kaito24mako/personal-portfolio-v2",
+    siteUrl: "https://personal-portfolio-v2-smoky.vercel.app/",
     grid: "row-span-1",
   },
   {
@@ -62,12 +63,13 @@ export const projectsFeatured = [
 
 export const projects2026 = [
   {
-    title: "Personal Portfolio V1",
-    image: portfolioV1,
-    description: "My first portfolio site made with React and SCSS.",
-    tech: ["React", "SCSS"],
-    githubUrl: "https://github.com/kaito24mako/uxdd-personal-portfolio",
-    siteUrl: "https://personal-portfolio-cyan-seven-25.vercel.app/",
+    title: "Personal Portfolio V2",
+    image: portfolioV2,
+    description:
+      "Revised portfolio site with an enhanced design, modern animations, and polish.",
+    tech: ["Next.js", "Tailwind CSS", "Motion"],
+    githubUrl: "https://github.com/kaito24mako/personal-portfolio-v2",
+    siteUrl: "https://personal-portfolio-v2-smoky.vercel.app/",
     grid: "row-span-1",
   },
   {
@@ -75,7 +77,7 @@ export const projects2026 = [
     image: mako,
     description:
       "A CMS for customizing a portfolio site via API endpoints. Utilizes Next.js with postgreSQL for the backend.",
-    tech: ["Next.js", "Supabase", "TailwindCSS", "DaisyUI"],
+    tech: ["Next.js", "Supabase", "Tailwind CSS", "DaisyUI"],
     githubUrl: "https://github.com/kaito24mako/portfolio-cms",
     siteUrl: "https://portfolio-cms-blond-five.vercel.app/login",
     growth:
@@ -95,9 +97,10 @@ export const projects2026 = [
     grid: "row-span-2",
   },
   {
-    title: "Working in progress...",
+    title: "Personal Portfolio V1",
     image: portfolioV1,
     description: "My first portfolio site made with React and SCSS.",
+    tech: ["React", "SCSS"],
     githubUrl: "https://github.com/kaito24mako/uxdd-personal-portfolio",
     siteUrl: "https://personal-portfolio-cyan-seven-25.vercel.app/",
     grid: "row-span-1",

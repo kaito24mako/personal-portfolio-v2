@@ -5,6 +5,8 @@
 // # default prop
 //* Black to silver:
 // # firstColor="background" secondColor="foreground-muted/60%"
+// * White to black:
+// # firstColor="foreground-muted" secondColor="border"
 
 type Props = {
   children: React.ReactNode;
@@ -13,6 +15,7 @@ type Props = {
   secondColor?: string;
 };
 
+// to allow for changes in color opacity within props
 function themeColor(token: string): string {
   const slashIndex = token.indexOf("/");
 
