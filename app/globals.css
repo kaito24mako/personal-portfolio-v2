@@ -62,7 +62,7 @@
 
 html {
   scroll-behavior: smooth;
-  scrollbar-color: var(--color-accent-dark) var(--color-surface);
+  /* scrollbar-color: var(--color-accent-dark) var(--color-background); */
   scrollbar-width: thin;
 }
 
