@@ -7,8 +7,6 @@ type Props = {
   italic?: boolean;
 };
 
-// todo: staggered effect?
-
 function Badge({
   children,
   className = "",

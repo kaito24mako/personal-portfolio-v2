@@ -29,9 +29,9 @@ function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorant.variable} ${inter.variable} min-h-screen snap-y snap-proximity antialiased`}
+      className={`${cormorant.variable} ${inter.variable}  antialiased`}
     >
-      <body className="min-h-screen flex flex-col bg-background">
+      <body className="flex flex-col bg-background">
         <Navbar />
         <main className="flex-1">{children}</main>
         {/* <Footer /> */}

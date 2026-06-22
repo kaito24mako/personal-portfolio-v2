@@ -1,21 +1,21 @@
 type Props = {
   children: React.ReactNode;
   className?: string;
-  color?: "primary" | "secondary" | "accent" | "custom";
-  size?: "xl" | "lg" | "md" | "sm" | "custom";
+  color?: "primary" | "secondary" | "accent" | "none";
+  size?: "xl" | "lg" | "md" | "sm" | "none";
 };
 
 function Heading({
   children,
   className,
-  color = "custom",
-  size = "custom",
+  color = "none",
+  size = "none",
 }: Props) {
   const colorClasses = {
     primary: "text-foreground",
     secondary: "text-background",
     accent: "text-accent",
-    custom: "",
+    none: "",
   };
 
   const sizeClasses = {
@@ -23,7 +23,7 @@ function Heading({
     lg: "text-5xl md:text-7xl",
     md: "text-5xl md:text-6xl",
     sm: "text-4xl md:text-5xl",
-    custom: "",
+    none: "",
   };
 
   return (

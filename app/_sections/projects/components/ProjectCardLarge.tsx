@@ -36,7 +36,7 @@ function ProjectCardLarge({
 }: Props) {
   return (
     <div
-      className={`${grid} flex flex-col h-full bg-surface border border-border/70 rounded-xs overflow-hidden`}
+      className={`${grid} flex flex-col h-full bg-surface border border-border rounded-xs overflow-hidden`}
     >
       <Image src={image} alt={title} quality={90} placeholder="blur" />
 

@@ -60,10 +60,8 @@
 }
 
 html {
-  /* scroll-behaviour: smooth can conflict with snap scrolling, so set to auto */
-  overflow-y: scroll;
-  scroll-behavior: auto;
-  /* scrollbar-color: var(--color-surface) var(--color-background); */
+  scroll-behavior: smooth;
+  scrollbar-color: var(--color-accent-dark) var(--color-surface);
   scrollbar-width: thin;
 }
 

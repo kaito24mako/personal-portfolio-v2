@@ -1,7 +1,10 @@
 // Color props use theme token names (eg. "accent", "foreground-muted", "border/70%")
 
-// Recommended color props:
-// - black to white/silver
+//** Recommended color props:
+// * White to silver:
+// # default prop
+//* Black to silver:
+// # firstColor="background" secondColor="foreground-muted/60%"
 
 type Props = {
   children: React.ReactNode;

@@ -31,7 +31,7 @@ function ProjectCardSmall({
 }: Props) {
   return (
     <div
-      className={`${grid} h-full bg-surface border border-border/70 rounded-xs overflow-hidden`}
+      className={`${grid} h-full bg-surface border border-border rounded-xs overflow-hidden`}
     >
       <div className="relative h-full">
         <Image
@@ -54,7 +54,9 @@ function ProjectCardSmall({
               {title}
             </h3>
 
-            <p className="text-sm opacity-80 mb-1">{description}</p>
+            <p className="text-sm lg:text-base opacity-80 mb-1">
+              {description}
+            </p>
 
             <div className="flex gap-2">
               {tech?.map((t) => (
