@@ -14,9 +14,9 @@ function MarqueeItems({
   shine?: boolean;
 }) {
   return (
-    <div className="flex items-center gap-8 pr-8" aria-hidden={ariaHidden}>
+    <div className="flex items-center gap-6 pr-6" aria-hidden={ariaHidden}>
       {contents.map((content, index) => (
-        <span key={content} className="flex items-center gap-8 shrink-0">
+        <span key={content} className="flex items-center gap-6 shrink-0">
           {/* for every second item, apply shine */}
           {shine && index % 2 === 0 ? (
             <Shine
@@ -42,8 +42,8 @@ function MarqueeItems({
 
 type Props = {
   contents: string[];
-  color?: "primary" | "secondary" | "accent" | "muted" | "custom";
-  size?: "xl" | "lg" | "md" | "sm" | "xs" | "custom";
+  color?: "primary" | "secondary" | "accent" | "muted" | "none";
+  size?: "xl" | "lg" | "md" | "sm" | "xs" | "none";
   italic?: boolean;
   containerStyle?: string;
   textStyle?: string;
@@ -54,8 +54,8 @@ type Props = {
 
 function MarqueeX({
   contents,
-  color = "custom",
-  size = "custom",
+  color = "none",
+  size = "none",
   italic = false,
   containerStyle,
   textStyle,
@@ -68,7 +68,7 @@ function MarqueeX({
     secondary: "text-background",
     accent: "text-accent",
     muted: "text-border/60",
-    custom: "",
+    none: "",
   };
 
   const sizeClasses = {
@@ -77,7 +77,7 @@ function MarqueeX({
     md: "text-3xl md:text-4xl",
     sm: "text-xl md:text-2xl",
     xs: "text-base md:text-lg",
-    custom: "",
+    none: "",
   };
 
   const rowClassName = `${sizeClasses[size]} ${textStyle} ${colorClasses[color]} ${italic ? "italic" : ""}`;
