@@ -26,12 +26,12 @@ type Props = {
 function ProjectsSection({ sectionSummary, gridTemplate, projects }: Props) {
   return (
     <SectionContainer className="text-center bg-background text-foreground py-0! w-screen snap-start shrink-0">
-      <div className=" border-border/40 mt-5 mb-2">
+      <div className=" border-border/40 mt-3 mb-2">
         <MarqueeX
           contents={sectionSummary}
           size="xs"
           color="primary"
-          textStyle="font-subHeading tracking-widest"
+          textStyle="font-subHeading italic tracking-widest"
           fadeEdges
           separator
         />

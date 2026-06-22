@@ -2,14 +2,14 @@ import { frontendTech, backendTech } from "@/_utils/mappedArrays/tech.js";
 
 import SectionContainer from "@/_components/common/container/SectionContainer";
 import TechSegment from "./components/TechSegment";
-import FadeOutOnScroll from "@/_components/animations/fade/FadeOutOnScroll";
 import Heading from "@/_components/common/text/Heading";
+
 import Shine from "@/_components/animations/other/Shine";
 
 function AboutSection() {
   return (
     <SectionContainer className="text-center">
-      <FadeOutOnScroll className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4">
         <Heading className="font-semibold" color="secondary" size="md">
           <Shine firstColor="background" secondColor="foreground-muted/60%">
             A little about me
@@ -24,15 +24,15 @@ function AboutSection() {
           karaoke is my passion. Here are some technologies that I am familiar
           with:
         </p>
-      </FadeOutOnScroll>
+      </div>
 
-      <FadeOutOnScroll className="flex flex-col gap-5">
+      <div className="flex flex-col gap-5">
         <TechSegment tech={frontendTech} heading="Front-End" />
-      </FadeOutOnScroll>
+      </div>
 
-      <FadeOutOnScroll className="flex flex-col gap-5">
+      <div className="flex flex-col gap-5">
         <TechSegment tech={backendTech} heading="Back-End" />
-      </FadeOutOnScroll>
+      </div>
     </SectionContainer>
   );
 }

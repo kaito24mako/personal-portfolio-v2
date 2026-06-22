@@ -50,7 +50,7 @@ function MainPage() {
             sectionSummary={[
               "My best works",
               "Personal milestone projects",
-              "Featured projects",
+              "Highly up-skiled my dev skills",
             ]}
             projects={projectsFeatured}
           />

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import SectionContainer from "@/_components/common/container/SectionContainer";
 import Heading from "@/_components/common/text/Heading";
-import ContactForm from "@/_components/common/form/ContactForm";
+import ContactForm from "./components/ContactForm";
 import SocialsList from "@/_components/features/footer/SocialsList";
 import Footer from "@/_components/layout/Footer";
 import GroupHeading from "@/_components/common/text/GroupHeading";

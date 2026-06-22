@@ -1,4 +1,6 @@
-import Button from "../button/Button";
+import Button from "@/_components/common/button/Button";
+
+// todo: implement Formspree to send form data to serverless client for email submissions https://help.formspree.io/articles/using-the-cli/build-a-contact-form-with-react/
 
 function ContactForm() {
   return (

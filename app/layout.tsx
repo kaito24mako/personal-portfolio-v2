@@ -4,7 +4,6 @@ import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter_Tight } from "next/font/google";
 
 import Navbar from "@/_components/layout/Navbar";
-import Footer from "@/_components/layout/Footer";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",

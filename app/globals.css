@@ -8,6 +8,7 @@
   /* Fonts */
   --font-heading: var(--font-cormorant);
   --font-subHeading: var(--font-inter);
+  --font-marquee: serif;
 
   /* Layers */
   --color-background: var(--color-neutral-900);
@@ -66,7 +67,7 @@ html {
 }
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, serif, sans-serif;
 }
 
 button,
