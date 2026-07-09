@@ -48,12 +48,12 @@ function ProjectCardLarge({
             {title}
           </h3>
 
-          <p className="text-sm md:text-base opacity-80 mb-1">{description}</p>
+          <p className="text-sm opacity-87 mb-1">{description}</p>
 
           <div className="flex gap-2">
             {tech?.map((t) => (
               <Badge
-                size="small"
+                size="medium"
                 textColor="foreground"
                 bgColor="surface"
                 key={t}

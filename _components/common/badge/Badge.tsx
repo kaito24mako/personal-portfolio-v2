@@ -16,7 +16,7 @@ function Badge({
   italic = false,
 }: Props) {
   const sizeClasses = {
-    small: "text-[10px] md:text-xs rounded-sm",
+    small: "text-xs rounded-sm",
     medium: "text-xs md:text-sm rounded-md",
     large: "text-sm md:text-base rounded-lg",
   };

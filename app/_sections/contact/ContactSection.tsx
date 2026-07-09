@@ -20,36 +20,33 @@ function ContactSection() {
             </Shine>
           </Heading>
 
-          <div className="flex flex-col gap-2 mb-5 text-border">
+          <div className="flex flex-col gap-2 mb-5 text-base lg:text-lg">
             <p>
               I am always looking for new opportunities to collaborate on
-              projects and work on building beautiful applications.
+              projects and work on building beautiful sites.
             </p>
-            <p>
+            {/* <p>
               Contact me via email or social media, and I will respond as soon
               as possible.
-            </p>
+            </p> */}
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-7">
             <GroupHeading heading="Location" className="col-span-1">
-              <p className="text-border">Melbourne, Australia</p>
+              <p>Melbourne, Australia</p>
             </GroupHeading>
 
             <GroupHeading heading="Email">
               <Link
                 href="mailto:kaitowatanabemcc@gmail.com"
-                className=" hover:text-accent-dark text-border"
+                className=" hover:text-accent-dark"
               >
                 kaitowatanabemcc@gmail.com
               </Link>
             </GroupHeading>
 
             <GroupHeading heading="Phone number">
-              <Link
-                href="tel:+61416127431"
-                className="hover:text-accent-dark text-border cursor-pointer"
-              >
+              <Link href="tel:+61416127431" className="hover:text-accent-dark">
                 (+61) 0416 127 431
               </Link>
             </GroupHeading>

@@ -21,7 +21,7 @@ import ocean from "@/public/bg/ocean.png";
 function MainPage() {
   return (
     <>
-      <section id="home" className="relative min-h-screen">
+      <section id="home" className="relative h-[80dvh] sm:min-h-screen">
         <ParallaxBackground
           image={mountains}
           alt="Mountain landscape with a sakura tree"

@@ -34,7 +34,7 @@ function DividerWithText({
   return (
     <div className={`flex items-center gap-4 ${className}`}>
       <div
-        className={`${dividerStyle} ${dividerColor} ${opacityClasses[opacity]} ${heightClasses[height]} flex-1`}
+        className={`${dividerStyle} ${dividerColor} ${opacityClasses[opacity]} ${heightClasses[height]} flex-1 sm:flex-none px-0 sm:px-5`}
       />
       <span className={`${textStyle} ${textColor}`}>{children}</span>
       <div
