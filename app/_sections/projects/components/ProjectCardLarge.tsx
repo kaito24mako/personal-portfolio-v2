@@ -35,8 +35,9 @@ function ProjectCardLarge({
   grid,
 }: Props) {
   return (
+    // optional borders: border border-border
     <div
-      className={`${grid} flex flex-col h-full bg-surface border border-border rounded-xs overflow-hidden`}
+      className={`${grid} flex flex-col h-full bg-surface rounded-xs overflow-hidden`}
     >
       <Image src={image} alt={title} quality={90} placeholder="blur" />
 
@@ -48,7 +49,7 @@ function ProjectCardLarge({
             {title}
           </h3>
 
-          <p className="text-sm opacity-87 mb-1">{description}</p>
+          <p className="text-sm mb-1">{description}</p>
 
           <div className="flex gap-2">
             {tech?.map((t) => (
@@ -73,7 +74,7 @@ function ProjectCardLarge({
             <h4 className="text-accent-light text-xs md:text-sm mb-0.5">
               Personal Growth
             </h4>
-            <p className="text-xs md:text-sm opacity-70 mb-10">{growth}</p>
+            <p className="text-xs md:text-sm opacity-80 mb-10">{growth}</p>
           </div>
 
           <div className="flex justify-between items-center">
