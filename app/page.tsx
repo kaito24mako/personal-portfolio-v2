@@ -9,14 +9,14 @@ import ProjectsSection from "@/app/_sections/projects/ProjectsSection";
 import ProjectsScrollArea from "@/app/_sections/projects/components/ProjectsScrollArea";
 import AboutSection from "@/app/_sections/about/AboutSection";
 import ContactSection from "./_sections/contact/ContactSection";
+import Heading from "@/_components/common/text/Heading";
 
 import ParallaxBackground from "@/_components/animations/parallax/ParallaxBackground";
-import Heading from "@/_components/common/text/Heading";
+import Shine from "@/_components/animations/other/Shine";
 
 import mountains from "@/public/bg/mountains.png";
 import land from "@/public/bg/land.png";
 import ocean from "@/public/bg/ocean.png";
-import Shine from "@/_components/animations/other/Shine";
 
 function MainPage() {
   return (

@@ -28,9 +28,6 @@ function AboutSection() {
 
       <div className="flex flex-col gap-5">
         <TechSegment tech={frontendTech} heading="Front-End" />
-      </div>
-
-      <div className="flex flex-col gap-5">
         <TechSegment tech={backendTech} heading="Back-End" />
       </div>
     </SectionContainer>

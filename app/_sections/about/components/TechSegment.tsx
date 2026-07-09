@@ -29,8 +29,10 @@ function TechSegment({ tech, heading }: Props) {
       >
         {heading}
       </DividerWithText>
+
       <motion.div
         className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3"
+        // variants adds custom animation to this element
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
