@@ -101,9 +101,7 @@ function ProjectsScrollAreaV1({ children, sectionLabels }: Props) {
                 ariaLabel={label}
                 onClick={() => scrollToSection(index)}
                 className={`flex-1 text-center font-heading text-2xl lg:text-3xl transition-colors duration-300 ${
-                  index === activeIndex
-                    ? "text-accent"
-                    : "text-foreground-muted!"
+                  index === activeIndex ? "text-accent" : "text-foreground"
                 }`}
               >
                 {label}

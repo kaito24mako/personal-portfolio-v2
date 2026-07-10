@@ -12,41 +12,44 @@ import Shine from "@/_components/animations/other/Shine";
 function ContactSection() {
   return (
     <>
-      <SectionContainer className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 h-full text-background">
-        <div className="flex flex-col gap-4 text-center lg:text-left">
+      <SectionContainer className="h-full text-background text-center text-base lg:text-lg">
+        <div className="flex flex-col gap-4">
           <Heading className="font-semibold" color="secondary" size="md">
             <Shine firstColor="background" secondColor="foreground-muted/60%">
               Get in touch
             </Shine>
           </Heading>
 
-          <div className="flex flex-col gap-2 mb-5 text-base lg:text-lg">
+          <div className="flex flex-col gap-2 mb-5">
             <p>
               I am always looking for new opportunities to collaborate on
               projects and work on building beautiful sites.
             </p>
-            {/* <p>
+            <p>
               Contact me via email or social media, and I will respond as soon
               as possible.
-            </p> */}
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-7">
+          <div className="grid grid-cols-2 gap-4 sm:gap-10 mx-auto">
             <GroupHeading heading="Location" className="col-span-1">
-              <p>Melbourne, Australia</p>
+              <p className="mx-auto">Melbourne, Australia</p>
             </GroupHeading>
 
             <GroupHeading heading="Email">
               <Link
                 href="mailto:kaitowatanabemcc@gmail.com"
-                className=" hover:text-accent-dark"
+                className=" hover:text-accent-dark mx-auto"
               >
                 kaitowatanabemcc@gmail.com
               </Link>
             </GroupHeading>
 
             <GroupHeading heading="Phone number">
-              <Link href="tel:+61416127431" className="hover:text-accent-dark">
+              <Link
+                href="tel:+61416127431"
+                className="hover:text-accent-dark mx-auto"
+              >
                 (+61) 0416 127 431
               </Link>
             </GroupHeading>
@@ -57,9 +60,9 @@ function ContactSection() {
           </div>
         </div>
 
-        <div className="mt-0 lg:mt-20">
+        {/* <div className="mt-0 lg:mt-20">
           <ContactForm />
-        </div>
+        </div> */}
       </SectionContainer>
 
       <Footer />

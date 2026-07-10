@@ -59,7 +59,9 @@ function ProjectCardLarge({
                 bgColor="surface"
                 key={t}
               >
-                <Shine>{t}</Shine>
+                <Shine firstColor="foreground" secondColor="border/40%">
+                  {t}
+                </Shine>
               </Badge>
             ))}
           </div>

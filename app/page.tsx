@@ -39,9 +39,11 @@ function MainPage() {
 
       <section id="projects" className="pt-25 pb-25">
         <Heading className="text-center mb-8" color="accent" size="md">
-          <Shine firstColor="foreground-muted" secondColor="border">
-            Projects showcase
-          </Shine>
+          Projects Showcase
+          {/* <Shine firstColor="foreground" secondColor="border/70%">
+            Projects Showcase
+          </Shine> */}
+          {/* Projects <span className="text-accent">Projects</span> Showcase */}
         </Heading>
 
         <ProjectsScrollArea sectionLabels={["Featured", "2026", "2025"]}>

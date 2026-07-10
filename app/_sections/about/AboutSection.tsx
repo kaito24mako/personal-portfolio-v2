@@ -8,8 +8,7 @@ import Shine from "@/_components/animations/other/Shine";
 
 function AboutSection() {
   return (
-    // OR text-center
-    <SectionContainer className="text-center sm:text-left">
+    <SectionContainer className="text-center">
       <div className="flex flex-col gap-4">
         <Heading className="font-semibold" color="secondary" size="md">
           <Shine firstColor="background" secondColor="foreground-muted/60%">

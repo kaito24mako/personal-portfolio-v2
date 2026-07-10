@@ -2,7 +2,7 @@ import Link from "next/link";
 
 function SocialsList() {
   return (
-    <>
+    <div className="flex mx-auto gap-3">
       <Link
         href="https://github.com/kaito24mako"
         target="_blank"
@@ -65,7 +65,7 @@ function SocialsList() {
           <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
         </svg>
       </Link>
-    </>
+    </div>
   );
 }
 
