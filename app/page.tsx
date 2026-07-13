@@ -16,12 +16,12 @@ import Shine from "@/_components/animations/other/Shine";
 
 import mountains from "@/public/bg/mountains.png";
 import land from "@/public/bg/land.png";
-import ocean from "@/public/bg/ocean.png";
+import ocean from "@/public/bg/ocean-two.png";
 
 function MainPage() {
   return (
     <>
-      <section id="home" className="relative h-[80dvh] sm:min-h-screen">
+      <section id="home" className="relative min-h-screen">
         <ParallaxBackground
           image={mountains}
           alt="Mountain landscape with a sakura tree"
@@ -29,7 +29,7 @@ function MainPage() {
         <HomeSection />
       </section>
 
-      <section id="about" className="relative">
+      <section id="about" className="relative min-h-screen">
         <ParallaxBackground
           image={land}
           alt="Countryside with shrubbery, mountains, and a lake"
@@ -80,10 +80,7 @@ function MainPage() {
         </ProjectsScrollArea>
       </section>
 
-      <section
-        id="contact"
-        className="relative min-h-screen my-auto pt-0 md:pt-10"
-      >
+      <section id="contact" className="relative min-h-screen">
         <ParallaxBackground image={ocean} alt="Ocean waves" />
         <ContactSection />
       </section>
@@ -92,30 +89,3 @@ function MainPage() {
 }
 
 export default MainPage;
-
-//* For rendering a vertical progress bar instead:
-{
-  /* <ProjectsScrollAreaV2
-  sectionLabels={["Featured", "2026", "2025"]}
-  isSectionVisible={isRefVisible}
-  sectionRef={ref}
->
-  <ProjectsSection
-    // sectionLabel="Featured"
-    gridTemplate="grid-cols-1 lg:grid-cols-2 grid-rows-3"
-    projects={projectsFeatured}
-  />
-
-  <ProjectsSection
-    sectionLabel="2026"
-    gridTemplate="grid-cols-1 lg:grid-cols-2 grid-rows-3"
-    projects={projects2026}
-  />
-
-  <ProjectsSection
-    sectionLabel="2025"
-    gridTemplate="grid-cols-1 lg:grid-cols-2 grid-rows-3"
-    projects={projects2025}
-  />
-</ProjectsScrollAreaV2>; */
-}

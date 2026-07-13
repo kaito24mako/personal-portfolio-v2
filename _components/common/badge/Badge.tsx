@@ -38,7 +38,7 @@ function Badge({
 
   return (
     <div
-      className={`${sizeClasses[size]} ${textColorClasses[textColor]} ${bgColorClasses[bgColor]} ${className} ${italic && "italic"} px-3 py-1.5 rounded-xs `}
+      className={`${sizeClasses[size]} ${textColorClasses[textColor]} ${bgColorClasses[bgColor]} ${className} ${italic && "italic"} px-3 py-1.5 rounded-xs`}
     >
       {children}
     </div>

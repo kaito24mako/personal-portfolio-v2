@@ -12,8 +12,8 @@ import Shine from "@/_components/animations/other/Shine";
 function ContactSection() {
   return (
     <>
-      <SectionContainer className="h-full text-background text-center text-base lg:text-lg">
-        <div className="flex flex-col gap-4">
+      <SectionContainer className="min-h-screen justify-center text-background text-center text-base lg:text-lg">
+        <div className="flex flex-col gap-4 mb-5">
           <Heading className="font-semibold" color="secondary" size="md">
             <Shine firstColor="background" secondColor="foreground-muted/60%">
               Get in touch
@@ -31,7 +31,7 @@ function ContactSection() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 sm:gap-10 mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10 mx-auto">
             <GroupHeading heading="Location" className="col-span-1">
               <p className="mx-auto">Melbourne, Australia</p>
             </GroupHeading>
@@ -39,7 +39,7 @@ function ContactSection() {
             <GroupHeading heading="Email">
               <Link
                 href="mailto:kaitowatanabemcc@gmail.com"
-                className=" hover:text-accent-dark mx-auto"
+                className=" hover:text-accent mx-auto"
               >
                 kaitowatanabemcc@gmail.com
               </Link>
@@ -48,19 +48,19 @@ function ContactSection() {
             <GroupHeading heading="Phone number">
               <Link
                 href="tel:+61416127431"
-                className="hover:text-accent-dark mx-auto"
+                className="hover:text-accent mx-auto"
               >
                 (+61) 0416 127 431
               </Link>
             </GroupHeading>
 
-            <GroupHeading heading="Social Network">
+            <GroupHeading heading="Social network">
               <SocialsList />
             </GroupHeading>
           </div>
         </div>
 
-        {/* <div className="mt-0 lg:mt-20">
+        {/* <div className="w-[400px] mx-auto">
           <ContactForm />
         </div> */}
       </SectionContainer>

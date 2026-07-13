@@ -4,8 +4,8 @@ import Button from "@/_components/common/button/Button";
 
 function ContactForm() {
   return (
-    <form className="flex flex-col gap-10 bg-surface shadow-sm rounded-xs p-15">
-      <legend className="text-center text-foreground font-semibold text-xl">
+    <form className="flex flex-col gap-10 bg-surface shadow-sm rounded-sm p-12">
+      <legend className="text-center text-accent font-semibold text-xl">
         Send a message!
       </legend>
 
