@@ -24,6 +24,7 @@ export const projectsFeatured = [
     tech: ["Next.js", "Supabase", "Tailwind CSS", "DaisyUI"],
     githubUrl: "https://github.com/kaito24mako/portfolio-cms",
     siteUrl: "https://portfolio-cms-blond-five.vercel.app/login",
+    blog: false,
     growth:
       '"First dive into Next.js and full-stack programming. Learned about the intricacies of communicating between the front and back-end."',
     grid: "row-span-2",
@@ -36,6 +37,7 @@ export const projectsFeatured = [
     tech: ["Next.js", "Tailwind CSS", "Motion"],
     githubUrl: "https://github.com/kaito24mako/personal-portfolio-v2",
     siteUrl: "https://personal-portfolio-v2-smoky.vercel.app/",
+    blog: true,
     grid: "row-span-1",
   },
   {
@@ -46,6 +48,7 @@ export const projectsFeatured = [
     tech: ["React", "SCSS"],
     githubUrl: "https://github.com/kaito24mako/react-pokemon-app",
     siteUrl: "https://pokemon-app-five-murex.vercel.app/",
+    blog: false,
     growth:
       '"My first project utilising React.js, and the first from my Diploma of IT course. Implemented core React principles such as re-usable components and hooks."',
     grid: "row-span-2",
@@ -57,6 +60,7 @@ export const projectsFeatured = [
     // tech: ["JavaScript", "CSS", "HTML"],
     githubUrl: "https://github.com/kaito24mako/Last-Man-Standing",
     siteUrl: "https://kaito24mako.github.io/Last-Man-Standing/",
+    blog: false,
     grid: "row-span-1",
   },
 ];
@@ -70,6 +74,7 @@ export const projects2026 = [
     tech: ["Next.js", "Tailwind CSS", "Motion"],
     githubUrl: "https://github.com/kaito24mako/personal-portfolio-v2",
     siteUrl: "https://personal-portfolio-v2-smoky.vercel.app/",
+    blog: true,
     grid: "row-span-1",
   },
   {
@@ -82,6 +87,7 @@ export const projects2026 = [
     siteUrl: "https://portfolio-cms-blond-five.vercel.app/login",
     growth:
       '"First dive into Next.js and full-stack programming. Learned about the intricacies of communicating between the front and back-end."',
+    blog: false,
     grid: "row-span-2",
   },
   {
@@ -94,6 +100,7 @@ export const projects2026 = [
     siteUrl: "https://pokemon-app-five-murex.vercel.app/",
     growth:
       '"My first project utilising React.js, and the first from my diploma of IT course. Implemented core React principles such as re-usable components and hooks."',
+    blog: false,
     grid: "row-span-2",
   },
   {
@@ -103,6 +110,7 @@ export const projects2026 = [
     tech: ["React", "SCSS"],
     githubUrl: "https://github.com/kaito24mako/uxdd-personal-portfolio",
     siteUrl: "https://personal-portfolio-cyan-seven-25.vercel.app/",
+    blog: false,
     grid: "row-span-1",
   },
 ];
@@ -118,6 +126,7 @@ export const projects2025 = [
     siteUrl: "https://kaito24mako.github.io/Book-Library/",
     growth:
       '"Worked with class-based JavaScript which deepened my understanding of how objects are created and manipulated. Also a leap in terms of UI/UX design from my previous projects."',
+    blog: false,
     grid: "row-span-2",
   },
   {
@@ -127,6 +136,7 @@ export const projects2025 = [
     // tech: ["JavaScript", "CSS", "HTML"],
     githubUrl: "https://github.com/kaito24mako/Last-Man-Standing",
     siteUrl: "https://kaito24mako.github.io/Last-Man-Standing/",
+    blog: false,
     // growth:
     //   '"My first major project that incorporates JavaScript alongside a front-end UI. Implementing the logic and a fun yet clear UI to provide feedback was a steep learning curve."',
     grid: "row-span-1",
@@ -138,6 +148,7 @@ export const projects2025 = [
     tech: ["JavaScript", "CSS", "HTML"],
     githubUrl: "https://github.com/kaito24mako/Tic-Tac-Toe",
     siteUrl: "https://kaito24mako.github.io/Tic-Tac-Toe/",
+    blog: false,
     growth:
       '"This foundational JS project from The Odin Project course taught me about various JavaScript logic, array methods, and mathematical calculations."',
     grid: "row-span-2",
@@ -150,6 +161,7 @@ export const projects2025 = [
     // tech: ["JavaScript", "CSS", "HTML"],
     githubUrl: "https://github.com/kaito24mako/Etch-A-Sketch",
     siteUrl: "https://kaito24mako.github.io/Etch-A-Sketch/",
+    blog: false,
     grid: "row-span-1",
   },
 ];

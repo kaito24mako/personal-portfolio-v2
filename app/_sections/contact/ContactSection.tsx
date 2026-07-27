@@ -27,7 +27,7 @@ function ContactSection() {
             </p>
             <p>
               Contact me via email or social media, and I will respond as soon
-              as possible.
+              as possible!
             </p>
           </div>
 
@@ -50,7 +50,7 @@ function ContactSection() {
                 href="tel:+61416127431"
                 className="hover:text-accent mx-auto"
               >
-                (+61) 0416 127 431
+                (+61) 416 127 431
               </Link>
             </GroupHeading>
 

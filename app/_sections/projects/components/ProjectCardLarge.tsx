@@ -18,6 +18,7 @@ type Props = {
   tech?: string[];
   githubUrl?: string;
   siteUrl?: string;
+  blog?: boolean;
   growth: string;
   grid: string;
 };
@@ -31,6 +32,7 @@ function ProjectCardLarge({
   tech,
   githubUrl,
   siteUrl,
+  blog,
   growth,
   grid,
 }: Props) {
@@ -80,20 +82,6 @@ function ProjectCardLarge({
           </div>
 
           <div className="flex justify-between items-center">
-            <Button
-              href="/blog"
-              ariaLabel="Link to blog page"
-              size="small"
-              color="background"
-            >
-              <IconTextWrapper gap="small">
-                <BounceX position={-2.1} ease="easeIn">
-                  <ArrowRightIcon />
-                </BounceX>
-                <span>Read Blog</span>
-              </IconTextWrapper>
-            </Button>
-
             <div className="flex gap-3">
               <Button
                 size="small"
@@ -123,6 +111,22 @@ function ProjectCardLarge({
                 </IconTextWrapper>
               </Button>
             </div>
+
+            {blog ?? (
+              <Button
+                href="/blog"
+                ariaLabel="Link to blog page"
+                size="small"
+                color="background"
+              >
+                <IconTextWrapper gap="small">
+                  <BounceX position={-2.1} ease="easeIn">
+                    <ArrowRightIcon />
+                  </BounceX>
+                  <span>Read Blog</span>
+                </IconTextWrapper>
+              </Button>
+            )}
           </div>
         </div>
       </div>

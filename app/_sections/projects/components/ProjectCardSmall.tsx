@@ -17,6 +17,7 @@ type Props = {
   tech?: string[];
   githubUrl?: string;
   siteUrl?: string;
+  blog?: boolean;
   grid: string;
 };
 
@@ -27,6 +28,7 @@ function ProjectCardSmall({
   tech,
   githubUrl,
   siteUrl,
+  blog,
   grid,
 }: Props) {
   return (
@@ -72,20 +74,6 @@ function ProjectCardSmall({
 
           {/* bottom content */}
           <div className="flex justify-between items-center w-full">
-            <Button
-              href="/blog"
-              size="small"
-              color="background"
-              ariaLabel="Link to blog page"
-            >
-              <IconTextWrapper gap="small">
-                <BounceX position={-2.1} ease="easeIn">
-                  <ArrowRightIcon />
-                </BounceX>
-                <span>Read Blog</span>
-              </IconTextWrapper>
-            </Button>
-
             <div className="flex gap-3">
               <Button
                 size="small"
@@ -115,6 +103,22 @@ function ProjectCardSmall({
                 </IconTextWrapper>
               </Button>
             </div>
+
+            {blog ?? (
+              <Button
+                href="/blog"
+                size="small"
+                color="background"
+                ariaLabel="Link to blog page"
+              >
+                <IconTextWrapper gap="small">
+                  <BounceX position={-2.1} ease="easeIn">
+                    <ArrowRightIcon />
+                  </BounceX>
+                  <span>Read Blog</span>
+                </IconTextWrapper>
+              </Button>
+            )}
           </div>
         </div>
       </div>
