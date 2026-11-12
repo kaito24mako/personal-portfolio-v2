@@ -6,9 +6,7 @@ import Button from "@/_components/common/button/Button";
 import IconTextWrapper from "@/_components/common/wrapper/IconTextWrapper";
 import GithubIcon from "@/_components/common/icon/GithubIcon";
 import SiteIcon from "@/_components/common/icon/SiteIcon";
-import ArrowRightIcon from "@/_components/common/icon/ArrowRightIcon";
 
-import BounceX from "@/_components/animations/bounce/BounceX";
 import Shine from "@/_components/animations/other/Shine";
 
 type Props = {
@@ -18,7 +16,6 @@ type Props = {
   tech?: string[];
   githubUrl?: string;
   siteUrl?: string;
-  blog?: boolean;
   growth: string;
   grid: string;
 };
@@ -32,7 +29,6 @@ function ProjectCardLarge({
   tech,
   githubUrl,
   siteUrl,
-  blog,
   growth,
   grid,
 }: Props) {
@@ -111,22 +107,6 @@ function ProjectCardLarge({
                 </IconTextWrapper>
               </Button>
             </div>
-
-            {blog ?? (
-              <Button
-                href="/blog"
-                ariaLabel="Link to blog page"
-                size="small"
-                color="background"
-              >
-                <IconTextWrapper gap="small">
-                  <BounceX position={-2.1} ease="easeIn">
-                    <ArrowRightIcon />
-                  </BounceX>
-                  <span>Read Blog</span>
-                </IconTextWrapper>
-              </Button>
-            )}
           </div>
         </div>
       </div>

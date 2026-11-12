@@ -1,6 +1,12 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react";
 import { motion, useMotionValue } from "motion/react";
 
 import Button from "@/_components/common/button/Button";
@@ -34,6 +40,7 @@ function ProjectsScrollAreaV1({ children, sectionLabels }: Props) {
   const scrollRef = useRef<HTMLDivElement>(null); // creates a ref that stores the scroll position
   const scrollSection = useMotionValue(0); // creates a motion value that can animate the scroll position
   const [activeIndex, setActiveIndex] = useState(0); // state that stores the active index (0 = Featured, 1 = 2026, etc.)
+  const [activeSectionHeight, setActiveSectionHeight] = useState<number>();
 
   const sectionCount = sectionLabels.length; // stores the number of sections
 
@@ -89,6 +96,24 @@ function ProjectsScrollAreaV1({ children, sectionLabels }: Props) {
     };
   }, [updateScrollSection]);
 
+  // update height of the project section according to the number of projects
+  useLayoutEffect(() => {
+    const container = scrollRef.current;
+    const activeSection = container?.children[activeIndex];
+    if (!(activeSection instanceof HTMLElement)) return;
+
+    const updateHeight = () => {
+      setActiveSectionHeight(activeSection.offsetHeight);
+    };
+
+    updateHeight();
+
+    const observer = new ResizeObserver(updateHeight);
+    observer.observe(activeSection);
+
+    return () => observer.disconnect();
+  }, [activeIndex]);
+
   return (
     <div className="flex flex-col">
       <div className="mb-4 px-7 sm:px-25 md:px-40 xl:px-60 3xl:px-100">
@@ -126,7 +151,10 @@ function ProjectsScrollAreaV1({ children, sectionLabels }: Props) {
       {/* parent container for projects with ref for scrolling logic */}
       <div
         ref={scrollRef}
-        className="flex snap-x snap-mandatory overflow-x-auto scrollbar-none"
+        className="flex items-start snap-x snap-mandatory overflow-x-auto overflow-y-hidden scrollbar-none transition-[height] duration-300"
+        style={
+          activeSectionHeight ? { height: activeSectionHeight } : undefined
+        }
       >
         {children}
       </div>

@@ -12,7 +12,6 @@ type Project = {
   tech?: string[];
   githubUrl?: string;
   siteUrl?: string;
-  blog?: boolean;
   growth?: string;
   grid: string;
 };
@@ -49,7 +48,6 @@ function ProjectsSection({ sectionSummary, gridTemplate, projects }: Props) {
               tech={project.tech}
               githubUrl={project.githubUrl}
               siteUrl={project.siteUrl}
-              blog={project.blog}
               growth={project.growth}
               grid={project.grid}
             />

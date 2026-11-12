@@ -44,7 +44,7 @@ function MainPage() {
 
         <ProjectsScrollArea sectionLabels={["Featured", "2026", "2025"]}>
           <ProjectsSection
-            gridTemplate="grid-cols-1 xl:grid-cols-2 grid-rows-6 xl:grid-rows-3"
+            gridTemplate="grid-cols-1 grid-rows-4 xl:grid-cols-2 xl:grid-rows-2"
             sectionSummary={[
               "My best works",
               "Personal milestone projects",

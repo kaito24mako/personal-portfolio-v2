@@ -5,9 +5,7 @@ import Button from "@/_components/common/button/Button";
 import IconTextWrapper from "@/_components/common/wrapper/IconTextWrapper";
 import GithubIcon from "@/_components/common/icon/GithubIcon";
 import SiteIcon from "@/_components/common/icon/SiteIcon";
-import ArrowRightIcon from "@/_components/common/icon/ArrowRightIcon";
 
-import BounceX from "@/_components/animations/bounce/BounceX";
 import Shine from "@/_components/animations/other/Shine";
 
 type Props = {
@@ -17,7 +15,6 @@ type Props = {
   tech?: string[];
   githubUrl?: string;
   siteUrl?: string;
-  blog?: boolean;
   grid: string;
 };
 
@@ -28,7 +25,6 @@ function ProjectCardSmall({
   tech,
   githubUrl,
   siteUrl,
-  blog,
   grid,
 }: Props) {
   return (
@@ -103,22 +99,6 @@ function ProjectCardSmall({
                 </IconTextWrapper>
               </Button>
             </div>
-
-            {blog ?? (
-              <Button
-                href="/blog"
-                size="small"
-                color="background"
-                ariaLabel="Link to blog page"
-              >
-                <IconTextWrapper gap="small">
-                  <BounceX position={-2.1} ease="easeIn">
-                    <ArrowRightIcon />
-                  </BounceX>
-                  <span>Read Blog</span>
-                </IconTextWrapper>
-              </Button>
-            )}
           </div>
         </div>
       </div>
