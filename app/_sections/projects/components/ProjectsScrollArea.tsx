@@ -128,9 +128,6 @@ function ProjectsScrollAreaV1({ children, sectionLabels }: Props) {
         ref={scrollRef}
         className="flex snap-x snap-mandatory overflow-x-auto scrollbar-none"
       >
-        <div>
-          <p>this is</p>
-        </div>
         {children}
       </div>
     </div>

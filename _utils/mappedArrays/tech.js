@@ -27,11 +27,6 @@ export const frontendTech = [
     text: "Bootstrap",
   },
   {
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg",
-    alt: "Framer Motion logo",
-    text: "Framer Motion",
-  },
-  {
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
     alt: "JavaScript logo",
     text: "JavaScript",

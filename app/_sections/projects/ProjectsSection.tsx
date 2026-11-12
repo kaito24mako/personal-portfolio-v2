@@ -27,7 +27,7 @@ type Props = {
 function ProjectsSection({ sectionSummary, gridTemplate, projects }: Props) {
   return (
     <SectionContainer className="text-center bg-background text-foreground py-0! w-screen snap-start shrink-0">
-      <div className=" border-border/40 mt-3 mb-2">
+      {/* <div className=" border-border/40 mt-3 mb-2">
         <MarqueeX
           contents={sectionSummary}
           size="xs"
@@ -36,9 +36,9 @@ function ProjectsSection({ sectionSummary, gridTemplate, projects }: Props) {
           fadeEdges
           separator
         />
-      </div>
+      </div> */}
 
-      <div className={`${gridTemplate} grid gap-8`}>
+      <div className={`${gridTemplate} grid gap-8 mt-3`}>
         {projects.map((project) =>
           project.growth ? (
             <ProjectCardLarge

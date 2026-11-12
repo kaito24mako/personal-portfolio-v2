@@ -2,6 +2,8 @@
 // add growth key to projects you want to use ProjectCardLarge (large size)
 // omit growth key to projects you want to use ProjectCardSmall (small size)
 
+import coachingtool from "@/public/projects/2026/coaching-tool.png";
+import dreamteam from "@/public/projects/2026/dream-team.png";
 import portfolioV2 from "@/public/projects/2026/portfolio-v2.png";
 import mako from "@/public/projects/2026/mako.png";
 import searchEmAll from "@/public/projects/2026/search-em-all.png";
@@ -16,6 +18,33 @@ import calculator from "@/public/projects/2025/calculator.png";
 import restaurant from "@/public/projects/2025/kanazawa-delights.png";
 
 export const projectsFeatured = [
+  // large
+  {
+    title: "Coaching Management Tool",
+    image: coachingtool,
+    description:
+      "A basketball coaching tool for managing rosters, substitutions, and equal playing time.",
+    tech: ["React", "PostgreSQL", "Tailwind CSS", "Better Auth"],
+    githubUrl:
+      "https://github.com/Holmesglen-Falcon-Stack/Raptors-Coaching-Tool",
+    siteUrl: "https://coaching-system-fr58.onrender.com/login",
+    blog: false,
+    growth:
+      "This was a group project made for a real client, which came with an immense amount of new experiences. I made a tremendous amount of growth as a leader of this project, ensuring team members were on-task and communicative as we developed this full-stack application from scratch.",
+    grid: "row-span-2",
+  },
+  // small
+  {
+    title: "Dream Team",
+    image: dreamteam,
+    description: "Fictional basketball card collector and battler.",
+    tech: ["React", "Tailwind CSS", "MySQL"],
+    githubUrl: "https://github.com/kaito24mako/dream-team",
+    siteUrl: "https://dream-team-7l90.onrender.com/",
+    blog: false,
+    grid: "row-span-1",
+  },
+  // small
   {
     title: "Portfolio CMS",
     image: mako,
@@ -24,42 +53,6 @@ export const projectsFeatured = [
     tech: ["Next.js", "Supabase", "Tailwind CSS", "DaisyUI"],
     githubUrl: "https://github.com/kaito24mako/portfolio-cms",
     siteUrl: "https://portfolio-cms-blond-five.vercel.app/login",
-    blog: false,
-    growth:
-      '"First dive into Next.js and full-stack programming. Learned about the intricacies of communicating between the front and back-end."',
-    grid: "row-span-2",
-  },
-  {
-    title: "Personal Portfolio V2",
-    image: portfolioV2,
-    description:
-      "Revised portfolio site with an enhanced design, modern animations, and polish.",
-    tech: ["Next.js", "Tailwind CSS", "Motion"],
-    githubUrl: "https://github.com/kaito24mako/personal-portfolio-v2",
-    siteUrl: "https://personal-portfolio-v2-smoky.vercel.app/",
-    blog: true,
-    grid: "row-span-1",
-  },
-  {
-    title: "Search Em' All!",
-    image: searchEmAll,
-    description:
-      "Search through the Pokemon TCG database via data fetching, and store cards in collections.",
-    tech: ["React", "SCSS"],
-    githubUrl: "https://github.com/kaito24mako/react-pokemon-app",
-    siteUrl: "https://pokemon-app-five-murex.vercel.app/",
-    blog: false,
-    growth:
-      '"My first project utilising React.js, and the first from my Diploma of IT course. Implemented core React principles such as re-usable components and hooks."',
-    grid: "row-span-2",
-  },
-  {
-    title: "Last Man Standing",
-    image: lastManStanding,
-    description: "User vs CPU-based game of rock, paper, scissors.",
-    // tech: ["JavaScript", "CSS", "HTML"],
-    githubUrl: "https://github.com/kaito24mako/Last-Man-Standing",
-    siteUrl: "https://kaito24mako.github.io/Last-Man-Standing/",
     blog: false,
     grid: "row-span-1",
   },
