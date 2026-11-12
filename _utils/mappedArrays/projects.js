@@ -13,9 +13,6 @@ import tictactoe from "@/public/projects/2025/tic-tac-toe.png";
 import bookCollection from "@/public/projects/2025/book-collection.png";
 import etchASketch from "@/public/projects/2025/etch-a-sketch.png";
 import lastManStanding from "@/public/projects/2025/last-man-standing.png";
-import adminDashboard from "@/public/projects/2025/admin-dashboard.png";
-import calculator from "@/public/projects/2025/calculator.png";
-import restaurant from "@/public/projects/2025/kanazawa-delights.png";
 
 export const projectsFeatured = [
   // large
@@ -23,8 +20,8 @@ export const projectsFeatured = [
     title: "Coaching Management Tool",
     image: coachingtool,
     description:
-      "A basketball coaching tool for managing rosters, substitutions, and equal playing time.",
-    tech: ["React", "PostgreSQL", "Tailwind CSS", "Better Auth"],
+      "A basketball coaching platform that tracks live player minutes and helps coaches plan and manage game substitutions.",
+    tech: ["React", "Tailwind", "Node.js with Express", "PostgreSQL"],
     githubUrl:
       "https://github.com/Holmesglen-Falcon-Stack/Raptors-Coaching-Tool",
     siteUrl: "https://coaching-system-fr58.onrender.com/login",
@@ -36,8 +33,9 @@ export const projectsFeatured = [
   {
     title: "Dream Team",
     image: dreamteam,
-    description: "Fictional basketball card collector and battler.",
-    tech: ["React", "Tailwind CSS", "MySQL"],
+    description:
+      "A full-stack basketball card collection game featuring pack openings, lineup management, and opponent battles.",
+    tech: ["React", "TypeScript", "Node.js with Express", "MySQL"],
     githubUrl: "https://github.com/kaito24mako/dream-team",
     siteUrl: "https://dream-team-7l90.onrender.com/",
     grid: "row-span-1",
@@ -46,9 +44,8 @@ export const projectsFeatured = [
   {
     title: "Portfolio CMS",
     image: mako,
-    description:
-      "A CMS for customizing a portfolio site via API endpoints. Utilizes Next.js with postgreSQL for the backend.",
-    tech: ["Next.js", "Supabase", "Tailwind CSS", "DaisyUI"],
+    description: "A CMS for customising portfolio sites via API endpoints.",
+    tech: ["Next.js", "Node.js with Express", "PostgreSQL"],
     githubUrl: "https://github.com/kaito24mako/portfolio-cms",
     siteUrl: "https://portfolio-cms-blond-five.vercel.app/login",
     grid: "row-span-1",

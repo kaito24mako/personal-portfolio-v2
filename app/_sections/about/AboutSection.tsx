@@ -20,7 +20,7 @@ function AboutSection() {
           Welcome to my portfolio! I&apos;m Kaito and I have been studying web
           development since 2025. I have a sharp eye for detail, passion in
           learning new technologies, and love creating stunning websites. Here
-          are some technologies I am familiar with:
+          are technologies I am familiar with:
         </p>
       </div>
 

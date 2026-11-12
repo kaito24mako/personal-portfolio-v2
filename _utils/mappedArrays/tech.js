@@ -9,7 +9,12 @@ export const frontendTech = [
   {
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
     alt: "Typescript logo",
-    text: "Typescript",
+    text: "TypeScript",
+  },
+  {
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+    alt: "JavaScript logo",
+    text: "JavaScript",
   },
   {
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
@@ -27,11 +32,6 @@ export const frontendTech = [
     text: "Bootstrap",
   },
   {
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
-    alt: "JavaScript logo",
-    text: "JavaScript",
-  },
-  {
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
     alt: "CSS3 logo",
     text: "CSS",
@@ -45,9 +45,14 @@ export const frontendTech = [
 
 export const backendTech = [
   {
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
-    alt: "Next.js logo",
-    text: "Next.js",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg",
+    alt: "Node.js logo",
+    text: "Node.js",
+  },
+  {
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
+    alt: "Express logo",
+    text: "Express",
   },
   {
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg",
@@ -55,13 +60,18 @@ export const backendTech = [
     text: "SQLite",
   },
   {
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg",
-    alt: "Supabase logo",
-    text: "Supabase",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+    alt: "PostgreSQL logo",
+    text: "PostgreSQL",
   },
   {
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg",
-    alt: "Express logo",
-    text: "Express",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg",
+    alt: "MySQL logo",
+    text: "MySQL",
+  },
+  {
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+    alt: "Next.js logo",
+    text: "Next.js",
   },
 ];

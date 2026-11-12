@@ -26,9 +26,9 @@ function Navbar() {
         px-10 py-1 text-xs md:text-base text-background rounded-sm transition-colors duration-500 
         ${scrolled ? "bg-surface text-foreground shadow-md" : "bg-transparent"}`}
     >
-      <Link href="#home">
+      <Link href="/">
         <Image
-          src="/icon/logo.png"
+          src="/icon/logo-gold-transparent.png"
           alt="Logo of Kaito Watanabe"
           width={55}
           height={55}
@@ -37,16 +37,16 @@ function Navbar() {
 
       <ul className="flex gap-5 md:gap-7 font-semibold font-heading text-base sm:text-lg">
         <li className="hover:text-accent">
-          <Link href="#home">Home</Link>
+          <Link href="/">Home</Link>
         </li>
         <li className="hover:text-accent">
-          <Link href="#about">About</Link>
+          <Link href="/#about">About</Link>
         </li>
         <li className="hover:text-accent">
-          <Link href="#projects">Projects</Link>
+          <Link href="/#projects">Projects</Link>
         </li>
         <li className="hover:text-accent">
-          <Link href="#contact">Contact</Link>
+          <Link href="/#contact">Contact</Link>
         </li>
       </ul>
     </nav>
