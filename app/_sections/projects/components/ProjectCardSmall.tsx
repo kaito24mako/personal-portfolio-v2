@@ -28,7 +28,7 @@ function ProjectCardSmall({
   grid,
 }: Props) {
   return (
-    <div className={`${grid} h-full bg-surface rounded-xs overflow-hidden`}>
+    <div className={`${grid} h-full bg-surface rounded-sm overflow-hidden`}>
       <div className="relative h-full">
         <Image
           src={image}

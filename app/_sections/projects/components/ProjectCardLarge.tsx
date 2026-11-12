@@ -35,7 +35,7 @@ function ProjectCardLarge({
   return (
     // optional borders: border border-border
     <div
-      className={`${grid} flex flex-col h-full bg-surface rounded-xs overflow-hidden`}
+      className={`${grid} flex flex-col h-full bg-surface rounded-sm overflow-hidden`}
     >
       <Image src={image} alt={title} quality={90} placeholder="blur" />
 
